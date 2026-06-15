@@ -1,0 +1,106 @@
+# =========================
+# PYTHON
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+.env/
+.venv/
+
+# Archivos de entorno
+.env
+.env.local
+
+# Logs
+*.log
+
+# Caché pytest
+.pytest_cache/
+
+# Caché mypy
+.mypy_cache/
+
+# Caché Ruff
+.ruff_cache/
+
+# Cobertura
+.coverage
+htmlcov/
+
+# =========================
+# FASTAPI / UVICORN
+# =========================
+
+*.sqlite3
+*.db
+
+# =========================
+# CSV GENERADOS
+# =========================
+
+index-total.csv
+duplicados.csv
+contenidos.csv
+candidatos_eliminar.csv
+
+# Exportaciones
+exports/
+output/
+resultados/
+
+# =========================
+# NODE / REACT
+# =========================
+
+node_modules/
+
+build/
+dist/
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# VSCODE
+# =========================
+
+.vscode/
+
+# =========================
+# JETBRAINS
+# =========================
+
+.idea/
+
+# =========================
+# WINDOWS
+# =========================
+
+Thumbs.db
+Desktop.ini
+
+# =========================
+# MAC
+# =========================
+
+.DS_Store
+
+# =========================
+# ARCHIVOS TEMPORALES
+# =========================
+
+*.tmp
+*.temp
+*.bak
+
+# =========================
+# DATOS DE PRUEBA
+# =========================
+
+uploads/

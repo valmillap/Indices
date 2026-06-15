@@ -1,0 +1,29 @@
+index-analyzer/
+│
+├── backend/
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── uploads/
+│   └── services/
+│
+└── frontend/
+    ├── package.json
+    └── src/
+
+backend:
+pip install fastapi uvicorn pandas python-multipart
+
+raiz:  npx create-react-app frontend
+backend: npm install react-dropzone
+install  axios--algo asi
+
+
+correr backend: uvicorn main:app --reload 
+
+
+futuro mejora: 
+Upload
+   ↓
+UUID sesión
+   ↓
+cache[uuid] = df_costo
