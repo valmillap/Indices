@@ -60,7 +60,7 @@ def calcular_fragmentacion(fragmentacion, uso):
     how="left")
     df.to_csv("index-fragmetacion2.csv",sep=";",index=False)
     #return df
-
+'''
 def main():
     df_1 = pd.read_csv("1.csv", sep=";",header=None,dtype=str)
     df_2 = pd.read_csv("2.csv", sep=";", header=None, skiprows=1, dtype=str, na_filter=False)
@@ -68,3 +68,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    '''

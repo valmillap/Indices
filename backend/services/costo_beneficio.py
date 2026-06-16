@@ -18,31 +18,29 @@ def calcular_costo(df_costo):
     def clasificar(row):
         busquedas = row["BUSQUEDAS"]
         updates = row["USER_UPDATES"]
-        ratio = updates/ busquedas
 
         if busquedas == 0 and updates == 0:
             return "NO USO"
 
+        if busquedas == 0:
+            return "SIN BENEFICIO"
+
+        ratio = updates / busquedas
+
         if ratio <= 1:
             return "Beneficio Busqueda"
-        
-        if 1 <ratio <1.5:
+
+        elif ratio <= 1.5:
             return "Aceptable"
-        
-        if 1.5 <ratio <3:
+
+        elif ratio <= 3:
             return "Costo de mantenimiento"
-        
-        if ratio < 3:
+
+        elif ratio <= 10:
             return "Relevante costo de mantenimiento"
-        
-        if ratio < 10:
+
+        else:
             return "Trascendental costo de mantenimiento"
-
-
-        if busquedas >= updates:
-            return "BENEFICIO EN BUSQUEDA"
-
-        return "EQUILIBRADO"
 
     df_costo["EVALUACION_INDICE"] = df_costo.apply(clasificar, axis=1)
 

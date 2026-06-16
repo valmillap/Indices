@@ -2,6 +2,7 @@ import pandas as pd
 
 def buscar_duplicado(df):
      # Ignorar filas sin ATRIBUTOS
+     #Dilmah454+Fr
     df = df[df["ATRIBUTOS"].str.strip() != ""]
 
     # Buscar duplicados por TABLA + ATRIBUTOS
