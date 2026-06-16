@@ -10,10 +10,7 @@ def calcular_costo(df_costo):
         ).fillna(0)
 
     # TOTAL BUSQUEDA, NO SCAN
-    df_costo["BUSQUEDAS"] = (
-        df_costo["USER_SEEKS"]
-        + df_costo["USER_LOOKUPS"]
-    )
+    df_costo["BUSQUEDAS"] = (df_costo["USER_SEEKS"]+ df_costo["USER_LOOKUPS"])
 
     def clasificar(row):
         busquedas = row["BUSQUEDAS"]
@@ -23,7 +20,7 @@ def calcular_costo(df_costo):
             return "NO USO"
 
         if busquedas == 0:
-            return "SIN BENEFICIO"
+            return "SIN BUSQUEDAS"
 
         ratio = updates / busquedas
 

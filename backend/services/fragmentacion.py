@@ -54,11 +54,8 @@ def calcular_fragmentacion(fragmentacion, uso):
         "USED-PAGES",
     ]
 
-    df = fragmentacion.merge(
-    uso,
-    on=["TABLA", "INDICE"],
-    how="left")
-    df.to_csv("index-fragmetacion2.csv",sep=";",index=False)
+    df = fragmentacion.merge(uso, on=["TABLA", "INDICE"], how="left")
+    #df.to_csv("index-fragmetacion2.csv",sep=";",index=False)
     #return df
 '''
 def main():
