@@ -1,0 +1,15 @@
+TABLA;INDICE;TYPE_DESC;USER_SEEKS;USER_SCANS;USER_LOOKUPS;USER_UPDATES;USED-PAGES
+Detalle_DecretoPago;;HEAP;0.0;2.0;4239;0;245.289062
+Detalle_DecretoPago;aaDetalle_DecretoPago_PK;NONCLUSTERED;3939.0;299.0;0;0;48.343750
+Detalle_DecretoPago;Cta_CodigoTrabajo;NONCLUSTERED;;;;;68.843750
+Detalle_DecretoPago;Cta_Contrata;NONCLUSTERED;;;;;68.851562
+Detalle_DecretoPago;Cta_Planta;NONCLUSTERED;;;;;68.851562
+Detalle_DecretoPago;Cta_Suplencia;NONCLUSTERED;;;;;68.859375
+Historial_Contratos;;HEAP;0.0;0.0;4298;1641;29.054687
+Historial_Contratos;aaaaaHistorial_Contratos_PK;NONCLUSTERED;2100.0;0.0;0;1641;8.093750
+Historial_Contratos;Fecha_Ingreso;NONCLUSTERED;0.0;0.0;0;1641;6.554687
+Historial_Contratos;Fecha_Inicio;NONCLUSTERED;3637.0;0.0;0;1641;6.609375
+Historial_Contratos;Fecha_Termino;NONCLUSTERED;178.0;0.0;0;1641;5.359375
+Historial_Contratos;Id_Correlativo;NONCLUSTERED;0.0;0.0;0;1641;5.406250
+Historial_Contratos;Id_Establecimiento;NONCLUSTERED;0.0;0.0;0;1641;6.312500
+Historial_Contratos;Id_funcionario;NONCLUSTERED;0.0;0.0;0;1641;4.781250
