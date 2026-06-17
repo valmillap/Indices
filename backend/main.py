@@ -88,6 +88,10 @@ async def contenido():
 
 @app.get("/heap-loockup")
 async def loockup():
+    global df_uso_global
+    if df_costo_global is None:
+        return {"error": "Debe cargar archivos"}
+
     df_heap = calcular_loockup(df_uso_global)
 
     return {
