@@ -20,8 +20,50 @@ def buscar_duplicado(df):
     duplicado = duplicado.sort_values(by=["PESO_GRUPO", "TABLA", "ATRIBUTOS", "IS_PRIMARY_KEY"],
         ascending=[False,True,True,False])
 
-    duplicado.drop( columns=["IS_PRIMARY_KEY_NUM"], inplace=True)
+    #duplicado.drop( columns=["IS_PRIMARY_KEY_NUM"], inplace=True)
+    
+    # COLUMNA
+        # Convertir a numérico
+    duplicado["IS_PRIMARY_KEY_NUM"] = pd.to_numeric(
+        duplicado["IS_PRIMARY_KEY"], errors="coerce"
+    ).fillna(0)
 
+    duplicado["IS_UNIQUE_NUM"] = pd.to_numeric(
+        duplicado["IS_UNIQUE"], errors="coerce"
+    ).fillna(0)
 
-    print(f"Encontrados {len(duplicado)} registros")
+    # Cantidad de índices UNIQUE por grupo
+    duplicado["UNIQUE_COUNT"] = (
+        duplicado.groupby(["TABLA", "ATRIBUTOS"])["IS_UNIQUE_NUM"]
+        .transform("sum")
+    )
+
+    # Valor por defecto
+    duplicado["MANTENER"] = 0
+
+    # PK siempre se mantiene
+    duplicado.loc[
+        duplicado["IS_PRIMARY_KEY_NUM"] == 1,
+        "MANTENER"
+    ] = 1
+
+    # UNIQUE se mantiene sólo si es el único UNIQUE del grupo
+    duplicado.loc[
+        (duplicado["IS_PRIMARY_KEY_NUM"] == 0)
+        & (duplicado["IS_UNIQUE_NUM"] == 1)
+        & (duplicado["UNIQUE_COUNT"] == 1),
+        "MANTENER"
+    ] = 1
+
+    duplicado.drop(columns=["UNIQUE_COUNT", "IS_UNIQUE_NUM", "PESO_GRUPO"], inplace=True)
+
+    duplicado.to_csv("duplicado3.csv",sep=";",index=False)
     return duplicado
+'''
+def main():
+    df_1 = pd.read_csv("costo-benefico.csv", sep=";", dtype=str)
+    buscar_duplicado(df_1)
+
+if __name__ == "__main__":
+    main()
+'''

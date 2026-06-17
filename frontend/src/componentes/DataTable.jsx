@@ -13,8 +13,13 @@ function DataTable({ data }) {
   const columnDefs = [
     {checkboxSelection: true, headerCheckboxSelection: true, width: 60},
     {field: "TABLA", flex: 1},
-    {field: "INDICE", flex: 2},
-    {field: "BUSQUEDAS", flex: 1}
+    {field: "INDICE", flex: 1},
+    {field: "ATRIBUTOS", flex: 1},
+    {field: "TYPE_DESC", flex: 1},
+    {field: "IS_PRIMARY_KEY", flex: 1},
+    {field: "IS_UNIQUE", flex: 1},
+    {field: "EVALUACION_INDICE", flex: 1},
+    {field: "USED-PAGES", flex: 1}
 ];
 
 
@@ -49,39 +54,37 @@ function DataTable({ data }) {
       className="ag-theme-alpine"
       style={{
         height: "700px",
-        width: "95%"
+        width: "80%"
       }}
     >
       <AgGridReact
-  rowData={data}
-  columnDefs={columnDefs}
+        rowData={data}
+        columnDefs={columnDefs}
 
-  rowSelection="multiple"
+        rowSelection="multiple"
 
-  defaultColDef={{
-    sortable: true,
-    filter: true,
-    resizable: true
-  }}
+        defaultColDef={{
+          sortable: true,
+          filter: true,
+          resizable: true
+        }}
 
-  rowClassRules={{
-    "fila-pk": params =>
-      params.data.IS_PK == 1,
+        rowClassRules={{
+          "fila-pk": params =>
+            params.data.IS_PK == 1,
 
-    "fila-unique": params =>
-      params.data.IS_UNIQUE == 1,
+          "fila-duplicado": params =>
+            params.data.MANTENER == 0,
 
-    "fila-sin-uso": params =>
-      Number(params.data.BUSQUEDAS) === 0,
 
-    "fila-duplicado": params =>
-      String(params.data.TABLA).trim() ===
-      "RentaEncasillamiento"
-  }}
+          "nada": params =>
+            String(params.data.TABLA).trim() ===
+            "RentaEncasillamiento"
+        }}
 
-  pagination={true}
-  paginationPageSize={50}
-/>
+        pagination={true}
+        paginationPageSize={50}
+      />
     </div>
 
   </div>

@@ -41,5 +41,13 @@ def calcular_costo(df_costo):
 
     df_costo["EVALUACION_INDICE"] = df_costo.apply(clasificar, axis=1)
 
-    df_costo.to_csv("costo-benefico.csv",sep=";",index=False)
+    #df_costo.to_csv("costo-benefico.csv",sep=";",index=False)
     return df_costo
+'''
+def main():
+    df_1 = pd.read_csv("index-base.csv", sep=";", dtype=str)
+    calcular_costo(df_1)
+
+if __name__ == "__main__":
+    main()
+'''

@@ -28,14 +28,10 @@ def calcular_loockup(uso):
     uso = uso[uso["TABLA"].isin(nombre_tabla)]
     uso = uso[(uso["USER_SEEKS"] > 0) | (uso["USER_SCANS"] > 0) | (uso["TYPE_DESC"] == "HEAP")]
     uso.to_csv("heap_filtro.csv",sep=";",index=False)
-    
+
     return uso
 
     #AGREGAR SCAN> en cost-beneficio
-
-
-
-
 
 def main():
     df_1 = pd.read_csv("2.csv", sep=";",header=None,dtype=str)

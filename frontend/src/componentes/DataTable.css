@@ -1,6 +1,6 @@
 .panel {
 
-    background: rgb(146, 37, 37);
+    background: rgba(233, 230, 230, 0.74);
 
     border: 1px solid #ddd;
 
@@ -44,14 +44,10 @@
     align-items: center;
 }
 
-.fila-sin-uso {
-    background-color: #e0dfdb;
-}
-
 .fila-pk {
     background-color: #d5d8db;
 }
 
 .fila-duplicado {
-    background-color: #8a353c;
+    background-color: #FCE4D6;
 }

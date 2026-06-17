@@ -73,6 +73,14 @@ def buscar_contenido(df):
             False
         ]
     )
-    #indices_contenidos.to_csv("indices_contenidos.csv",sep=";",index=False)
+    indices_contenidos.to_csv("indices_contenidos.csv",sep=";",index=False)
 
-    return indices_contenidos
+    #return indices_contenidos
+
+    
+def main():
+    df_1 = pd.read_csv("costo-benefico.csv", sep=";", dtype=str)
+    buscar_contenido(df_1)
+
+if __name__ == "__main__":
+    main()

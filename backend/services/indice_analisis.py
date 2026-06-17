@@ -28,6 +28,7 @@ def generar_df_indice_base(atributos_file, uso_file):
     #---------------
     # ATRIBUTO X USO
     uso = pd.read_csv(uso_file, sep=";", header=None, skiprows=1, dtype=str, na_filter=False)
+    uso = uso.drop(uso.columns[13], axis=1)
 
     uso.columns = [
         "TABLA",
@@ -42,8 +43,7 @@ def generar_df_indice_base(atributos_file, uso_file):
         "LAST_USER_SEEK",
         "LAST_USER_SCAN",
         "TAMANO-TOTAL",
-        "USED-PAGES",
-        "DATA-PAGES"
+        "USED-PAGES"
     ]
         # Eliminar HEAP
     uso = uso[uso["TYPE_DESC"] != "HEAP"]
@@ -65,6 +65,14 @@ def generar_df_indice_base(atributos_file, uso_file):
     )
     #df_uso.to_csv("index-base.csv",sep=";",index=False)
     return df_uso
+'''
+def main():
+    #df_1 = pd.read_csv("1.csv", sep=";",header=None,dtype=str)
+    #df_2 = pd.read_csv("2.csv", sep=";",header=None,dtype=str)
+    generar_df_indice_base("1.csv", "2.csv")
 
+if __name__ == "__main__":
+    main()
+'''
 
     
