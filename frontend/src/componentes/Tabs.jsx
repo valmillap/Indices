@@ -13,11 +13,22 @@ function Tabs() {
     setData(resultado.data);
   };
 
+  const cargarHeap = async () => {
+
+    const resultado = await getHeap();
+
+    setData(resultado.data);
+  };
+
   return (
     <div>
 
       <button onClick={cargarDuplicados}>
         Duplicados
+      </button>
+
+      <button onClick={cargarHeap}>
+        Loockup
       </button>
 
       <DataTable data={data} />

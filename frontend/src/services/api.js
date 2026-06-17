@@ -13,6 +13,15 @@ export async function uploadFiles(formData) {
   return response.json();
 }
 
+export async function getLoockup() {
+
+  const response = await fetch(
+    `${API_URL}/heap-loockup`
+  );
+
+  return response.json();
+}
+
 export async function getDuplicados() {
 
   const response = await fetch(

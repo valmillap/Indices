@@ -1,10 +1,12 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
+import pandas as pd
 
 from services.indice_analisis import generar_df_indice_base
 from services.costo_beneficio import calcular_costo
 from services.duplicado import buscar_duplicado
 from services.contenido import buscar_contenido
+from services.heap import calcular_loockup
 
 
 app = FastAPI()
@@ -24,8 +26,10 @@ async def upload(
     atributos: UploadFile = File(...),
     uso: UploadFile = File(...)
 ):
-
+    global df_uso_global
     global df_costo_global
+
+    df_uso_global = pd.read_csv(uso, sep=";",header=None,dtype=str)
 
     df_base = generar_df_indice_base(
         atributos.file,
@@ -80,4 +84,14 @@ async def contenido():
     return {
         "rows": len(df_contenido),
         "data": df_contenido.to_dict("records")
+    }
+
+@app.get("/heap-loockup")
+async def loockup():
+    df_heap = calcular_loockup(df_uso_global)
+
+    return {
+        "rows": len(df_heap),
+        "columns": list(df_heap.columns),
+        "data": df_heap.to_dict("records")
     }
