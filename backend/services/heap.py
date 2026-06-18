@@ -32,10 +32,11 @@ def calcular_loockup(uso):
     return uso
 
     #AGREGAR SCAN> en cost-beneficio
-
+'''
 def main():
     df_1 = pd.read_csv("2.csv", sep=";",header=None,dtype=str)
     calcular_loockup(df_1)
 
 if __name__ == "__main__":
     main()
+'''
