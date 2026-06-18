@@ -12,6 +12,7 @@ from services.heap import calcular_loockup
 app = FastAPI()
 df_costo_global = None
 df_uso_global = None
+
 # CORS
 app.add_middleware(
     CORSMiddleware,

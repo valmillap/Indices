@@ -4,24 +4,11 @@ import "ag-grid-community/styles/ag-theme-alpine.css";
 
 import "./DataTable.css";
 
-function DataTable({ data }) {
+function DataTable({ data, columnDefs, rowClassRules }) {
 
   if (!data || data.length === 0) {
     return <div>Sin datos</div>;
   }
-
-  const columnDefs = [
-    {checkboxSelection: true, headerCheckboxSelection: true, width: 60},
-    {field: "TABLA", flex: 1},
-    {field: "INDICE", flex: 1},
-    {field: "ATRIBUTOS", flex: 1},
-    {field: "TYPE_DESC", flex: 1},
-    {field: "IS_PRIMARY_KEY", flex: 1},
-    {field: "IS_UNIQUE", flex: 1},
-    {field: "EVALUACION_INDICE", flex: 1},
-    {field: "USED-PAGES", flex: 1}
-];
-
 
   return (
     <div className="panel">
@@ -68,20 +55,7 @@ function DataTable({ data }) {
           filter: true,
           resizable: true
         }}
-
-        rowClassRules={{
-          "fila-pk": params =>
-            params.data.IS_PK == 1,
-
-          "fila-duplicado": params =>
-            params.data.MANTENER == 0,
-
-
-          "nada": params =>
-            String(params.data.TABLA).trim() ===
-            "RentaEncasillamiento"
-        }}
-
+        
         pagination={true}
         paginationPageSize={50}
       />
