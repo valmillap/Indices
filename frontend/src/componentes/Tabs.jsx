@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { getDuplicados } from "../services/api";
 import DataTable from "./DataTable";
+import { getLoockup } from "../services/api";
 
 function Tabs() {
 
@@ -15,7 +16,7 @@ function Tabs() {
 
   const cargarHeap = async () => {
 
-    const resultado = await getHeap();
+    const resultado = await getLoockup();
 
     setData(resultado.data);
   };
@@ -26,7 +27,6 @@ function Tabs() {
       <button onClick={cargarDuplicados}>
         Duplicados
       </button>
-
       <button onClick={cargarHeap}>
         Loockup
       </button>
