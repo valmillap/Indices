@@ -73,9 +73,9 @@ def buscar_contenido(df):
             False
         ]
     )
-    indices_contenidos.to_csv("indices_contenidos.csv",sep=";",index=False)
+    #indices_contenidos.to_csv("indices_contenidos.csv",sep=";",index=False)
 
-    #return indices_contenidos
+    return indices_contenidos
 
     
 def main():

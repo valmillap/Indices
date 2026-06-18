@@ -6,7 +6,7 @@ from services.indice_analisis import generar_df_indice_base
 from services.costo_beneficio import calcular_costo
 from services.duplicado import buscar_duplicado
 from services.contenido import buscar_contenido
-from services.heap import calcular_loockup
+from services.heap import calcular_lookup
 
 
 app = FastAPI()
@@ -88,13 +88,13 @@ async def contenido():
         "data": df_contenido.to_dict("records")
     }
 
-@app.get("/heap-loockup")
-async def loockup():
+@app.get("/heap-lookup")
+async def lookup():
     global df_uso_global
     if df_uso_global is None:
         return {"error": "Debe cargar archivos"}
 
-    df_heap = calcular_loockup(df_uso_global)
+    df_heap = calcular_lookup(df_uso_global)
 
     return {
         "rows": len(df_heap),

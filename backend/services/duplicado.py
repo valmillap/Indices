@@ -57,7 +57,7 @@ def buscar_duplicado(df):
 
     duplicado.drop(columns=["UNIQUE_COUNT", "IS_UNIQUE_NUM", "PESO_GRUPO"], inplace=True)
 
-    duplicado.to_csv("duplicado3.csv",sep=";",index=False)
+    #duplicado.to_csv("duplicado3.csv",sep=";",index=False)
     return duplicado
 '''
 def main():

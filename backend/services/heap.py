@@ -1,6 +1,6 @@
 import pandas as pd
 
-def calcular_loockup(uso):
+def calcular_lookup(uso):
     uso = uso[[0, 1, 2, 5, 6, 7, 8, 12]]
 
     uso.columns = [
@@ -13,6 +13,15 @@ def calcular_loockup(uso):
         "USER_UPDATES",
         "USED-PAGES"
     ]
+
+      # Limpiar espacios
+    for df in [uso]:
+        df["TABLA"] = df["TABLA"].fillna("").str.strip()
+        df["INDICE"] = df["INDICE"].fillna("").str.strip()
+
+    # NULL textual -> vacío
+    uso["INDICE"] = uso["INDICE"].replace("NULL", "")
+
     heap = uso[uso["TYPE_DESC"] == "HEAP"]
     #heap.to_csv("heap.csv",sep=";",index=False)
     heap["USED-PAGES"] = pd.to_numeric(heap["USED-PAGES"], errors="coerce")
@@ -27,7 +36,7 @@ def calcular_loockup(uso):
 
     uso = uso[uso["TABLA"].isin(nombre_tabla)]
     uso = uso[(uso["USER_SEEKS"] > 0) | (uso["USER_SCANS"] > 0) | (uso["TYPE_DESC"] == "HEAP")]
-    uso.to_csv("heap_filtro.csv",sep=";",index=False)
+    #uso.to_csv("heap_filtro.csv",sep=";",index=False)
 
     return uso
 
@@ -35,8 +44,8 @@ def calcular_loockup(uso):
 '''
 def main():
     df_1 = pd.read_csv("2.csv", sep=";",header=None,dtype=str)
-    calcular_loockup(df_1)
+    calcular_lookup(df_1)
 
 if __name__ == "__main__":
     main()
-'''
+    '''
