@@ -42,6 +42,7 @@ def calcular_fragmentacion(fragmentacion, uso):
         "FRAGMENTACION",
         "PAGE_FULLNESS"
         ]
+    
 
     uso = uso[[0,1, 2, 5, 6, 7, 8]]
     uso.columns = [
@@ -54,12 +55,20 @@ def calcular_fragmentacion(fragmentacion, uso):
         "USED-PAGES",
     ]
 
+
     df = fragmentacion.merge(uso, on=["TABLA", "INDICE"], how="left")
+
+    for col in ["USER_SEEKS", "USER_SCANS", "USER_LOOKUPS", "USER_UPDATES","USED-PAGES"]:
+        df[col] = pd.to_numeric(
+        df[col].replace(["NULL", ""], "0"),
+        errors="coerce"
+    ).fillna(0)
+
     #df.to_csv("index-fragmetacion2.csv",sep=";",index=False)
-    #return df
+    return df
 '''
 def main():
-    df_1 = pd.read_csv("1.csv", sep=";",header=None,dtype=str)
+    df_1 = pd.read_csv("3.csv", sep=";",header=None,dtype=str)
     df_2 = pd.read_csv("2.csv", sep=";", header=None, skiprows=1, dtype=str, na_filter=False)
     calcular_fragmentacion(df_1,df_2)
 

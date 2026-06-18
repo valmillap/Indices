@@ -7,6 +7,7 @@ from services.costo_beneficio import calcular_costo
 from services.duplicado import buscar_duplicado
 from services.contenido import buscar_contenido
 from services.heap import calcular_lookup
+from services.fragmentacion import calcular_fragmentacion
 
 
 app = FastAPI()
@@ -35,6 +36,7 @@ async def upload(
 
     df_uso_global = pd.read_csv(uso.file, sep=";",header=None,dtype=str)
     df_frag_global = pd.read_csv(frag.file, sep=";",header=None,dtype=str)
+    frag.file.seek(0)
     uso.file.seek(0)
 
     df_base = generar_df_indice_base(
@@ -106,13 +108,13 @@ async def lookup():
     }
 
 @app.get("/frag-pag")
-async def lookup():
+async def fragmentacion():
     global df_frag_global
     global df_uso_global
-    if df_frag_global or df_uso_global is None:
+    if df_frag_global is None:
         return {"error": "Debe cargar archivos"}
 
-    df_frag = calcular_lookup(df_frag_global,df_uso_global)
+    df_frag = calcular_fragmentacion(df_frag_global,df_uso_global)
     return {
         "rows": len(df_frag),
         "columns": list(df_frag.columns),

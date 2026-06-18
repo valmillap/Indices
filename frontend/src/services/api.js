@@ -12,6 +12,14 @@ export async function uploadFiles(formData) {
 
   return response.json();
 }
+export async function getFrag() {
+
+  const response = await fetch(
+    `${API_URL}/frag-pag`
+  );
+
+  return response.json();
+}
 
 export async function getLookup() {
 

@@ -13,7 +13,7 @@ function UploadFiles({ onUploadSuccess }) {
 
     formData.append("atributos", atributos);
     formData.append("uso", uso);
-    formData.append("fragmentacion-pagefullness", frag);
+    formData.append("frag", frag);
 
     await uploadFiles(formData);
 
