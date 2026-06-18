@@ -43,6 +43,7 @@
 
     align-items: center;
 }
+/*---- DUPLICADO */
 
 .fila-pk {
     background-color: #d5d8db;
@@ -50,4 +51,15 @@
 
 .fila-duplicado {
     background-color: #FCE4D6;
+}
+/*---- LOOKUP*/
+.fila-heap{
+    background-color:#EDEDED;
+}
+
+.fila-no-heap{
+    background-color:#ffffff;
+}
+.celda-lookup{
+    background-color:rgb(255, 208, 208);
 }

@@ -47,7 +47,8 @@ function DataTable({ data, columnDefs, rowClassRules }) {
       <AgGridReact
         rowData={data}
         columnDefs={columnDefs}
-
+        rowClassRules ={rowClassRules}
+        
         rowSelection="multiple"
 
         defaultColDef={{

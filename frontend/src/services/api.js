@@ -13,10 +13,10 @@ export async function uploadFiles(formData) {
   return response.json();
 }
 
-export async function getLoockup() {
+export async function getLookup() {
 
   const response = await fetch(
-    `${API_URL}/heap-loockup`
+    `${API_URL}/heap-lookup`
   );
 
   return response.json();

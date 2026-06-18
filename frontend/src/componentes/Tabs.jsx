@@ -1,9 +1,8 @@
 import { useState } from "react";
-import {getDuplicados,getLoockup} from "../services/api";
+import {getDuplicados,getLookup} from "../services/api";
 import {duplicadosColumnDefs,duplicadosRules} from "../config/duplicados";
-import {loockupColumnDefs,loockupRules} from "../config/loockup";
+import {lookupColumnDefs,lookupRules} from "../config/lookup";
 import DataTable from "./DataTable";
-import { getLoockup } from "../services/api";
 
 function Tabs() {
 
@@ -21,11 +20,11 @@ function Tabs() {
 
   const cargarHeap = async () => {
 
-    const resultado = await getLoockup();
+    const resultado = await getLookup();
 
     setData(resultado.data);
-    setColumnDefs(loockupColumnDefs);
-    setRowClassRules(loockupRules);
+    setColumnDefs(lookupColumnDefs);
+    setRowClassRules(lookupRules);
   };
 
   return (
