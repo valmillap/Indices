@@ -12,6 +12,7 @@ from services.heap import calcular_lookup
 app = FastAPI()
 df_costo_global = None
 df_uso_global = None
+df_frag_global = None
 
 # CORS
 app.add_middleware(
@@ -25,12 +26,15 @@ app.add_middleware(
 @app.post("/upload")
 async def upload(
     atributos: UploadFile = File(...),
-    uso: UploadFile = File(...)
+    uso: UploadFile = File(...),
+    frag: UploadFile = File(...)
 ):
     global df_uso_global
     global df_costo_global
+    global df_frag_global
 
     df_uso_global = pd.read_csv(uso.file, sep=";",header=None,dtype=str)
+    df_frag_global = pd.read_csv(frag.file, sep=";",header=None,dtype=str)
     uso.file.seek(0)
 
     df_base = generar_df_indice_base(
@@ -95,9 +99,22 @@ async def lookup():
         return {"error": "Debe cargar archivos"}
 
     df_heap = calcular_lookup(df_uso_global)
-    #preuba
     return {
         "rows": len(df_heap),
         "columns": list(df_heap.columns),
         "data": df_heap.to_dict("records")
+    }
+
+@app.get("/frag-pag")
+async def lookup():
+    global df_frag_global
+    global df_uso_global
+    if df_frag_global or df_uso_global is None:
+        return {"error": "Debe cargar archivos"}
+
+    df_frag = calcular_lookup(df_frag_global,df_uso_global)
+    return {
+        "rows": len(df_frag),
+        "columns": list(df_frag.columns),
+        "data": df_frag.to_dict("records")
     }

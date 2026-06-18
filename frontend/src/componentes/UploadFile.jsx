@@ -5,6 +5,7 @@ function UploadFiles({ onUploadSuccess }) {
 
   const [atributos, setAtributos] = useState(null);
   const [uso, setUso] = useState(null);
+  const [frag, setFrag] = useState(null);
 
   const handleUpload = async () => {
 
@@ -12,6 +13,7 @@ function UploadFiles({ onUploadSuccess }) {
 
     formData.append("atributos", atributos);
     formData.append("uso", uso);
+    formData.append("fragmentacion-pagefullness", frag);
 
     await uploadFiles(formData);
 
@@ -32,6 +34,13 @@ function UploadFiles({ onUploadSuccess }) {
         type="file"
         onChange={(e) =>
           setUso(e.target.files[0])
+        }
+      />
+
+      <input
+        type="file"
+        onChange={(e) =>
+          setFrag(e.target.files[0])
         }
       />
 
