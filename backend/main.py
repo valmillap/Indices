@@ -95,7 +95,7 @@ async def lookup():
         return {"error": "Debe cargar archivos"}
 
     df_heap = calcular_lookup(df_uso_global)
-
+    #preuba
     return {
         "rows": len(df_heap),
         "columns": list(df_heap.columns),
