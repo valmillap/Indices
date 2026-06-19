@@ -25,22 +25,6 @@ function UploadFiles({ onUploadSuccess }) {
     onUploadSuccess();
   };
 
-/*
-const generarCsv = async () => {
-
-    const response = await fetch(
-        "http://localhost:8000/generar-csv",
-        {
-            method: "POST"
-        }
-    );
-
-    const data = await response.json();
-
-    alert(data.mensaje);
-};*/
-
-
   return (
     <div>
 
@@ -65,7 +49,7 @@ const generarCsv = async () => {
         }
       />
       <button onClick={() => setModalAbierto(true)}>
-        Conectar y Exportar
+        Conectar 
       </button>
 
       {mensaje && <p>{mensaje}</p>}

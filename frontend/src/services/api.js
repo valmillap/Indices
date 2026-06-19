@@ -26,22 +26,7 @@ export async function conectarYExportar(form) {
 
   return await res.json(); // retorna { ok, mensaje }
 }
-/*
-export async function generarCsv(datosConexion) {
 
-  const response = await fetch(
-    `${API_URL}/generar-csv`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(datosConexion)
-    }
-  );
-
-  return response.json();
-}*/
 
 export async function getCosto() {
 

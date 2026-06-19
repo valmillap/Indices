@@ -10,7 +10,7 @@ from services.duplicado import buscar_duplicado
 from services.contenido import buscar_contenido
 from services.heap import calcular_lookup
 from services.fragmentacion import calcular_fragmentacion
-#from services.consulta import exportar_csv, ejecutar_consulta_sql
+from services.consulta import CONSULTA_ATRIBUTOS, CONSULTA_USO_TAMAÑO, CONSULTA_FRAGMENTACION
 
 from pydantic import BaseModel
 
@@ -137,24 +137,24 @@ def conectar_y_exportar(data: Conexion):
     try:
         conn = pyodbc.connect(
             f"DRIVER={{ODBC Driver 17 for SQL Server}};"
-            f"SERVER={data.server};"
-            f"DATABASE={data.database};"
-            f"UID={data.user};"
+            f"SERVER={data.servidor};"
+            f"DATABASE={data.baseDatos};"
+            f"UID={data.usuario};"
             f"PWD={data.password}"
         )
-        sql = """
-        SELECT * FROM NivelEducativo;
-        """
-        df = pd.read_sql(sql, conn)
 
-        df.to_csv(
-            "resultado.csv",
-            sep=";",
-            index=False
-        )
+        consultas = [
+            {"sql": CONSULTA_ATRIBUTOS, "archivo": "1c.csv"},
+            {"sql": CONSULTA_USO_TAMAÑO,   "archivo": "2c.csv"},
+            {"sql": CONSULTA_FRAGMENTACION, "archivo": "3c.csv"},
+        ]
+
+        for item in consultas:
+            df = pd.read_sql(item["sql"], conn)
+            df.to_csv(item["archivo"], sep=";", index=False)
+
         conn.close()
-        
-        return {"ok": True, "mensaje": "Archivo generado correctamente"}
+        return {"ok": True, "mensaje": "3 archivos generados correctamente"}
 
     except Exception as e:
         return {"ok": False, "mensaje": str(e)}
