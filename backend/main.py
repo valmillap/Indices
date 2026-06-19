@@ -12,6 +12,14 @@ from services.heap import calcular_lookup
 from services.fragmentacion import calcular_fragmentacion
 #from services.consulta import exportar_csv, ejecutar_consulta_sql
 
+from pydantic import BaseModel
+
+class Conexion(BaseModel):
+    server: str
+    database: str
+    user: str
+    password: str
+
 
 app = FastAPI()
 df_costo_global = None
@@ -124,33 +132,29 @@ async def fragmentacion():
         "data": df_frag.to_dict("records")
     }
 
+@app.post("/conectar-y-exportar")
+def conectar_y_exportar(data: Conexion):
+    try:
+        conn = pyodbc.connect(
+            f"DRIVER={{ODBC Driver 17 for SQL Server}};"
+            f"SERVER={data.server};"
+            f"DATABASE={data.database};"
+            f"UID={data.user};"
+            f"PWD={data.password}"
+        )
+        sql = """
+        SELECT * FROM NivelEducativo;
+        """
+        df = pd.read_sql(sql, conn)
 
-@app.post("/generar-csv")
-async def generar_csv():
+        df.to_csv(
+            "resultado.csv",
+            sep=";",
+            index=False
+        )
+        conn.close()
+        
+        return {"ok": True, "mensaje": "Archivo generado correctamente"}
 
-    servidor = r'192.9.206.178\RESPALDO'  # o la IP, ej: '127.0.0.1'
-    base_datos = 'Rem_Educacion'
-    usuario = 'sa'  # ej: 
-    password = 'Imo015'
-
-    # Cadena de conexión
-    conexion_str = f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={servidor};DATABASE={base_datos};UID={usuario};PWD={password}'
-    conn = pyodbc.connect(conexion_str)
-
-    sql = """
-    SELECT * from NivelEducativo;
-    """
-
-    df = pd.read_sql(sql, conn)
-
-    df.to_csv(
-        "resultado.csv",
-        sep=";",
-        index=False
-    )
-
-    conn.close()
-
-    return {
-        "rows": len(df)
-    }
+    except Exception as e:
+        return {"ok": False, "mensaje": str(e)}

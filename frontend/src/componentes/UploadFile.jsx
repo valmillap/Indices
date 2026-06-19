@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { uploadFiles } from "../services/api";
+import { uploadFiles, conectarYExportar } from "../services/api";
+import ModalConexion from "./ModalConexion";
+
 
 function UploadFiles({ onUploadSuccess }) {
 
@@ -7,6 +9,9 @@ function UploadFiles({ onUploadSuccess }) {
   const [uso, setUso] = useState(null);
   const [frag, setFrag] = useState(null);
 
+  const [modalAbierto, setModalAbierto] = useState(false);
+  const [mensaje, setMensaje] = useState("");
+  
   const handleUpload = async () => {
 
     const formData = new FormData();
@@ -19,6 +24,8 @@ function UploadFiles({ onUploadSuccess }) {
 
     onUploadSuccess();
   };
+
+/*
 const generarCsv = async () => {
 
     const response = await fetch(
@@ -31,9 +38,8 @@ const generarCsv = async () => {
     const data = await response.json();
 
     alert(data.mensaje);
-};
+};*/
 
-    
 
   return (
     <div>
@@ -58,14 +64,26 @@ const generarCsv = async () => {
           setFrag(e.target.files[0])
         }
       />
-      {/*
-      <button onClick={generarCsv}>
-        Generar CSV
-      </button>*/}
+      <button onClick={() => setModalAbierto(true)}>
+        Conectar y Exportar
+      </button>
+
+      {mensaje && <p>{mensaje}</p>}
+
+      {modalAbierto && (
+        <ModalConexion
+          onCerrar={() => setModalAbierto(false)}
+          onExito={() => {
+            setModalAbierto(false);
+            setMensaje("Archivo exportado correctamente");
+          }}
+        />
+      )}
 
       <button onClick={handleUpload}>
         Analizar
       </button>
+
 
     </div>
   );

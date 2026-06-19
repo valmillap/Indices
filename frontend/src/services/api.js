@@ -12,6 +12,37 @@ export async function uploadFiles(formData) {
 
   return response.json();
 }
+
+export async function conectarYExportar(form) {
+  const res = await fetch("http://localhost:8000/conectar-y-exportar", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(form),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Error HTTP: ${res.status}`);
+  }
+
+  return await res.json(); // retorna { ok, mensaje }
+}
+/*
+export async function generarCsv(datosConexion) {
+
+  const response = await fetch(
+    `${API_URL}/generar-csv`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(datosConexion)
+    }
+  );
+
+  return response.json();
+}*/
+
 export async function getCosto() {
 
   const response = await fetch(
