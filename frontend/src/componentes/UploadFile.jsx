@@ -19,6 +19,21 @@ function UploadFiles({ onUploadSuccess }) {
 
     onUploadSuccess();
   };
+const generarCsv = async () => {
+
+    const response = await fetch(
+        "http://localhost:8000/generar-csv",
+        {
+            method: "POST"
+        }
+    );
+
+    const data = await response.json();
+
+    alert(data.mensaje);
+};
+
+    
 
   return (
     <div>
@@ -43,6 +58,9 @@ function UploadFiles({ onUploadSuccess }) {
           setFrag(e.target.files[0])
         }
       />
+      <button onClick={generarCsv}>
+      Generar CSV
+    </button>
 
       <button onClick={handleUpload}>
         Analizar

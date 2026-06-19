@@ -1,5 +1,6 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 import pandas as pd
 
 from services.indice_analisis import generar_df_indice_base
@@ -8,6 +9,7 @@ from services.duplicado import buscar_duplicado
 from services.contenido import buscar_contenido
 from services.heap import calcular_lookup
 from services.fragmentacion import calcular_fragmentacion
+from services.consulta import exportar_csv, ejecutar_consulta_sql
 
 
 app = FastAPI()
@@ -119,4 +121,35 @@ async def fragmentacion():
         "rows": len(df_frag),
         "columns": list(df_frag.columns),
         "data": df_frag.to_dict("records")
+    }
+
+
+@app.post("/generar-csv")
+async def generar_csv():
+
+    conn = pyodbc.connect(
+        "DRIVER={ODBC Driver 17 for SQL Server};"
+        "SERVER=localhost;"
+        "DATABASE=TuBase;"
+        "Trusted_Connection=yes;"
+    )
+
+    sql = """
+    SELECT *
+    FROM TuTabla
+    """
+
+    df = pd.read_sql(sql, conn)
+
+    df.to_csv(
+        "resultado.csv",
+        sep=";",
+        index=False
+    )
+
+    conn.close()
+
+    return {
+        "mensaje": "resultado.csv generado",
+        "rows": len(df)
     }
