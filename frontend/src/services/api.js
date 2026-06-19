@@ -12,6 +12,24 @@ export async function uploadFiles(formData) {
 
   return response.json();
 }
+export async function getCosto() {
+
+  const response = await fetch(
+    `${API_URL}/costo-beneficio`
+  );
+
+  return response.json();
+}
+
+export async function getContenidos() {
+
+  const response = await fetch(
+    `${API_URL}/contenidos`
+  );
+
+  return response.json();
+}
+
 export async function getFrag() {
 
   const response = await fetch(
@@ -34,24 +52,6 @@ export async function getDuplicados() {
 
   const response = await fetch(
     `${API_URL}/duplicados`
-  );
-
-  return response.json();
-}
-
-export async function getContenidos() {
-
-  const response = await fetch(
-    `${API_URL}/contenidos`
-  );
-
-  return response.json();
-}
-
-export async function getCostoBeneficio() {
-
-  const response = await fetch(
-    `${API_URL}/costo-beneficio`
   );
 
   return response.json();

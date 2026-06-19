@@ -2,6 +2,7 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 import pandas as pd
+import pyodbc
 
 from services.indice_analisis import generar_df_indice_base
 from services.costo_beneficio import calcular_costo
@@ -9,7 +10,7 @@ from services.duplicado import buscar_duplicado
 from services.contenido import buscar_contenido
 from services.heap import calcular_lookup
 from services.fragmentacion import calcular_fragmentacion
-from services.consulta import exportar_csv, ejecutar_consulta_sql
+#from services.consulta import exportar_csv, ejecutar_consulta_sql
 
 
 app = FastAPI()
@@ -127,16 +128,17 @@ async def fragmentacion():
 @app.post("/generar-csv")
 async def generar_csv():
 
-    conn = pyodbc.connect(
-        "DRIVER={ODBC Driver 17 for SQL Server};"
-        "SERVER=localhost;"
-        "DATABASE=TuBase;"
-        "Trusted_Connection=yes;"
-    )
+    servidor = r'192.9.206.178\RESPALDO'  # o la IP, ej: '127.0.0.1'
+    base_datos = 'Rem_Educacion'
+    usuario = 'sa'  # ej: 
+    password = 'Imo015'
+
+    # Cadena de conexión
+    conexion_str = f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={servidor};DATABASE={base_datos};UID={usuario};PWD={password}'
+    conn = pyodbc.connect(conexion_str)
 
     sql = """
-    SELECT *
-    FROM TuTabla
+    SELECT * from NivelEducativo;
     """
 
     df = pd.read_sql(sql, conn)
@@ -150,6 +152,5 @@ async def generar_csv():
     conn.close()
 
     return {
-        "mensaje": "resultado.csv generado",
         "rows": len(df)
     }

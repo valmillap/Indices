@@ -1,8 +1,10 @@
 import { useState } from "react";
-import {getDuplicados, getLookup, getFrag } from "../services/api";
+import {getDuplicados, getLookup, getFrag, getCosto, getContenidos } from "../services/api";
 import {duplicadosColumnDefs, duplicadosRules} from "../config/duplicados";
 import {lookupColumnDefs, lookupRules} from "../config/lookup";
 import { fragColumnDefs, fragRules } from "../config/frag";
+import { costoColumnDefs,costoRules } from "../config/costo-beneficio";
+import { contenidosColumnDefs, contenidosRules } from "../config/contenidos";
 import DataTable from "./DataTable";
 
 function Tabs() {
@@ -35,6 +37,22 @@ function Tabs() {
     setRowClassRules(fragRules);
   };
 
+  const cargarCosto = async () => {
+    const resultado = await getCosto();
+
+    setData(resultado.data);
+    setColumnDefs(costoColumnDefs);
+    setRowClassRules(costoRules);
+  };
+
+  const cargarContenidos = async () => {
+    const resultado = await getContenidos();
+
+    setData(resultado.data);
+    setColumnDefs(contenidosColumnDefs);
+    setRowClassRules(contenidosRules);
+  };
+
   return (
     <div>
 
@@ -50,6 +68,13 @@ function Tabs() {
         Fragmentacion- pagefullness
       </button>
 
+      <button onClick={cargarCosto}>
+        Costo
+      </button>
+
+      <button onClick={cargarContenidos}>
+        Contenidos
+      </button>
 
       <DataTable
         data={data}

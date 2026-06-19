@@ -58,9 +58,10 @@ const generarCsv = async () => {
           setFrag(e.target.files[0])
         }
       />
+      {/*
       <button onClick={generarCsv}>
-      Generar CSV
-    </button>
+        Generar CSV
+      </button>*/}
 
       <button onClick={handleUpload}>
         Analizar

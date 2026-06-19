@@ -9,8 +9,6 @@ export const fragColumnDefs = [
     {field: "USER_SCANS", flex: 1},
     {field: "USER_UPDATES", flex: 1},
     {field: "USED-PAGES", flex: 1},
-
-    
 ];
 
 export const fragRules = {
