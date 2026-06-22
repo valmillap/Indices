@@ -10,7 +10,7 @@ from services.duplicado import buscar_duplicado
 from services.contenido import buscar_contenido
 from services.heap import calcular_lookup
 from services.fragmentacion import calcular_fragmentacion
-from services.consulta2 import CONSULTA_USO_TAMAÑO,CONSULTA_ATRIBUTOS,CONSULTA_FRAGMENTACION
+from services.consulta import CONSULTA_USO_TAMAÑO,CONSULTA_ATRIBUTOS,CONSULTA_FRAGMENTACION
 
 from pydantic import BaseModel
 
@@ -142,21 +142,22 @@ def conectar_y_exportar(data: Conexion):
             f"UID={data.user};"
             f"PWD={data.password}"
         )
-        sql = """
-        SELECT * FROM NivelEducativo;
-        """
+
         consultas = [
             {"sql": CONSULTA_ATRIBUTOS, "archivo": "12c.csv"},
             {"sql": CONSULTA_USO_TAMAÑO,   "archivo": "22c.csv"},
-            {"sql": CONSULTA_FRAGMENTACION, "archivo": "32c.csv"},
+            #{"sql": CONSULTA_FRAGMENTACION, "archivo": "32c.csv"},
         ]
-        '''
+        
         for item in consultas:
             df = pd.read_sql(item["sql"], conn)
-            df.to_csv(item["archivo"], sep=";", index=False)
+            df.to_csv(f"files/{item['archivo']}", sep=";", index=False)
+            df.to_csv(f"files/{item["archivo"]}", sep=";", index=False)
         
         return {"ok": True, "mensaje": "Archivo generado correctamente"}
-        '''
+        
 
     except Exception as e:
         return {"ok": False, "mensaje": str(e)}
+    
+    fr"C:\reportes\{item['archivo']}",
