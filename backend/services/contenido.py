@@ -32,9 +32,41 @@ def buscar_contenido(df):
                     continue
 
                 if es_prefijo(atr1, atr2):
+                    contenedor = registros[i].copy()
+                    contenido = registros[j].copy()
 
-                    indices_contenidos.append(registros[i])  # contenedor
-                    indices_contenidos.append(registros[j])  # contenido
+                    largo_contenedor = len([x.strip() for x in atr1.split(",")])
+                    largo_contenido = len([x.strip() for x in atr2.split(",")])
+
+                    diferencia = largo_contenedor - largo_contenido
+
+                    contenido["DIFERENCIA_ATRIBUTOS"] = diferencia
+
+                    if (
+                        diferencia < 3
+                        and str(contenido["IS_PRIMARY_KEY"]) != "1"
+                        and str(contenido["IS_UNIQUE"]) != "1"
+                    ):
+
+                        contenido["EVALUACION_CONTENIDO"] = "CANDIDATO ELIMINAR"
+
+                    elif diferencia >= 3:
+
+                        contenido["EVALUACION_CONTENIDO"] = (
+                            "REVISAR (CONTENEDOR CON MUCHAS COLUMNAS)"
+                        )
+
+                    else:
+
+                        contenido["EVALUACION_CONTENIDO"] = (
+                            "CONSERVAR (PK/UNIQUE)"
+                        )
+
+                    contenedor["DIFERENCIA_ATRIBUTOS"] = ""
+                    contenedor["EVALUACION_CONTENIDO"] = "CONTENEDOR"
+
+                    indices_contenidos.append(contenedor)
+                    indices_contenidos.append(contenido)
 
     indices_contenidos = pd.DataFrame(indices_contenidos)
     indices_contenidos = indices_contenidos.sort_values(["TABLA", "ATRIBUTOS", "INDICE"])
