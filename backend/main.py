@@ -148,9 +148,9 @@ def conectar_y_exportar(data: Conexion):
         )
 
         consultas = [
-            {"sql": CONSULTA_ATRIBUTOS, "archivo": "12c.csv"},
-            {"sql": CONSULTA_USO_TAMAÑO,   "archivo": "22c.csv"},
-            #{"sql": CONSULTA_FRAGMENTACION, "archivo": "32c.csv"},
+            {"sql": CONSULTA_ATRIBUTOS, "archivo": "atributos.csv"},
+            {"sql": CONSULTA_USO_TAMAÑO,   "archivo": "uso.csv"},
+            {"sql": CONSULTA_FRAGMENTACION, "archivo": "frag.csv"},
         ]
         
         for item in consultas:
@@ -158,9 +158,8 @@ def conectar_y_exportar(data: Conexion):
             df.to_csv(f"files/{item['archivo']}", sep=";", index=False)
             df.to_csv(f"files/{item["archivo"]}", sep=";", index=False)
         
+        cargar()
         return {"ok": True, "mensaje": "Archivo generado correctamente"}
-        
-
     except Exception as e:
         return {"ok": False, "mensaje": str(e)}
     

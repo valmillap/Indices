@@ -53,7 +53,7 @@ def buscar_contenido(df):
                     elif diferencia >= 3:
 
                         contenido["EVALUACION_CONTENIDO"] = (
-                            "REVISAR (CONTENEDOR CON MUCHAS COLUMNAS)"
+                            "REVISAR"
                         )
 
                     else:
@@ -105,7 +105,7 @@ def buscar_contenido(df):
             False
         ]
     )
-    #indices_contenidos.to_csv("indices_contenidos.csv",sep=";",index=False)
+    indices_contenidos.to_csv("indices_contenidos.csv",sep=";",index=False)
 
     return indices_contenidos
 

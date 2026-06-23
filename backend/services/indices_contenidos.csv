@@ -1,187 +1,187 @@
-TABLA;INDICE;TYPE_DESC;IS_PRIMARY_KEY;IS_UNIQUE;USER_SEEKS;USER_SCANS;USER_LOOKUPS;USER_UPDATES;LAST_USER_SEEK;LAST_USER_SCAN;TAMANO-TOTAL;USED-PAGES;DATA-PAGES;ATRIBUTOS;BUSQUEDAS;EVALUACION_INDICE;LARGO_ATRIBUTOS;PESO_GRUPO
-HistoricoMovLiquidacion;aaaaaHistoricoMovLiquidacio_PK;NONCLUSTERED;1;1;5346.0;0.0;0.0;5346.0;2026-06-04 09:11:44.660;;68.632812;68.539062;68.265625;Id_Establecimiento,Id_Funcionario,Tipo_HaberDcto,Id_HaberDcto,Mes,Ano;5346.0;Beneficio Busqueda;6;68.539062
-HistoricoMovLiquidacion;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;5346.0;;;33.890625;33.835937;33.617187;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;68.539062
-HistoricoFicha_EducacionHrs;aaaaaHistoricoFicha_Educaci_PK;NONCLUSTERED;1;1;9248.0;0.0;0.0;9247.0;2026-06-04 09:11:45.383;;48.070312;47.992187;47.828125;Id_Establecimiento,Id_Funcionario,Tipo_Horas,Mes,Ano;9248.0;Beneficio Busqueda;5;47.992187
-HistoricoFicha_EducacionHrs;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;9247.0;;;30.445312;30.398437;30.218750;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;47.992187
-HistoricoFichaEducacion;aaaaaHistoricoFichaEducacio_PK;NONCLUSTERED;1;1;6859.0;0.0;0.0;6858.0;2026-06-04 09:11:45.383;;32.757812;32.734375;32.625000;Id_Establecimiento,Id_Funcionario,Mes,Ano;6859.0;Beneficio Busqueda;4;32.734375
-HistoricoFichaEducacion;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;6858.0;;;22.445312;22.398437;22.265625;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;32.734375
-HistoricoFichaFuncionario;aaaaaHistoricoFichaFunciona_PK;NONCLUSTERED;1;1;6858.0;0.0;0.0;6858.0;2026-06-04 09:09:22.060;;32.757812;32.734375;32.625000;Id_Establecimiento,Id_Funcionario,Mes,Ano;6858.0;Beneficio Busqueda;4;32.734375
-HistoricoFichaFuncionario;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;6858.0;;;22.640625;22.609375;22.468750;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;32.734375
-Previred;aaPrevired_PK;NONCLUSTERED;1;1;1.0;0.0;0.0;0.0;2026-06-04 09:08:39.980;;23.828125;23.796875;23.679687;K1_Id_Remuneracion,K1_Id_ProcesoPS,K1_Id_Establecimiento,K1_Id_Funcionario,K1_NroContrato,K1_Correlativo,K1_Mes,K1_Ano;1.0;Beneficio Busqueda;8;23.796875
-Previred;K1_Id_Remuneracion;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;10.570312;10.546875;10.500000;K1_Id_Remuneracion;0.0;NO USO;1;23.796875
-HistoricoCuentaBanco;aaaaaHistoricoCuentaBanco_PK;NONCLUSTERED;1;1;4427.0;0.0;0.0;4427.0;2026-06-04 09:09:22.047;;23.695312;23.632812;23.546875;Id_Establecimiento,Id_Funcionario,Mes,Ano;4427.0;Beneficio Busqueda;4;23.632812
-HistoricoCuentaBanco;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;4427.0;;;16.453125;16.4375;16.328125;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;23.632812
-HistoricoFichaLeyesPrevisional;aaHistoricoFichaLeyesPrev_PK;NONCLUSTERED;1;1;4258.0;0.0;0.0;4258.0;2026-06-04 09:10:59.767;;17.882812;17.828125;17.757812;Id_Establecimiento,Id_Funcionario,Mes,Ano;4258.0;Beneficio Busqueda;4;17.828125
-HistoricoFichaLeyesPrevisional;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;4258.0;;;12.828125;12.820312;12.726562;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;17.828125
-HistoricoLiquidacionHrs;aaaaaHistoricoLiquidacionHr_PK;NONCLUSTERED;1;1;2047.0;1.0;0.0;2047.0;2026-06-04 09:11:17.923;2026-06-04 09:11:45.383;17.507812;17.484375;17.414062;Id_Establecimiento,Id_Funcionario,Tipo_Horas,Mes,Ano;2047.0;Beneficio Busqueda;5;17.484375
-HistoricoLiquidacionHrs;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;2047.0;;;11.007812;10.960937;10.890625;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;17.484375
-HistoricoLiquidacion;aaaaaHistoricoLiquidacion_PK;NONCLUSTERED;1;1;1541.0;0.0;0.0;1541.0;2026-06-04 09:11:07.963;;12.632812;12.5625;12.507812;Id_Establecimiento,Id_Funcionario,Mes,Ano;1541.0;Beneficio Busqueda;4;12.5625
-HistoricoLiquidacion;Id_Estable;NONCLUSTERED;0;0;0.0;0.0;0.0;1541.0;;;8.570312;8.53125;8.476562;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;12.5625
-Historial_Contratos;aaaaaHistorial_Contratos_PK;NONCLUSTERED;1;1;2100.0;0.0;0.0;1641.0;2026-06-04 09:13:41.833;;8.132812;8.09375;8.054687;Id_Funcionario,Id_Establecimiento,Id_Correlativo;2100.0;Beneficio Busqueda;3;8.09375
-Historial_Contratos;Id_funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;1641.0;;;4.820312;4.78125;4.750000;Id_Funcionario;0.0;SIN BUSQUEDAS;1;8.09375
-Totales_PlanillaRemuneraciones;aaTotales_PlanillaRemuneraciones_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;2.195312;2.132812;2.101562;Id_Establecimiento,Id_Funcionario,Id_Remuneracion,Id_ProcesoPs,Tipo_Hd,Id_Hd,DescNoEfec;0.0;NO USO;7;2.132812
-Totales_PlanillaRemuneraciones;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;1.695312;1.59375;1.578125;Id_Establecimiento;0.0;NO USO;1;2.132812
-PermisosLegales;aaaaaPermisosLegales_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;1.882812;1.773437;1.757812;Id_Establecimiento,Id_Funcionario,Periodo;0.0;NO USO;3;1.773437
-PermisosLegales;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;1.570312;1.492187;1.476562;Id_Establecimiento;0.0;NO USO;1;1.773437
-PermisosAdministrativos;aaaaaPermisosAdministrativo_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.515625;0.40625;0.382812;Id_Funcionario,Id_Establecimiento,Periodo,Correlativo;0.0;NO USO;4;0.40625
-PermisosAdministrativos;Id_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.390625;0.25;0.226562;Id_Funcionario;0.0;NO USO;1;0.40625
-MovimientoHaberDctos;aaaaaMovimientoHaberDctos_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;1.0;;;0.445312;0.359375;0.343750;Id_Establecimiento,Id_Funcionario,Tipo_Hd,Id_Hd;0.0;SIN BUSQUEDAS;4;0.398437
-MovimientoHaberDctos;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;1.0;;;0.507812;0.398437;0.382812;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;0.398437
-Antecedentes;aaaaaAntecedentes_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.382812;0.257812;0.242187;Id_Establecimiento,Id_Funcionario,Id_Antecedentes;0.0;NO USO;3;0.257812
-Antecedentes;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.203125;0.187500;Id_Establecimiento;0.0;NO USO;1;0.257812
-Ficha_EducacionHrs;aaaaaFicha_EducacionHrs_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.382812;0.242187;0.226562;Id_Establecimiento,Id_Funcionario,Tipo_Horas;0.0;NO USO;3;0.242187
-Ficha_EducacionHrs;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.210937;0.195312;Id_Establecimiento;0.0;NO USO;1;0.242187
-HistoricoCambioEstablecimiento;aaHistoricoCambioEstablecimiento_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.335937;0.195312;0.265625;Id_Funcionario,Mes,Ano;0.0;NO USO;3;0.195312
-HistoricoCambioEstablecimiento;Id_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.273437;0.15625;0.195312;Id_Funcionario;0.0;NO USO;1;0.195312
-BaseCalculo_PostNatalParental;aaaBaseCalculo_PostNatalParental_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.257812;0.1875;0.171875;Id_CorrelativoPermiso,Rut;0.0;NO USO;2;0.1875
-BaseCalculo_PostNatalParental;Id_CorrelativoPermiso;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.078125;0.03125;0.015625;Id_CorrelativoPermiso;0.0;NO USO;1;0.1875
-FichaEducacion;FichaEducacion_Indice;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.1875;0.171875;Id_Establecimiento,Id_Funcionario,Tipo_Funcionario;0.0;NO USO;3;0.1875
-FichaEducacion;FichaEducacion_Indice;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.1875;0.171875;Id_Establecimiento,Id_Funcionario,Tipo_Funcionario;0.0;NO USO;3;0.1875
-FichaEducacion;aaaaaFichaEducacion_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.320312;0.179687;0.164062;Id_Establecimiento,Id_Funcionario;0.0;NO USO;2;0.1875
-FichaEducacion;aaaaaFichaEducacion_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.320312;0.179687;0.164062;Id_Establecimiento,Id_Funcionario;0.0;NO USO;2;0.1875
-FichaEducacion;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.164062;0.148437;Id_Establecimiento;0.0;NO USO;1;0.1875
-FichaEducacion;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.164062;0.148437;Id_Establecimiento;0.0;NO USO;1;0.1875
-FichaFuncionario;aaaaaFichaFuncionario_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.320312;0.171875;0.156250;Id_Establecimiento,Id_Funcionario;0.0;NO USO;2;0.171875
-FichaFuncionario;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.15625;0.140625;Id_Establecimiento;0.0;NO USO;1;0.171875
-FichaPersonal;aaaaaFichaPersonal_PK;NONCLUSTERED;1;1;0.0;1.0;0.0;0.0;;2026-06-04 09:07:45.233;0.320312;0.171875;0.156250;Id_Establecimiento,Id_Funcionario;0.0;NO USO;2;0.171875
-FichaPersonal;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.15625;0.140625;Id_Establecimiento;0.0;NO USO;1;0.171875
-HistoricoCargasRetroactivas;aaHistoricoCargasRetroactivas_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;10.0;;;0.265625;0.171875;0.218750;Id_Establecimiento,Id_Funcionario,Mes,Ano,TipoCarga_Retro,Id_Carga_Retro;0.0;SIN BUSQUEDAS;6;0.171875
-HistoricoCargasRetroactivas;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;10.0;;;0.226562;0.109375;0.125000;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;0.171875
-Feriados;aaaaaFeriados_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.265625;0.164062;0.140625;Id_Funcionario,Id_Establecimiento,Id_Periodo,Id_Correlativo;0.0;NO USO;4;0.164062
-Feriados;Id_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.179687;0.078125;0.062500;Id_Funcionario;0.0;NO USO;1;0.164062
-HistoricoConstantes;aaHistoricoConstantes_PK;NONCLUSTERED;1;1;46.0;0.0;0.0;46.0;2026-06-04 09:13:42.247;;0.234375;0.132812;0.140625;Ano,Mes,Id_Constante;46.0;Beneficio Busqueda;3;0.15625
-HistoricoConstantes;Rut;NONCLUSTERED;0;0;0.0;0.0;0.0;46.0;;;0.296875;0.15625;0.164062;Ano;0.0;SIN BUSQUEDAS;1;0.15625
-PermisosPostNatalParental;aaaPermisosPostNatalParental_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.265625;0.15625;0.132812;Id_Correlativo,Rut;0.0;NO USO;2;0.15625
-PermisosPostNatalParental;Id_Correlativo;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.078125;0.03125;0.015625;Id_Correlativo;0.0;NO USO;1;0.15625
-CargasRetroactivas;aaaaaCargasRetroactivas_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.210937;0.132812;0.187500;Id_Establecimiento,Id_Funcionario,Id_Carga_Retro;0.0;NO USO;3;0.132812
-CargasRetroactivas;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.210937;0.109375;0.140625;Id_Establecimiento;0.0;NO USO;1;0.132812
-FichaLeyesPrevisional;aaFichaLeyesPrev_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.257812;0.125;0.109375;Id_Establecimiento,Id_Funcionario;0.0;NO USO;2;0.125
-FichaLeyesPrevisional;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.257812;0.117187;0.101562;Id_Establecimiento;0.0;NO USO;1;0.125
-HistoricoAfp;aaHistoricoAfp_PK;NONCLUSTERED;1;1;19.0;0.0;0.0;19.0;2026-06-04 09:11:45.160;;0.187500;0.09375;0.085937;Id_Afp,Mes,Ano;19.0;Beneficio Busqueda;3;0.09375
-HistoricoAfp;Id_Afp;NONCLUSTERED;0;0;0.0;0.0;0.0;19.0;;;0.125000;0.070312;0.062500;Id_Afp;0.0;SIN BUSQUEDAS;1;0.09375
-HistoricoMovDctos;aaHistoricoMovDctos_PK;NONCLUSTERED;1;1;8.0;0.0;0.0;8.0;2026-06-04 09:11:44.783;;0.148437;0.09375;0.125000;Id_Establecimiento,Id_Funcionario,Mes,Ano,Tipo_Hd,Id_Hd;8.0;Beneficio Busqueda;6;0.09375
-HistoricoMovDctos;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;8.0;;;0.164062;0.054687;0.070312;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;0.09375
-CuentaBanco;aaaaaCuentaBanco_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.148437;0.078125;0.148437;Id_Establecimiento,Id_Funcionario;0.0;NO USO;2;0.078125
-CuentaBanco;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.140625;0.078125;0.132812;Id_Establecimiento;0.0;NO USO;1;0.078125
-RecaudacionPostNatalParental;aaaRecaudacionPostNatalParental_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.125000;0.078125;0.062500;Id_Correlativo,Id_CorrelativoPermiso,Rut;0.0;NO USO;3;0.078125
-RecaudacionPostNatalParental;Id_Correlativo;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.093750;0.039062;0.023437;Id_Correlativo;0.0;NO USO;1;0.078125
-GrupoFamiliar;aaaaaGrupoFamiliar_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.140625;0.054687;0.132812;Id_Establecimiento,Id_Funcionario,Id_Carga_Carga;0.0;NO USO;3;0.070312
-GrupoFamiliar;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.140625;0.070312;0.117187;Id_Establecimiento;0.0;NO USO;1;0.070312
-HistoricoIsapres;aaHistoricoIsapres_PK;NONCLUSTERED;1;1;14.0;0.0;0.0;14.0;2026-06-04 09:11:45.323;;0.171875;0.0625;0.062500;Id_Isapre,Mes,Ano;14.0;Beneficio Busqueda;3;0.070312
-HistoricoIsapres;Id_Isapre;NONCLUSTERED;0;0;0.0;0.0;0.0;14.0;;;0.179687;0.070312;0.046875;Id_Isapre;0.0;SIN BUSQUEDAS;1;0.070312
-PlandeCuenta;aaaaaPlandeCuenta_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.148437;0.054687;0.085937;Ano_Proceso,Codigo_Area,CodigoCuenta;0.0;NO USO;3;0.054687
-PlandeCuenta;Ano_Proceso;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.039062;0.039062;0.023437;Ano_Proceso;0.0;NO USO;1;0.054687
-Dias_Feriados;aaaaaDias_Feriados_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.031250;0.03125;0.015625;Dia,Mes,Ano;0.0;NO USO;3;0.03125
-Dias_Feriados;Dia;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.078125;0.03125;0.015625;Dia;0.0;NO USO;1;0.03125
-TablaControl;aaaTablaControl_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.195312;0.03125;0.015625;Control_Ano,Control_Mes,Control_TipoProceso,Control_TipoRemun,Control_Id_Haber,SueldoDesde,SueldoHasta;0.0;NO USO;7;0.03125
-TablaControl;Control_Ano;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Control_Ano;0.0;NO USO;1;0.03125
-PermisosPost_Natal;aaaPermisosPost_Natal_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.023437;0.023437;0.007812;Id_Establecimiento,Id_Funcionario,Tipo_Permiso,Fecha_Evento,Correlativo;0.0;NO USO;5;0.023437
-PermisosPost_Natal;ID_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento;0.0;NO USO;1;0.023437
-PermisosPost_Natal_Otorgados;aaaPermisosPost_Natal_Otorgados_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.023437;0.023437;0.007812;Id_Establecimiento,Id_Funcionario,Tipo_Permiso,Fecha_Evento;0.0;NO USO;4;0.023437
-PermisosPost_Natal_Otorgados;ID_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento;0.0;NO USO;1;0.023437
-AguinaldoTemporal;aaaaaAguinaldoTemporal_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.054687;Id_Establecimiento,Id_Funcionario;0.0;NO USO;2;0.015625
-AguinaldoTemporal;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.031250;Id_Establecimiento;0.0;NO USO;1;0.015625
-AnexoPlandeCuenta;aaAnexoPlandeCuenta_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.015625;Ano_Proceso,Mes_Proceso,Codigo_Area,CodigoCuenta;0.0;NO USO;4;0.015625
-AnexoPlandeCuenta;Ano_Proceso;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Ano_Proceso;0.0;NO USO;1;0.015625
-Anotaciones;aaaaaAnotaciones_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Funcionario,Id_Establecimiento,Id_TipoAnotacion,Id_Merito_Demerito;0.0;NO USO;4;0.015625
-Anotaciones;Id_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Funcionario;0.0;NO USO;1;0.015625
-Bienios_Cumplidos;aaaaaBienios_Cumplidos_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Funcionario,Mes_Proceso,Ano_Proceso;0.0;NO USO;3;0.015625
-Bienios_Cumplidos;Id_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Funcionario;0.0;NO USO;1;0.015625
-CCAF_LosAndes;aaCCAF_LosAndes_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;K1_Id_Establecimiento,K1_Id_Funcionario,K1_Ano,K1_Mes,Correlativo;0.0;NO USO;5;0.015625
-CCAF_LosAndes;K1_Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;K1_Id_Establecimiento;0.0;NO USO;1;0.015625
-CCAF_LosAndes_DepositosConvenidos;aaCCAF_LosAndes_DepositosConvenidos_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;K1_Id_Establecimiento,K1_Id_Funcionario,K1_Ano,K1_Mes,Correlativo;0.0;NO USO;5;0.015625
-CCAF_LosAndes_DepositosConvenidos;K1_Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;K1_Id_Establecimiento;0.0;NO USO;1;0.015625
-Capacitacion;aaaaaCapacitacion_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.070312;0.015625;0.007812;Rut_Funcionario,Id_Capacitacion;0.0;NO USO;2;0.015625
-Capacitacion;Rut_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.070312;0.015625;0.007812;Rut_Funcionario;0.0;NO USO;1;0.015625
-CometidoFuncionario;aaaaaCometidoFuncionario_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento,Id_Funcionario,Id_Cometido;0.0;NO USO;3;0.015625
-CometidoFuncionario;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento;0.0;NO USO;1;0.015625
-HistoricoCheques;aaaaaHistoricoCheques_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;ID_Numero,Mes,Ano;0.0;NO USO;3;0.015625
-HistoricoCheques;ID_Numero;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;ID_Numero;0.0;NO USO;1;0.015625
-HistoricoMutual;aaaHistoricoMutual_PK;NONCLUSTERED;1;1;1.0;0.0;0.0;1.0;2026-06-04 09:11:44.857;;0.015625;0.015625;0.007812;Mes,Ano;1.0;Beneficio Busqueda;2;0.015625
-HistoricoMutual;Mes;NONCLUSTERED;0;0;0.0;0.0;0.0;1.0;;;0.015625;0.015625;0.007812;Mes;0.0;SIN BUSQUEDAS;1;0.015625
-HistoricoNivelEducativo;aaaaaHistoricoNivelEducativ_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Nivel,Ano;0.0;NO USO;2;0.015625
-HistoricoNivelEducativo;Id_Nivel;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Nivel;0.0;NO USO;1;0.015625
-Indices;aaaaaIndices_PK;NONCLUSTERED;1;1;2.0;0.0;0.0;0.0;2026-06-04 10:53:38.627;;0.015625;0.015625;0.007812;Año,Mes;2.0;Beneficio Busqueda;2;0.015625
-Indices;A¤o;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Año;0.0;NO USO;1;0.015625
-InstitucionesAVP;aaInstitucionesAVP_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Institucion,Tipo_Institucion;0.0;NO USO;2;0.015625
-InstitucionesAVP;Id_institucion;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Institucion;0.0;NO USO;1;0.015625
-Liquidacion;aaaaaLiquidacion_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;2.0;;;0.070312;0.015625;0.007812;Id_Establecimiento,Id_Funcionario;0.0;SIN BUSQUEDAS;2;0.015625
-Liquidacion;Id_Estable;NONCLUSTERED;0;0;1.0;0.0;0.0;2.0;2026-06-04 10:00:09.270;;0.070312;0.015625;0.007812;Id_Establecimiento;1.0;Costo de mantenimiento;1;0.015625
-LiquidacionHrs;aaaaaLiquidacionHrs_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812;Id_Establecimiento,Id_Funcionario,Tipo_Horas;0.0;SIN BUSQUEDAS;3;0.015625
-LiquidacionHrs;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;0.015625
-MovimientoLiquidacion;aaaaaMovimientoLiquidacion_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812;Id_Establecimiento,Id_Funcionario,Tipo_HaberDcto,Id_HaberDcto;0.0;SIN BUSQUEDAS;4;0.015625
-MovimientoLiquidacion;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;0.015625
-Movimiento_Finiquito;aaMovimiento_Finiquito_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento,Id_Funcionario,Correlativo,Tipo_Movimiento,Id_Movimiento;0.0;NO USO;5;0.015625
-Movimiento_Finiquito;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento;0.0;NO USO;1;0.015625
-PermisosAdminSinRemuneracion;aaaaaPermisosAdminSinRemune_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento,Id_Funcionario,Periodo,Correlativo;0.0;NO USO;4;0.015625
-PermisosAdminSinRemuneracion;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento;0.0;NO USO;1;0.015625
-PostulantesPorRamos_DAEM;aaPostulantesPorRamos_DAEM_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;RutPostulante,Id_asignatura;0.0;NO USO;2;0.015625
-PostulantesPorRamos_DAEM;RutPostulante;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;RutPostulante;0.0;NO USO;1;0.015625
-RetencionJudicial;aaaaaRetencionJudicial_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento,Id_Funcionario,Rut_Beneficiario;0.0;NO USO;3;0.015625
-RetencionJudicial;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento;0.0;NO USO;1;0.015625
-Tipo_Finiquito;aaTipo_Finiquito_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Codigo_Ley,Codigo_Causal;0.0;NO USO;2;0.015625
-Tipo_Finiquito;Codigo_Ley;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Codigo_Ley;0.0;NO USO;1;0.015625
-TramosAsigFamiliar;aaaaaTramosAsigFamiliar_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Periodo,Tramo;0.0;NO USO;2;0.015625
-TramosAsigFamiliar;Periodo;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Periodo;0.0;NO USO;1;0.015625
-AdicionalDosSalud;aaaaaAdicionalDosSalud_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Dos_FechaContratoIsapre;0.0;NO USO;3;0.0
-AdicionalDosSalud;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-AnexoPlanCuentaPrivado;aaaaaAnexoPlanCuentaPrivado_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Ano_Proceso,Mes_Proceso,Id_Establecimiento,Codigo_Cuenta;0.0;NO USO;4;0.0
-AnexoPlanCuentaPrivado;AnoProceso;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Ano_Proceso;0.0;NO USO;1;0.0
-Anexo_Finiquito;aaAnexo_Finiquito_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Correlativo,Correlativo_Anexo;0.0;NO USO;4;0.0
-Anexo_Finiquito;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-Anexo_PlanCta_Privado;aaAnexo_PlanCta_Privado_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Codigo_Cuenta,Id_HaberDcto,Tipo_Cuenta,Id_Proyecto;0.0;NO USO;5;0.0
-Anexo_PlanCta_Privado;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-AperturaDeCuentas;aaAperturaDeCuentas_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario;0.0;NO USO;2;0.0
-AperturaDeCuentas;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-Asistencia;aaaaaAsistencia_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Id_Asistencia;0.0;NO USO;3;0.0
-Asistencia;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-CCAF_LosAndes_AfiliadoVoluntario;aaCCAF_LosAndes_AfiliadoVoluntario_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;K1_Id_Establecimiento,K1_Id_Funcionario,K1_Ano,K1_Mes;0.0;NO USO;4;0.0
-CCAF_LosAndes_AfiliadoVoluntario;K1_Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;K1_Id_Establecimiento;0.0;NO USO;1;0.0
-CCAF_LosAndes_SIL;aaCCAF_LosAndes_SIL_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;K1_Id_Establecimiento,K1_Id_Funcionario,K1_Ano,K1_Mes;0.0;NO USO;4;0.0
-CCAF_LosAndes_SIL;K1_Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;K1_Id_Establecimiento;0.0;NO USO;1;0.0
-Calificacion;aaaaaCalificacion_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Periodo;0.0;NO USO;3;0.0
-Calificacion;Id_Establecimeinto;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-CarreraDocente;aaaCarreraDocente_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut,Mes,Ano,Correlativo;0.0;NO USO;4;0.0
-CarreraDocente;Rut;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut;0.0;NO USO;1;0.0
-DatosPersonales_Finiquito;aaDatosPersonales_Finiquito_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Correlativo,Fecha_Termino;0.0;NO USO;4;0.0
-DatosPersonales_Finiquito;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-DescuentoBienestar;aaaDescuentoBienestar_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Id_Bienestar;0.0;NO USO;3;0.0
-DescuentoBienestar;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-DescuentoSindicato;aaaDescuentoSindicato_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Id_Sindicato;0.0;NO USO;3;0.0
-DescuentoSindicato;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-DescuentosNoEfectuados;aaaaaDescuentosNoEfectuados_PK;NONCLUSTERED;1;1;0.0;1.0;0.0;1.0;;2026-06-04 09:11:44.670;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Id_Descuento;0.0;SIN BUSQUEDAS;3;0.0
-DescuentosNoEfectuados;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;1.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;SIN BUSQUEDAS;1;0.0
-FichaAfiliadoVoluntario;aaFichaAfiliadoVoluntario_PK;CLUSTERED;1;1;0.0;3.0;0.0;2.0;;2026-06-04 10:00:08.993;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Rut_Afiliado;0.0;SIN BUSQUEDAS;3;0.0
-FichaAfiliadoVoluntario;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-FichaDetalle_AEduca;aaFichaDetalle_AEduca_PK;NONCLUSTERED;1;1;0.0;1.0;0.0;0.0;;2026-06-04 09:10:10.897;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Tipo_Horas;0.0;NO USO;3;0.0
-FichaDetalle_AEduca;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-HistorialUnidadE;aaaaaHistorialUnidadE_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut_Funcionario,Id_Historial;0.0;NO USO;2;0.0
-HistorialUnidadE;Id_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut_Funcionario;0.0;NO USO;1;0.0
-Historial_Egreso;aaaaaHistorial_Egreso_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut_Funcionario,Id_Establecimiento,Id_HistE;0.0;NO USO;3;0.0
-Historial_Egreso;Rut_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut_Funcionario;0.0;NO USO;1;0.0
-HistoricoDctosNoEfectuados;aaaaaHistoricoDctosNoEfectu_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Id_Descuento,Mes,Ano;0.0;NO USO;5;0.0
-HistoricoDctosNoEfectuados;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-HistoricoFichaAfiliadoVoluntario;aaHistoFichaAfiliadoVoluntario_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Mes,Ano,Rut_Afiliado;0.0;NO USO;5;0.0
-HistoricoFichaAfiliadoVoluntario;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-HistoricoFichaDetalle_AEduca;aaHistoricoFichaDetalle_AEduca_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Tipo_Horas,Mes,Ano;0.0;NO USO;5;0.0
-HistoricoFichaDetalle_AEduca;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-HistoricoGrupoFamiliar;aaHistoricoGrupoFamiliar_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Ano,Mes,Id_Establecimiento,Id_Funcionario,Id_Carga_Carga;0.0;NO USO;5;0.0
-HistoricoGrupoFamiliar;Ano;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Ano;0.0;NO USO;1;0.0
-HistoricoMovPlanillaSuple;aaaaaHistoricoMovPlanillaSu_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Id_Hd,Mes,Ano;0.0;NO USO;5;0.0
-HistoricoMovPlanillaSuple;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-HistoricoPlanillaSuplementaria;aaaaaHistoricoPlanillaSuple_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Mes,Ano;0.0;NO USO;4;0.0
-HistoricoPlanillaSuplementaria;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-Mentoria;aaaMentoria_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut_Mentor,Rut_Alumno;0.0;NO USO;2;0.0
-Mentoria;Rut_Mentor;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut_Mentor;0.0;NO USO;1;0.0
-MovimientoAnexo_Finiquito;aaMovimientoAnexo_Finiquito_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Correlativo,Correlativo_Anexo,Tipo_MovimientoAnexo,Id_MovimientoAnexo;0.0;NO USO;6;0.0
-MovimientoAnexo_Finiquito;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-PlantaMaestra;aaaaaPlantaMaestra_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Tipo_Funcionario,Id_Escalafon;0.0;NO USO;3;0.0
-PlantaMaestra;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-ResultadoMigracionNet;PK_ResultadoMigracionNet;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;NombreTablaOriginal,NombreTablaDestino;0.0;NO USO;2;0.0
-ResultadoMigracionNet;NombreTablaOriginal;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;NombreTablaOriginal;0.0;NO USO;1;0.0
-Retroactivo;aaRetroactivo_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Tipo_Horas;0.0;NO USO;3;0.0
-Retroactivo;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
-Tbl_Paridad;PK_Tbl_Paridad;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Tipo,Id_Vb6;0.0;NO USO;2;0.0
-Tbl_Paridad;Tipo;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Tipo;0.0;NO USO;1;0.0
-Totales_Finiquito;aaTotales_Finiquito_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Correlativo;0.0;NO USO;3;0.0
-Totales_Finiquito;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;0.0
+TABLA;INDICE;TYPE_DESC;IS_PRIMARY_KEY;IS_UNIQUE;USER_SEEKS;USER_SCANS;USER_LOOKUPS;USER_UPDATES;LAST_USER_SEEK;LAST_USER_SCAN;TAMANO-TOTAL;USED-PAGES;DATA-PAGES;ATRIBUTOS;BUSQUEDAS;EVALUACION_INDICE;DIFERENCIA_ATRIBUTOS;EVALUACION_CONTENIDO;LARGO_ATRIBUTOS;PESO_GRUPO
+HistoricoMovLiquidacion;aaaaaHistoricoMovLiquidacio_PK;NONCLUSTERED;1;1;5346.0;0.0;0.0;5346.0;2026-06-04 09:11:44.660;;68.632812;68.539062;68.265625;Id_Establecimiento,Id_Funcionario,Tipo_HaberDcto,Id_HaberDcto,Mes,Ano;5346.0;Beneficio Busqueda;;CONTENEDOR;6;68.539062
+HistoricoMovLiquidacion;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;5346.0;;;33.890625;33.835937;33.617187;Id_Establecimiento;0.0;SIN BUSQUEDAS;5;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;68.539062
+HistoricoFicha_EducacionHrs;aaaaaHistoricoFicha_Educaci_PK;NONCLUSTERED;1;1;9248.0;0.0;0.0;9247.0;2026-06-04 09:11:45.383;;48.070312;47.992187;47.828125;Id_Establecimiento,Id_Funcionario,Tipo_Horas,Mes,Ano;9248.0;Beneficio Busqueda;;CONTENEDOR;5;47.992187
+HistoricoFicha_EducacionHrs;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;9247.0;;;30.445312;30.398437;30.218750;Id_Establecimiento;0.0;SIN BUSQUEDAS;4;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;47.992187
+HistoricoFichaEducacion;aaaaaHistoricoFichaEducacio_PK;NONCLUSTERED;1;1;6859.0;0.0;0.0;6858.0;2026-06-04 09:11:45.383;;32.757812;32.734375;32.625000;Id_Establecimiento,Id_Funcionario,Mes,Ano;6859.0;Beneficio Busqueda;;CONTENEDOR;4;32.734375
+HistoricoFichaEducacion;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;6858.0;;;22.445312;22.398437;22.265625;Id_Establecimiento;0.0;SIN BUSQUEDAS;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;32.734375
+HistoricoFichaFuncionario;aaaaaHistoricoFichaFunciona_PK;NONCLUSTERED;1;1;6858.0;0.0;0.0;6858.0;2026-06-04 09:09:22.060;;32.757812;32.734375;32.625000;Id_Establecimiento,Id_Funcionario,Mes,Ano;6858.0;Beneficio Busqueda;;CONTENEDOR;4;32.734375
+HistoricoFichaFuncionario;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;6858.0;;;22.640625;22.609375;22.468750;Id_Establecimiento;0.0;SIN BUSQUEDAS;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;32.734375
+Previred;aaPrevired_PK;NONCLUSTERED;1;1;1.0;0.0;0.0;0.0;2026-06-04 09:08:39.980;;23.828125;23.796875;23.679687;K1_Id_Remuneracion,K1_Id_ProcesoPS,K1_Id_Establecimiento,K1_Id_Funcionario,K1_NroContrato,K1_Correlativo,K1_Mes,K1_Ano;1.0;Beneficio Busqueda;;CONTENEDOR;8;23.796875
+Previred;K1_Id_Remuneracion;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;10.570312;10.546875;10.500000;K1_Id_Remuneracion;0.0;NO USO;7;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;23.796875
+HistoricoCuentaBanco;aaaaaHistoricoCuentaBanco_PK;NONCLUSTERED;1;1;4427.0;0.0;0.0;4427.0;2026-06-04 09:09:22.047;;23.695312;23.632812;23.546875;Id_Establecimiento,Id_Funcionario,Mes,Ano;4427.0;Beneficio Busqueda;;CONTENEDOR;4;23.632812
+HistoricoCuentaBanco;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;4427.0;;;16.453125;16.4375;16.328125;Id_Establecimiento;0.0;SIN BUSQUEDAS;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;23.632812
+HistoricoFichaLeyesPrevisional;aaHistoricoFichaLeyesPrev_PK;NONCLUSTERED;1;1;4258.0;0.0;0.0;4258.0;2026-06-04 09:10:59.767;;17.882812;17.828125;17.757812;Id_Establecimiento,Id_Funcionario,Mes,Ano;4258.0;Beneficio Busqueda;;CONTENEDOR;4;17.828125
+HistoricoFichaLeyesPrevisional;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;4258.0;;;12.828125;12.820312;12.726562;Id_Establecimiento;0.0;SIN BUSQUEDAS;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;17.828125
+HistoricoLiquidacionHrs;aaaaaHistoricoLiquidacionHr_PK;NONCLUSTERED;1;1;2047.0;1.0;0.0;2047.0;2026-06-04 09:11:17.923;2026-06-04 09:11:45.383;17.507812;17.484375;17.414062;Id_Establecimiento,Id_Funcionario,Tipo_Horas,Mes,Ano;2047.0;Beneficio Busqueda;;CONTENEDOR;5;17.484375
+HistoricoLiquidacionHrs;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;2047.0;;;11.007812;10.960937;10.890625;Id_Establecimiento;0.0;SIN BUSQUEDAS;4;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;17.484375
+HistoricoLiquidacion;aaaaaHistoricoLiquidacion_PK;NONCLUSTERED;1;1;1541.0;0.0;0.0;1541.0;2026-06-04 09:11:07.963;;12.632812;12.5625;12.507812;Id_Establecimiento,Id_Funcionario,Mes,Ano;1541.0;Beneficio Busqueda;;CONTENEDOR;4;12.5625
+HistoricoLiquidacion;Id_Estable;NONCLUSTERED;0;0;0.0;0.0;0.0;1541.0;;;8.570312;8.53125;8.476562;Id_Establecimiento;0.0;SIN BUSQUEDAS;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;12.5625
+Historial_Contratos;aaaaaHistorial_Contratos_PK;NONCLUSTERED;1;1;2100.0;0.0;0.0;1641.0;2026-06-04 09:13:41.833;;8.132812;8.09375;8.054687;Id_Funcionario,Id_Establecimiento,Id_Correlativo;2100.0;Beneficio Busqueda;;CONTENEDOR;3;8.09375
+Historial_Contratos;Id_funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;1641.0;;;4.820312;4.78125;4.750000;Id_Funcionario;0.0;SIN BUSQUEDAS;2;CANDIDATO ELIMINAR;1;8.09375
+Totales_PlanillaRemuneraciones;aaTotales_PlanillaRemuneraciones_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;2.195312;2.132812;2.101562;Id_Establecimiento,Id_Funcionario,Id_Remuneracion,Id_ProcesoPs,Tipo_Hd,Id_Hd,DescNoEfec;0.0;NO USO;;CONTENEDOR;7;2.132812
+Totales_PlanillaRemuneraciones;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;1.695312;1.59375;1.578125;Id_Establecimiento;0.0;NO USO;6;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;2.132812
+PermisosLegales;aaaaaPermisosLegales_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;1.882812;1.773437;1.757812;Id_Establecimiento,Id_Funcionario,Periodo;0.0;NO USO;;CONTENEDOR;3;1.773437
+PermisosLegales;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;1.570312;1.492187;1.476562;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;1.773437
+PermisosAdministrativos;aaaaaPermisosAdministrativo_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.515625;0.40625;0.382812;Id_Funcionario,Id_Establecimiento,Periodo,Correlativo;0.0;NO USO;;CONTENEDOR;4;0.40625
+PermisosAdministrativos;Id_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.390625;0.25;0.226562;Id_Funcionario;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.40625
+MovimientoHaberDctos;aaaaaMovimientoHaberDctos_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;1.0;;;0.445312;0.359375;0.343750;Id_Establecimiento,Id_Funcionario,Tipo_Hd,Id_Hd;0.0;SIN BUSQUEDAS;;CONTENEDOR;4;0.398437
+MovimientoHaberDctos;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;1.0;;;0.507812;0.398437;0.382812;Id_Establecimiento;0.0;SIN BUSQUEDAS;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.398437
+Antecedentes;aaaaaAntecedentes_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.382812;0.257812;0.242187;Id_Establecimiento,Id_Funcionario,Id_Antecedentes;0.0;NO USO;;CONTENEDOR;3;0.257812
+Antecedentes;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.203125;0.187500;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.257812
+Ficha_EducacionHrs;aaaaaFicha_EducacionHrs_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.382812;0.242187;0.226562;Id_Establecimiento,Id_Funcionario,Tipo_Horas;0.0;NO USO;;CONTENEDOR;3;0.242187
+Ficha_EducacionHrs;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.210937;0.195312;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.242187
+HistoricoCambioEstablecimiento;aaHistoricoCambioEstablecimiento_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.335937;0.195312;0.265625;Id_Funcionario,Mes,Ano;0.0;NO USO;;CONTENEDOR;3;0.195312
+HistoricoCambioEstablecimiento;Id_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.273437;0.15625;0.195312;Id_Funcionario;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.195312
+BaseCalculo_PostNatalParental;aaaBaseCalculo_PostNatalParental_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.257812;0.1875;0.171875;Id_CorrelativoPermiso,Rut;0.0;NO USO;;CONTENEDOR;2;0.1875
+BaseCalculo_PostNatalParental;Id_CorrelativoPermiso;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.078125;0.03125;0.015625;Id_CorrelativoPermiso;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.1875
+FichaEducacion;FichaEducacion_Indice;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.1875;0.171875;Id_Establecimiento,Id_Funcionario,Tipo_Funcionario;0.0;NO USO;;CONTENEDOR;3;0.1875
+FichaEducacion;FichaEducacion_Indice;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.1875;0.171875;Id_Establecimiento,Id_Funcionario,Tipo_Funcionario;0.0;NO USO;;CONTENEDOR;3;0.1875
+FichaEducacion;aaaaaFichaEducacion_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.320312;0.179687;0.164062;Id_Establecimiento,Id_Funcionario;0.0;NO USO;;CONTENEDOR;2;0.1875
+FichaEducacion;aaaaaFichaEducacion_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.320312;0.179687;0.164062;Id_Establecimiento,Id_Funcionario;0.0;NO USO;1;CONSERVAR (PK/UNIQUE);2;0.1875
+FichaEducacion;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.164062;0.148437;Id_Establecimiento;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.1875
+FichaEducacion;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.164062;0.148437;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.1875
+FichaFuncionario;aaaaaFichaFuncionario_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.320312;0.171875;0.156250;Id_Establecimiento,Id_Funcionario;0.0;NO USO;;CONTENEDOR;2;0.171875
+FichaFuncionario;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.15625;0.140625;Id_Establecimiento;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.171875
+FichaPersonal;aaaaaFichaPersonal_PK;NONCLUSTERED;1;1;0.0;1.0;0.0;0.0;;2026-06-04 09:07:45.233;0.320312;0.171875;0.156250;Id_Establecimiento,Id_Funcionario;0.0;NO USO;;CONTENEDOR;2;0.171875
+FichaPersonal;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.320312;0.15625;0.140625;Id_Establecimiento;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.171875
+HistoricoCargasRetroactivas;aaHistoricoCargasRetroactivas_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;10.0;;;0.265625;0.171875;0.218750;Id_Establecimiento,Id_Funcionario,Mes,Ano,TipoCarga_Retro,Id_Carga_Retro;0.0;SIN BUSQUEDAS;;CONTENEDOR;6;0.171875
+HistoricoCargasRetroactivas;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;10.0;;;0.226562;0.109375;0.125000;Id_Establecimiento;0.0;SIN BUSQUEDAS;5;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.171875
+Feriados;aaaaaFeriados_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.265625;0.164062;0.140625;Id_Funcionario,Id_Establecimiento,Id_Periodo,Id_Correlativo;0.0;NO USO;;CONTENEDOR;4;0.164062
+Feriados;Id_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.179687;0.078125;0.062500;Id_Funcionario;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.164062
+HistoricoConstantes;aaHistoricoConstantes_PK;NONCLUSTERED;1;1;46.0;0.0;0.0;46.0;2026-06-04 09:13:42.247;;0.234375;0.132812;0.140625;Ano,Mes,Id_Constante;46.0;Beneficio Busqueda;;CONTENEDOR;3;0.15625
+HistoricoConstantes;Rut;NONCLUSTERED;0;0;0.0;0.0;0.0;46.0;;;0.296875;0.15625;0.164062;Ano;0.0;SIN BUSQUEDAS;2;CANDIDATO ELIMINAR;1;0.15625
+PermisosPostNatalParental;aaaPermisosPostNatalParental_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.265625;0.15625;0.132812;Id_Correlativo,Rut;0.0;NO USO;;CONTENEDOR;2;0.15625
+PermisosPostNatalParental;Id_Correlativo;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.078125;0.03125;0.015625;Id_Correlativo;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.15625
+CargasRetroactivas;aaaaaCargasRetroactivas_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.210937;0.132812;0.187500;Id_Establecimiento,Id_Funcionario,Id_Carga_Retro;0.0;NO USO;;CONTENEDOR;3;0.132812
+CargasRetroactivas;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.210937;0.109375;0.140625;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.132812
+FichaLeyesPrevisional;aaFichaLeyesPrev_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.257812;0.125;0.109375;Id_Establecimiento,Id_Funcionario;0.0;NO USO;;CONTENEDOR;2;0.125
+FichaLeyesPrevisional;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.257812;0.117187;0.101562;Id_Establecimiento;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.125
+HistoricoAfp;aaHistoricoAfp_PK;NONCLUSTERED;1;1;19.0;0.0;0.0;19.0;2026-06-04 09:11:45.160;;0.187500;0.09375;0.085937;Id_Afp,Mes,Ano;19.0;Beneficio Busqueda;;CONTENEDOR;3;0.09375
+HistoricoAfp;Id_Afp;NONCLUSTERED;0;0;0.0;0.0;0.0;19.0;;;0.125000;0.070312;0.062500;Id_Afp;0.0;SIN BUSQUEDAS;2;CANDIDATO ELIMINAR;1;0.09375
+HistoricoMovDctos;aaHistoricoMovDctos_PK;NONCLUSTERED;1;1;8.0;0.0;0.0;8.0;2026-06-04 09:11:44.783;;0.148437;0.09375;0.125000;Id_Establecimiento,Id_Funcionario,Mes,Ano,Tipo_Hd,Id_Hd;8.0;Beneficio Busqueda;;CONTENEDOR;6;0.09375
+HistoricoMovDctos;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;8.0;;;0.164062;0.054687;0.070312;Id_Establecimiento;0.0;SIN BUSQUEDAS;5;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.09375
+CuentaBanco;aaaaaCuentaBanco_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.148437;0.078125;0.148437;Id_Establecimiento,Id_Funcionario;0.0;NO USO;;CONTENEDOR;2;0.078125
+CuentaBanco;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.140625;0.078125;0.132812;Id_Establecimiento;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.078125
+RecaudacionPostNatalParental;aaaRecaudacionPostNatalParental_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.125000;0.078125;0.062500;Id_Correlativo,Id_CorrelativoPermiso,Rut;0.0;NO USO;;CONTENEDOR;3;0.078125
+RecaudacionPostNatalParental;Id_Correlativo;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.093750;0.039062;0.023437;Id_Correlativo;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.078125
+GrupoFamiliar;aaaaaGrupoFamiliar_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.140625;0.054687;0.132812;Id_Establecimiento,Id_Funcionario,Id_Carga_Carga;0.0;NO USO;;CONTENEDOR;3;0.070312
+GrupoFamiliar;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.140625;0.070312;0.117187;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.070312
+HistoricoIsapres;aaHistoricoIsapres_PK;NONCLUSTERED;1;1;14.0;0.0;0.0;14.0;2026-06-04 09:11:45.323;;0.171875;0.0625;0.062500;Id_Isapre,Mes,Ano;14.0;Beneficio Busqueda;;CONTENEDOR;3;0.070312
+HistoricoIsapres;Id_Isapre;NONCLUSTERED;0;0;0.0;0.0;0.0;14.0;;;0.179687;0.070312;0.046875;Id_Isapre;0.0;SIN BUSQUEDAS;2;CANDIDATO ELIMINAR;1;0.070312
+PlandeCuenta;aaaaaPlandeCuenta_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.148437;0.054687;0.085937;Ano_Proceso,Codigo_Area,CodigoCuenta;0.0;NO USO;;CONTENEDOR;3;0.054687
+PlandeCuenta;Ano_Proceso;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.039062;0.039062;0.023437;Ano_Proceso;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.054687
+Dias_Feriados;aaaaaDias_Feriados_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.031250;0.03125;0.015625;Dia,Mes,Ano;0.0;NO USO;;CONTENEDOR;3;0.03125
+Dias_Feriados;Dia;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.078125;0.03125;0.015625;Dia;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.03125
+TablaControl;aaaTablaControl_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.195312;0.03125;0.015625;Control_Ano,Control_Mes,Control_TipoProceso,Control_TipoRemun,Control_Id_Haber,SueldoDesde,SueldoHasta;0.0;NO USO;;CONTENEDOR;7;0.03125
+TablaControl;Control_Ano;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Control_Ano;0.0;NO USO;6;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.03125
+PermisosPost_Natal;aaaPermisosPost_Natal_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.023437;0.023437;0.007812;Id_Establecimiento,Id_Funcionario,Tipo_Permiso,Fecha_Evento,Correlativo;0.0;NO USO;;CONTENEDOR;5;0.023437
+PermisosPost_Natal;ID_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento;0.0;NO USO;4;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.023437
+PermisosPost_Natal_Otorgados;aaaPermisosPost_Natal_Otorgados_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.023437;0.023437;0.007812;Id_Establecimiento,Id_Funcionario,Tipo_Permiso,Fecha_Evento;0.0;NO USO;;CONTENEDOR;4;0.023437
+PermisosPost_Natal_Otorgados;ID_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.023437
+AguinaldoTemporal;aaaaaAguinaldoTemporal_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.054687;Id_Establecimiento,Id_Funcionario;0.0;NO USO;;CONTENEDOR;2;0.015625
+AguinaldoTemporal;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.031250;Id_Establecimiento;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.015625
+AnexoPlandeCuenta;aaAnexoPlandeCuenta_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.015625;Ano_Proceso,Mes_Proceso,Codigo_Area,CodigoCuenta;0.0;NO USO;;CONTENEDOR;4;0.015625
+AnexoPlandeCuenta;Ano_Proceso;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Ano_Proceso;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.015625
+Anotaciones;aaaaaAnotaciones_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Funcionario,Id_Establecimiento,Id_TipoAnotacion,Id_Merito_Demerito;0.0;NO USO;;CONTENEDOR;4;0.015625
+Anotaciones;Id_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Funcionario;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.015625
+Bienios_Cumplidos;aaaaaBienios_Cumplidos_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Funcionario,Mes_Proceso,Ano_Proceso;0.0;NO USO;;CONTENEDOR;3;0.015625
+Bienios_Cumplidos;Id_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Funcionario;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.015625
+CCAF_LosAndes;aaCCAF_LosAndes_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;K1_Id_Establecimiento,K1_Id_Funcionario,K1_Ano,K1_Mes,Correlativo;0.0;NO USO;;CONTENEDOR;5;0.015625
+CCAF_LosAndes;K1_Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;K1_Id_Establecimiento;0.0;NO USO;4;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.015625
+CCAF_LosAndes_DepositosConvenidos;aaCCAF_LosAndes_DepositosConvenidos_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;K1_Id_Establecimiento,K1_Id_Funcionario,K1_Ano,K1_Mes,Correlativo;0.0;NO USO;;CONTENEDOR;5;0.015625
+CCAF_LosAndes_DepositosConvenidos;K1_Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;K1_Id_Establecimiento;0.0;NO USO;4;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.015625
+Capacitacion;aaaaaCapacitacion_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.070312;0.015625;0.007812;Rut_Funcionario,Id_Capacitacion;0.0;NO USO;;CONTENEDOR;2;0.015625
+Capacitacion;Rut_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.070312;0.015625;0.007812;Rut_Funcionario;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.015625
+CometidoFuncionario;aaaaaCometidoFuncionario_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento,Id_Funcionario,Id_Cometido;0.0;NO USO;;CONTENEDOR;3;0.015625
+CometidoFuncionario;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.015625
+HistoricoCheques;aaaaaHistoricoCheques_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;ID_Numero,Mes,Ano;0.0;NO USO;;CONTENEDOR;3;0.015625
+HistoricoCheques;ID_Numero;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;ID_Numero;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.015625
+HistoricoMutual;aaaHistoricoMutual_PK;NONCLUSTERED;1;1;1.0;0.0;0.0;1.0;2026-06-04 09:11:44.857;;0.015625;0.015625;0.007812;Mes,Ano;1.0;Beneficio Busqueda;;CONTENEDOR;2;0.015625
+HistoricoMutual;Mes;NONCLUSTERED;0;0;0.0;0.0;0.0;1.0;;;0.015625;0.015625;0.007812;Mes;0.0;SIN BUSQUEDAS;1;CANDIDATO ELIMINAR;1;0.015625
+HistoricoNivelEducativo;aaaaaHistoricoNivelEducativ_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Nivel,Ano;0.0;NO USO;;CONTENEDOR;2;0.015625
+HistoricoNivelEducativo;Id_Nivel;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Nivel;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.015625
+Indices;aaaaaIndices_PK;NONCLUSTERED;1;1;2.0;0.0;0.0;0.0;2026-06-04 10:53:38.627;;0.015625;0.015625;0.007812;Año,Mes;2.0;Beneficio Busqueda;;CONTENEDOR;2;0.015625
+Indices;A¤o;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Año;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.015625
+InstitucionesAVP;aaInstitucionesAVP_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Institucion,Tipo_Institucion;0.0;NO USO;;CONTENEDOR;2;0.015625
+InstitucionesAVP;Id_institucion;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Institucion;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.015625
+Liquidacion;aaaaaLiquidacion_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;2.0;;;0.070312;0.015625;0.007812;Id_Establecimiento,Id_Funcionario;0.0;SIN BUSQUEDAS;;CONTENEDOR;2;0.015625
+Liquidacion;Id_Estable;NONCLUSTERED;0;0;1.0;0.0;0.0;2.0;2026-06-04 10:00:09.270;;0.070312;0.015625;0.007812;Id_Establecimiento;1.0;Costo de mantenimiento;1;CANDIDATO ELIMINAR;1;0.015625
+LiquidacionHrs;aaaaaLiquidacionHrs_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812;Id_Establecimiento,Id_Funcionario,Tipo_Horas;0.0;SIN BUSQUEDAS;;CONTENEDOR;3;0.015625
+LiquidacionHrs;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812;Id_Establecimiento;0.0;SIN BUSQUEDAS;2;CANDIDATO ELIMINAR;1;0.015625
+MovimientoLiquidacion;aaaaaMovimientoLiquidacion_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812;Id_Establecimiento,Id_Funcionario,Tipo_HaberDcto,Id_HaberDcto;0.0;SIN BUSQUEDAS;;CONTENEDOR;4;0.015625
+MovimientoLiquidacion;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812;Id_Establecimiento;0.0;SIN BUSQUEDAS;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.015625
+Movimiento_Finiquito;aaMovimiento_Finiquito_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento,Id_Funcionario,Correlativo,Tipo_Movimiento,Id_Movimiento;0.0;NO USO;;CONTENEDOR;5;0.015625
+Movimiento_Finiquito;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento;0.0;NO USO;4;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.015625
+PermisosAdminSinRemuneracion;aaaaaPermisosAdminSinRemune_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento,Id_Funcionario,Periodo,Correlativo;0.0;NO USO;;CONTENEDOR;4;0.015625
+PermisosAdminSinRemuneracion;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.015625
+PostulantesPorRamos_DAEM;aaPostulantesPorRamos_DAEM_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;RutPostulante,Id_asignatura;0.0;NO USO;;CONTENEDOR;2;0.015625
+PostulantesPorRamos_DAEM;RutPostulante;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;RutPostulante;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.015625
+RetencionJudicial;aaaaaRetencionJudicial_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento,Id_Funcionario,Rut_Beneficiario;0.0;NO USO;;CONTENEDOR;3;0.015625
+RetencionJudicial;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.015625
+Tipo_Finiquito;aaTipo_Finiquito_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Codigo_Ley,Codigo_Causal;0.0;NO USO;;CONTENEDOR;2;0.015625
+Tipo_Finiquito;Codigo_Ley;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Codigo_Ley;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.015625
+TramosAsigFamiliar;aaaaaTramosAsigFamiliar_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Periodo,Tramo;0.0;NO USO;;CONTENEDOR;2;0.015625
+TramosAsigFamiliar;Periodo;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.015625;0.015625;0.007812;Periodo;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.015625
+AdicionalDosSalud;aaaaaAdicionalDosSalud_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Dos_FechaContratoIsapre;0.0;NO USO;;CONTENEDOR;3;0.0
+AdicionalDosSalud;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.0
+AnexoPlanCuentaPrivado;aaaaaAnexoPlanCuentaPrivado_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Ano_Proceso,Mes_Proceso,Id_Establecimiento,Codigo_Cuenta;0.0;NO USO;;CONTENEDOR;4;0.0
+AnexoPlanCuentaPrivado;AnoProceso;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Ano_Proceso;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+Anexo_Finiquito;aaAnexo_Finiquito_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Correlativo,Correlativo_Anexo;0.0;NO USO;;CONTENEDOR;4;0.0
+Anexo_Finiquito;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+Anexo_PlanCta_Privado;aaAnexo_PlanCta_Privado_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Codigo_Cuenta,Id_HaberDcto,Tipo_Cuenta,Id_Proyecto;0.0;NO USO;;CONTENEDOR;5;0.0
+Anexo_PlanCta_Privado;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;4;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+AperturaDeCuentas;aaAperturaDeCuentas_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario;0.0;NO USO;;CONTENEDOR;2;0.0
+AperturaDeCuentas;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.0
+Asistencia;aaaaaAsistencia_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Id_Asistencia;0.0;NO USO;;CONTENEDOR;3;0.0
+Asistencia;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.0
+CCAF_LosAndes_AfiliadoVoluntario;aaCCAF_LosAndes_AfiliadoVoluntario_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;K1_Id_Establecimiento,K1_Id_Funcionario,K1_Ano,K1_Mes;0.0;NO USO;;CONTENEDOR;4;0.0
+CCAF_LosAndes_AfiliadoVoluntario;K1_Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;K1_Id_Establecimiento;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+CCAF_LosAndes_SIL;aaCCAF_LosAndes_SIL_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;K1_Id_Establecimiento,K1_Id_Funcionario,K1_Ano,K1_Mes;0.0;NO USO;;CONTENEDOR;4;0.0
+CCAF_LosAndes_SIL;K1_Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;K1_Id_Establecimiento;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+Calificacion;aaaaaCalificacion_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Periodo;0.0;NO USO;;CONTENEDOR;3;0.0
+Calificacion;Id_Establecimeinto;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.0
+CarreraDocente;aaaCarreraDocente_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut,Mes,Ano,Correlativo;0.0;NO USO;;CONTENEDOR;4;0.0
+CarreraDocente;Rut;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+DatosPersonales_Finiquito;aaDatosPersonales_Finiquito_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Correlativo,Fecha_Termino;0.0;NO USO;;CONTENEDOR;4;0.0
+DatosPersonales_Finiquito;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+DescuentoBienestar;aaaDescuentoBienestar_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Id_Bienestar;0.0;NO USO;;CONTENEDOR;3;0.0
+DescuentoBienestar;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.0
+DescuentoSindicato;aaaDescuentoSindicato_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Id_Sindicato;0.0;NO USO;;CONTENEDOR;3;0.0
+DescuentoSindicato;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.0
+DescuentosNoEfectuados;aaaaaDescuentosNoEfectuados_PK;NONCLUSTERED;1;1;0.0;1.0;0.0;1.0;;2026-06-04 09:11:44.670;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Id_Descuento;0.0;SIN BUSQUEDAS;;CONTENEDOR;3;0.0
+DescuentosNoEfectuados;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;1.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;SIN BUSQUEDAS;2;CANDIDATO ELIMINAR;1;0.0
+FichaAfiliadoVoluntario;aaFichaAfiliadoVoluntario_PK;CLUSTERED;1;1;0.0;3.0;0.0;2.0;;2026-06-04 10:00:08.993;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Rut_Afiliado;0.0;SIN BUSQUEDAS;;CONTENEDOR;3;0.0
+FichaAfiliadoVoluntario;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.0
+FichaDetalle_AEduca;aaFichaDetalle_AEduca_PK;NONCLUSTERED;1;1;0.0;1.0;0.0;0.0;;2026-06-04 09:10:10.897;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Tipo_Horas;0.0;NO USO;;CONTENEDOR;3;0.0
+FichaDetalle_AEduca;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.0
+HistorialUnidadE;aaaaaHistorialUnidadE_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut_Funcionario,Id_Historial;0.0;NO USO;;CONTENEDOR;2;0.0
+HistorialUnidadE;Id_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut_Funcionario;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.0
+Historial_Egreso;aaaaaHistorial_Egreso_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut_Funcionario,Id_Establecimiento,Id_HistE;0.0;NO USO;;CONTENEDOR;3;0.0
+Historial_Egreso;Rut_Funcionario;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut_Funcionario;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.0
+HistoricoDctosNoEfectuados;aaaaaHistoricoDctosNoEfectu_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Id_Descuento,Mes,Ano;0.0;NO USO;;CONTENEDOR;5;0.0
+HistoricoDctosNoEfectuados;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;4;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+HistoricoFichaAfiliadoVoluntario;aaHistoFichaAfiliadoVoluntario_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Mes,Ano,Rut_Afiliado;0.0;NO USO;;CONTENEDOR;5;0.0
+HistoricoFichaAfiliadoVoluntario;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;4;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+HistoricoFichaDetalle_AEduca;aaHistoricoFichaDetalle_AEduca_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Tipo_Horas,Mes,Ano;0.0;NO USO;;CONTENEDOR;5;0.0
+HistoricoFichaDetalle_AEduca;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;4;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+HistoricoGrupoFamiliar;aaHistoricoGrupoFamiliar_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Ano,Mes,Id_Establecimiento,Id_Funcionario,Id_Carga_Carga;0.0;NO USO;;CONTENEDOR;5;0.0
+HistoricoGrupoFamiliar;Ano;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Ano;0.0;NO USO;4;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+HistoricoMovPlanillaSuple;aaaaaHistoricoMovPlanillaSu_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Id_Hd,Mes,Ano;0.0;NO USO;;CONTENEDOR;5;0.0
+HistoricoMovPlanillaSuple;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;4;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+HistoricoPlanillaSuplementaria;aaaaaHistoricoPlanillaSuple_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Mes,Ano;0.0;NO USO;;CONTENEDOR;4;0.0
+HistoricoPlanillaSuplementaria;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;3;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+Mentoria;aaaMentoria_PK;CLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut_Mentor,Rut_Alumno;0.0;NO USO;;CONTENEDOR;2;0.0
+Mentoria;Rut_Mentor;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Rut_Mentor;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.0
+MovimientoAnexo_Finiquito;aaMovimientoAnexo_Finiquito_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Correlativo,Correlativo_Anexo,Tipo_MovimientoAnexo,Id_MovimientoAnexo;0.0;NO USO;;CONTENEDOR;6;0.0
+MovimientoAnexo_Finiquito;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;5;REVISAR (CONTENEDOR CON MUCHAS COLUMNAS);1;0.0
+PlantaMaestra;aaaaaPlantaMaestra_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Tipo_Funcionario,Id_Escalafon;0.0;NO USO;;CONTENEDOR;3;0.0
+PlantaMaestra;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.0
+ResultadoMigracionNet;PK_ResultadoMigracionNet;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;NombreTablaOriginal,NombreTablaDestino;0.0;NO USO;;CONTENEDOR;2;0.0
+ResultadoMigracionNet;NombreTablaOriginal;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;NombreTablaOriginal;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.0
+Retroactivo;aaRetroactivo_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Tipo_Horas;0.0;NO USO;;CONTENEDOR;3;0.0
+Retroactivo;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.0
+Tbl_Paridad;PK_Tbl_Paridad;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Tipo,Id_Vb6;0.0;NO USO;;CONTENEDOR;2;0.0
+Tbl_Paridad;Tipo;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Tipo;0.0;NO USO;1;CANDIDATO ELIMINAR;1;0.0
+Totales_Finiquito;aaTotales_Finiquito_PK;NONCLUSTERED;1;1;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento,Id_Funcionario,Correlativo;0.0;NO USO;;CONTENEDOR;3;0.0
+Totales_Finiquito;Id_Establecimiento;NONCLUSTERED;0;0;0.0;0.0;0.0;0.0;;;0.000000;0.0;0.000000;Id_Establecimiento;0.0;NO USO;2;CANDIDATO ELIMINAR;1;0.0
