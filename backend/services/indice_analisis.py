@@ -1,8 +1,11 @@
 # AGRUPAR ATRIBUTO --***ELIMINAR HEAP uso_tamaño*** 
 import pandas as pd
 
+
 def generar_df_indice_base(atributos_file, uso_file):
     atributos = pd.read_csv(atributos_file, sep=";",header=None,dtype=str)
+
+    
 
     # Agrupar por TABLA + INDICE
     df_agrupado = (
@@ -63,16 +66,12 @@ def generar_df_indice_base(atributos_file, uso_file):
         on=["TABLA", "INDICE"],
         how="left"
     )
-    #df_uso.to_csv("index-base.csv",sep=";",index=False)
+    #df_uso.to_csv("aaaindex-base.csv",sep=";",index=False)
     return df_uso
 '''
 def main():
-    #df_1 = pd.read_csv("1.csv", sep=";",header=None,dtype=str)
-    #df_2 = pd.read_csv("2.csv", sep=";",header=None,dtype=str)
-    generar_df_indice_base("1.csv", "2.csv")
+    generar_df_indice_base(FILES_DIR/"atributos.csv", FILES_DIR/"uso.csv")
 
 if __name__ == "__main__":
     main()
 '''
-
-    

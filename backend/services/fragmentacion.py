@@ -1,9 +1,13 @@
 
 import pandas as pd
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+FILES_DIR = BASE_DIR / "files"
 
 def calcular_fragmentacion(fragmentacion, uso):
-    #fragmentacion = pd.read_csv(fragmentacion_file, sep=";",header=None,dtype=str)
-    #uso = pd.read_csv(uso_file, sep=";", header=None, skiprows=1, dtype=str, na_filter=False)
+    fragmentacion = pd.read_csv(fragmentacion, sep=";",header=None,dtype=str)
+    uso = pd.read_csv(uso, sep=";", header=None, skiprows=1, dtype=str, na_filter=False)
     '''
     fragmentacion.columns = [
         "ESQUEMA",0
@@ -68,9 +72,7 @@ def calcular_fragmentacion(fragmentacion, uso):
     return df
 '''
 def main():
-    df_1 = pd.read_csv("3.csv", sep=";",header=None,dtype=str)
-    df_2 = pd.read_csv("2.csv", sep=";", header=None, skiprows=1, dtype=str, na_filter=False)
-    calcular_fragmentacion(df_1,df_2)
+    calcular_fragmentacion(FILES_DIR/"frag.csv",FILES_DIR/"uso.csv")
 
 if __name__ == "__main__":
     main()

@@ -2,7 +2,7 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 import pandas as pd
-import pyodbc
+import pyodbc,shutil, os
 
 from services.indice_analisis import generar_df_indice_base
 from services.costo_beneficio import calcular_costo
@@ -13,6 +13,10 @@ from services.fragmentacion import calcular_fragmentacion
 from services.consulta import CONSULTA_USO_TAMAÑO,CONSULTA_ATRIBUTOS,CONSULTA_FRAGMENTACION
 
 from pydantic import BaseModel
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+FILES_DIR = BASE_DIR / "files"
 
 class Conexion(BaseModel):
     server: str
@@ -23,9 +27,6 @@ class Conexion(BaseModel):
 
 app = FastAPI()
 df_costo_global = None
-df_uso_global = None
-df_frag_global = None
-
 # CORS
 app.add_middleware(
     CORSMiddleware,
@@ -41,25 +42,32 @@ async def upload(
     uso: UploadFile = File(...),
     frag: UploadFile = File(...)
 ):
-    global df_uso_global
     global df_costo_global
-    global df_frag_global
 
-    df_uso_global = pd.read_csv(uso.file, sep=";",header=None,dtype=str)
-    df_frag_global = pd.read_csv(frag.file, sep=";",header=None,dtype=str)
-    frag.file.seek(0)
-    uso.file.seek(0)
+     # Crear carpeta si no existe
+    os.makedirs("files", exist_ok=True)
 
-    df_base = generar_df_indice_base(
-        atributos.file,
-        uso.file
-    )
+    # Guardar csv em carpeta files
+    with open(FILES_DIR/"atributos.csv", "wb") as buffer:
+        shutil.copyfileobj(atributos.file, buffer)
+        
+    with open(FILES_DIR/"uso.csv", "wb") as buffer:
+        shutil.copyfileobj(uso.file, buffer)
 
+    with open(FILES_DIR/"frag.csv", "wb") as buffer:
+        shutil.copyfileobj(frag.file, buffer)
+
+    return cargar()
+
+
+def cargar():
+    global df_costo_global
+    df_base = generar_df_indice_base(FILES_DIR/"atributos.csv", FILES_DIR/"uso.csv")
     df_costo_global = calcular_costo(df_base)
-
     return {
         "rows": len(df_costo_global)
     }
+
 
 @app.get("/costo-beneficio")
 async def costo_beneficio():
@@ -107,11 +115,11 @@ async def contenido():
 
 @app.get("/heap-lookup")
 async def lookup():
-    global df_uso_global
-    if df_uso_global is None:
+    df_uso = pd.read_csv(FILES_DIR/"uso.csv", sep=";",header=None,dtype=str)
+    if df_uso is None:
         return {"error": "Debe cargar archivos"}
 
-    df_heap = calcular_lookup(df_uso_global)
+    df_heap = calcular_lookup(df_uso)
     return {
         "rows": len(df_heap),
         "columns": list(df_heap.columns),
@@ -120,12 +128,8 @@ async def lookup():
 
 @app.get("/frag-pag")
 async def fragmentacion():
-    global df_frag_global
-    global df_uso_global
-    if df_frag_global is None:
-        return {"error": "Debe cargar archivos"}
 
-    df_frag = calcular_fragmentacion(df_frag_global,df_uso_global)
+    df_frag = calcular_fragmentacion(FILES_DIR/"frag.csv",FILES_DIR/"uso.csv")
     return {
         "rows": len(df_frag),
         "columns": list(df_frag.columns),
@@ -160,4 +164,3 @@ def conectar_y_exportar(data: Conexion):
     except Exception as e:
         return {"ok": False, "mensaje": str(e)}
     
-    fr"C:\reportes\{item['archivo']}",
