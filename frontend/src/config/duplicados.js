@@ -1,5 +1,6 @@
 
 export const duplicadosColumnDefs = [
+    { field: "TABLA", flex: 1 },
     { headerName:"PRIORIDAD-TEXTO",field: "USED-PAGES", flex: 1 },
     { field: "INDICE", flex: 1,
         cellClassRules:{

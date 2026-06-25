@@ -7,7 +7,6 @@ def buscar_duplicado(df):
 
     # Buscar duplicados por TABLA + ATRIBUTOS
     duplicado = df[df.duplicated(subset=["TABLA", "ATRIBUTOS"],keep=False)]
-
     duplicado = duplicado.sort_values(["TABLA", "ATRIBUTOS", "INDICE"])
 
     # --- ORDEN FILAS POR PK- used pages
