@@ -71,7 +71,7 @@
 .celda-borde {
     border-left: 4px solid #22c55e !important;
 }
-.celda-punto {
+.celda-punto::before {
     content: "●";
     color: #22c55e;
     margin-right: 6px;
@@ -80,5 +80,20 @@
     background-color: rgb(240, 240, 240);
     color: #9ca3af;
     font-style: italic;
-    text-decoration: line-through;
+}
+.p::selection {
+    background-color: #22c55e;
+    color: rgb(233, 83, 83);
+}
+.badge {
+    background-color: #22c55e;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 4px;        /* esquinas levemente redondeadas */
+}
+.pill {
+    padding: 2px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
 }
