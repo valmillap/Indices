@@ -63,3 +63,22 @@
 .celda-lookup{
     background-color:rgb(255, 208, 208);
 }
+/*STYLOS*/
+.celda-texto {
+    color: #dc2626;
+    font-weight: bold;
+}
+.celda-borde {
+    border-left: 4px solid #22c55e !important;
+}
+.celda-punto {
+    content: "●";
+    color: #22c55e;
+    margin-right: 6px;
+}
+.celda-inactivo {
+    background-color: rgb(240, 240, 240);
+    color: #9ca3af;
+    font-style: italic;
+    text-decoration: line-through;
+}

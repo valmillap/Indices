@@ -7,10 +7,8 @@
     {field: "TYPE_DESC", flex: 1},
     {field: "USER_SEEKS", flex: 1},
     {field: "USER_SCANS", flex: 1},
-    {field: "USER_LOOKUPS",
-      flex: 1,
+    {field: "USER_LOOKUPS",flex: 1,
        cellClassRules: {
-
             "celda-lookup": params =>
                 Number(params.value) > 1000,
         }

@@ -1,0 +1,81 @@
+TABLA;INDICE;TYPE_DESC;IS_PRIMARY_KEY;IS_UNIQUE;USER_SEEKS;USER_SCANS;USER_LOOKUPS;USER_UPDATES;LAST_USER_SEEK;LAST_USER_SCAN;TAMANO-TOTAL;USED-PAGES;ATRIBUTOS;BUSQUEDAS;EVALUACION_INDICE;IS_PRIMARY_KEY_NUM;TIPO;MANTENER
+RentaEncasillamiento;aaaRentaEncasillamiento_PK;CLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.132812;0.09375;Rut;0.0;NO USO;0.0;INDEX;Duplica
+RentaEncasillamiento;Codigo_TDP;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.039062;0.039062;Rut;0.0;NO USO;0.0;INDEX;Duplica
+Asignaciones_Transparencia;aaaAsignaciones_Transparencia_PK;CLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.101562;0.046875;Id_Haber;0.0;NO USO;0.0;INDEX;Duplica
+Asignaciones_Transparencia;Id_Haber;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Haber;0.0;NO USO;0.0;INDEX;Duplica
+HaberesEncasillamiento;aaaHaberesEncasillamiento_PK;CLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.101562;0.046875;Id_Haber;0.0;NO USO;0.0;INDEX;Duplica
+HaberesEncasillamiento;Id_Haber;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Haber;0.0;NO USO;0.0;INDEX;Duplica
+Afp;aaaaaAfp_PK;NONCLUSTERED;True;True;0.0;1.0;0.0;0.0;;2026-06-04 09:11:44.943;0.015625;0.015625;Id_Afp;0.0;NO USO;0.0;INDEX;Duplica
+Afp;Id_Afp;NONCLUSTERED;False;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Afp;0.0;NO USO;0.0;INDEX;Duplica
+Bancos;aaaaaBancos_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Banco;0.0;NO USO;0.0;INDEX;Duplica
+Bancos;Id_Banco;NONCLUSTERED;False;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Banco;0.0;NO USO;0.0;INDEX;Duplica
+CargoFuncionario;aaaaaCargoFuncionario_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Cargo;0.0;NO USO;0.0;INDEX;Duplica
+CargoFuncionario;Id_Cargo;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Cargo;0.0;NO USO;0.0;INDEX;Duplica
+CausalesEgreso;aaaaaCausalesEgreso_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Codigo;0.0;NO USO;0.0;INDEX;Duplica
+CausalesEgreso;Id_Codigo;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Codigo;0.0;NO USO;0.0;INDEX;Duplica
+Centros_Estudios;aaCentros_Estudios_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Centros_Estudios;0.0;NO USO;0.0;INDEX;Duplica
+Centros_Estudios;Id_Centros_Estudios;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Centros_Estudios;0.0;NO USO;0.0;INDEX;Duplica
+ComponentesINE;aaComponentesINE_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Componente_INE;0.0;NO USO;0.0;INDEX;Duplica
+ComponentesINE;Id_Componente_INE;NONCLUSTERED;False;False;16.0;0.0;0.0;0.0;2026-06-04 09:07:07.720;;0.015625;0.015625;Id_Componente_INE;16.0;Beneficio Busqueda;0.0;INDEX;Duplica
+Constantes;aaaaaConstantes_PK;NONCLUSTERED;True;True;0.0;1.0;0.0;0.0;;2026-06-04 09:13:41.847;0.015625;0.015625;Id_Constante;0.0;NO USO;0.0;INDEX;Duplica
+Constantes;Id_Constante;NONCLUSTERED;False;True;28.0;0.0;0.0;0.0;2026-06-04 09:07:27.107;;0.015625;0.015625;Id_Constante;28.0;Beneficio Busqueda;0.0;INDEX;Duplica
+Descuentos_Finiquito;aaDescuentos_Finiquito_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Dcto;0.0;NO USO;0.0;INDEX;Duplica
+Descuentos_Finiquito;Id_Dcto;NONCLUSTERED;False;False;260.0;0.0;0.0;0.0;2026-06-04 09:07:18.480;;0.015625;0.015625;Id_Dcto;260.0;Beneficio Busqueda;0.0;INDEX;Duplica
+Escalafones;aaaaaEscalafones_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Escalafon;0.0;NO USO;0.0;INDEX;Duplica
+Escalafones;Id_Escalafon;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Escalafon;0.0;NO USO;0.0;INDEX;Duplica
+Establecimiento;aaaaaEstablecimiento_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Estable;0.0;NO USO;0.0;INDEX;Duplica
+Establecimiento;IdEstablecimiento;NONCLUSTERED;False;False;0.0;5.0;0.0;0.0;;2026-06-04 09:07:27.167;0.015625;0.015625;Id_Estable;0.0;NO USO;0.0;INDEX;Duplica
+Haberes;aaaaaHaberes_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Haber;0.0;NO USO;0.0;INDEX;Duplica
+Haberes;Id_Haber;NONCLUSTERED;False;True;7.0;0.0;0.0;0.0;2026-06-04 10:53:21.910;;0.015625;0.015625;Id_Haber;7.0;Beneficio Busqueda;0.0;INDEX;Duplica
+HaberesINE;aaHaberesINE_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Haber;0.0;NO USO;0.0;INDEX;Duplica
+HaberesINE;Id_Haber;NONCLUSTERED;False;False;471.0;0.0;0.0;0.0;2026-06-04 09:07:10.537;;0.015625;0.015625;Id_Haber;471.0;Beneficio Busqueda;0.0;INDEX;Duplica
+Haberes_Finiquito;aaHaberes_Finiquito_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Haber;0.0;NO USO;0.0;INDEX;Duplica
+Haberes_Finiquito;Id_Haber;NONCLUSTERED;False;False;466.0;0.0;0.0;0.0;2026-06-04 09:07:17.183;;0.015625;0.015625;Id_Haber;466.0;Beneficio Busqueda;0.0;INDEX;Duplica
+Haberes_Sistema;aaaHaberes_Sistema_PK;CLUSTERED;True;True;19.0;0.0;0.0;2.0;2026-06-04 09:07:27.160;;0.015625;0.015625;Id_Haber;19.0;Beneficio Busqueda;0.0;INDEX;Duplica
+Haberes_Sistema;Id_Haber;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Haber;0.0;NO USO;0.0;INDEX;Duplica
+Impuesto;aaaaaImpuesto_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Tramo;0.0;NO USO;0.0;INDEX;Duplica
+Impuesto;Id_Tramo;NONCLUSTERED;False;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Tramo;0.0;NO USO;0.0;INDEX;Duplica
+Isapres;aaaaaIsapres_PK;NONCLUSTERED;True;True;1.0;1.0;0.0;0.0;2026-06-04 09:07:04.667;2026-06-04 09:11:45.180;0.015625;0.015625;Id_Isapre;1.0;Beneficio Busqueda;0.0;INDEX;Duplica
+Isapres;Id_Isapre;NONCLUSTERED;False;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Isapre;0.0;NO USO;0.0;INDEX;Duplica
+LRE_Aportes;aaaLRE_Aportes_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Aporte;0.0;NO USO;0.0;INDEX;Duplica
+LRE_Aportes;Id_Aporte;NONCLUSTERED;False;False;6.0;0.0;0.0;0.0;2026-06-04 09:07:14.373;;0.015625;0.015625;Id_Aporte;6.0;Beneficio Busqueda;0.0;INDEX;Duplica
+LRE_Descuentos;aaaLRE_Descuentos_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Descuento;0.0;NO USO;0.0;INDEX;Duplica
+LRE_Descuentos;Id_Descuento;NONCLUSTERED;False;False;10.0;0.0;0.0;0.0;2026-06-04 09:07:12.480;;0.015625;0.015625;Id_Descuento;10.0;Beneficio Busqueda;0.0;INDEX;Duplica
+LRE_Haberes;aaaLRE_Haberes_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;2.0;;;0.015625;0.015625;Id_Haber;0.0;SIN BUSQUEDAS;0.0;INDEX;Duplica
+LRE_Haberes;Id_Haber;NONCLUSTERED;False;False;28.0;0.0;0.0;2.0;2026-06-04 09:07:12.417;;0.015625;0.015625;Id_Haber;28.0;Beneficio Busqueda;0.0;INDEX;Duplica
+LRE_Totales;aaaLRE_Totales_PK;NONCLUSTERED;True;True;2.0;0.0;0.0;0.0;2026-06-04 09:07:14.383;;0.015625;0.015625;Id_Total;2.0;Beneficio Busqueda;0.0;INDEX;Duplica
+LRE_Totales;Id_Total;NONCLUSTERED;False;False;11.0;0.0;0.0;0.0;2026-06-04 09:07:12.587;;0.015625;0.015625;Id_Total;11.0;Beneficio Busqueda;0.0;INDEX;Duplica
+MacroCalculo;aaaaaMacroCalculo_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Macro_id;0.0;NO USO;0.0;INDEX;Duplica
+MacroCalculo;Macro_id;NONCLUSTERED;False;False;10.0;0.0;0.0;0.0;2026-06-04 09:07:45.213;;0.015625;0.015625;Macro_id;10.0;Beneficio Busqueda;0.0;INDEX;Duplica
+ModoDctos;aaaaaModoDctos_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_ModoDctos;0.0;NO USO;0.0;INDEX;Duplica
+ModoDctos;Id_ModoDctos;NONCLUSTERED;False;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_ModoDctos;0.0;NO USO;0.0;INDEX;Duplica
+NivelEducativo;aaaaaNivelEducativo_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Nivel;0.0;NO USO;0.0;INDEX;Duplica
+NivelEducativo;Id_Nivel;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Nivel;0.0;NO USO;0.0;INDEX;Duplica
+Otras_InstitucionesPrev;aaOtras_InstitucionesPrev_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Codigo;0.0;NO USO;0.0;INDEX;Duplica
+Otras_InstitucionesPrev;Id_Codigo;NONCLUSTERED;False;False;5.0;0.0;0.0;0.0;2026-06-04 09:06:25.100;;0.015625;0.015625;Id_Codigo;5.0;Beneficio Busqueda;0.0;INDEX;Duplica
+ParametrosGenerales;aaaaaParametrosGenerales_PK;NONCLUSTERED;True;True;1.0;0.0;0.0;0.0;2026-06-04 10:00:08.683;;0.015625;0.015625;Codigo_Area;1.0;Beneficio Busqueda;0.0;INDEX;Duplica
+ParametrosGenerales;Codigo_Area;NONCLUSTERED;False;True;7.0;0.0;0.0;0.0;2026-06-04 10:53:21.897;;0.015625;0.015625;Codigo_Area;7.0;Beneficio Busqueda;0.0;INDEX;Duplica
+Proyectos;aaProyectos_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Proyecto;0.0;NO USO;0.0;INDEX;Duplica
+Proyectos;Id_Proyecto;NONCLUSTERED;False;False;1.0;0.0;0.0;0.0;2026-06-04 09:07:06.383;;0.015625;0.015625;Id_Proyecto;1.0;Beneficio Busqueda;0.0;INDEX;Duplica
+TablaBienestar;aaaTablaBienestar_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Bienestar;0.0;NO USO;0.0;INDEX;Duplica
+TablaBienestar;Id_Funcionario;NONCLUSTERED;False;False;2.0;0.0;0.0;0.0;2026-06-04 09:06:42.163;;0.015625;0.015625;Id_Bienestar;2.0;Beneficio Busqueda;0.0;INDEX;Duplica
+TablaSindicato;aaaTablaSindicato_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Id_Sindicato;0.0;NO USO;0.0;INDEX;Duplica
+TablaSindicato;Id_Funcionario;NONCLUSTERED;False;False;2.0;0.0;0.0;0.0;2026-06-04 09:06:42.197;;0.015625;0.015625;Id_Sindicato;2.0;Beneficio Busqueda;0.0;INDEX;Duplica
+TipoInstitucionesAVP;aaTipoInstitucionesAVP_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Tipo_Institucion;0.0;NO USO;0.0;INDEX;Duplica
+TipoInstitucionesAVP;Tipo_Institucion;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Tipo_Institucion;0.0;NO USO;0.0;INDEX;Duplica
+Tipo_Horas;aaaaaTipo_Horas_PK;NONCLUSTERED;True;True;1.0;0.0;0.0;0.0;2026-06-04 09:07:06.377;;0.015625;0.015625;Tipo_Horas;1.0;Beneficio Busqueda;0.0;INDEX;Duplica
+Tipo_Horas;Tipo_Horas;NONCLUSTERED;False;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Tipo_Horas;0.0;NO USO;0.0;INDEX;Duplica
+Tipo_Horas_AEduca;aaTipo_Horas_AEduca_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Tipo_Horas;0.0;NO USO;0.0;INDEX;Duplica
+Tipo_Horas_AEduca;Tipo_Horas;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Tipo_Horas;0.0;NO USO;0.0;INDEX;Duplica
+TramoDesarrolloProfesional;aaaTramoDesarrolloProfesional_PK;CLUSTERED;True;True;12.0;0.0;0.0;6.0;2026-06-04 09:07:07.133;;0.015625;0.015625;Codigo_TDP;12.0;Beneficio Busqueda;0.0;INDEX;Duplica
+TramoDesarrolloProfesional;Codigo_TDP;NONCLUSTERED;False;False;0.0;1.0;0.0;0.0;;2026-06-04 09:07:07.060;0.015625;0.015625;Codigo_TDP;0.0;NO USO;0.0;INDEX;Duplica
+ErroresMigracionNet;PK_ErroresMigracionNet;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.0;0.0;Id;0.0;NO USO;0.0;INDEX;Duplica
+ErroresMigracionNet;ID;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.0;0.0;Id;0.0;NO USO;0.0;INDEX;Duplica
+Mentor;aaaMentor_PK;CLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.0;0.0;Rut_Mentor;0.0;NO USO;0.0;INDEX;Duplica
+Mentor;Rut_Mentor;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.0;0.0;Rut_Mentor;0.0;NO USO;0.0;INDEX;Duplica
+Sindicatos;aaSindicatos_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.0;0.0;Id_Sindicato;0.0;NO USO;0.0;INDEX;Duplica
+Sindicatos;Id_Sindicato;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.0;0.0;Id_Sindicato;0.0;NO USO;0.0;INDEX;Duplica
+Suplencias;aaaaaSuplencias_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.0;0.0;Id_Funcionario;0.0;NO USO;0.0;INDEX;Duplica
+Suplencias;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.0;0.0;Id_Funcionario;0.0;NO USO;0.0;INDEX;Duplica
+Tipo_Horas_Proyecto;aaTipo_Horas_Proyecto_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.0;0.0;Id_Tipo_Horas_Proyecto;0.0;NO USO;0.0;INDEX;Duplica
+Tipo_Horas_Proyecto;Id_Tipo_Horas_Proyecto;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.0;0.0;Id_Tipo_Horas_Proyecto;0.0;NO USO;0.0;INDEX;Duplica

@@ -32,20 +32,33 @@ def buscar_duplicado(df):
         duplicado["IS_UNIQUE"], errors="coerce"
     ).fillna(0)
 
+    #----------
     # Cantidad de índices UNIQUE por grupo
     duplicado["UNIQUE_COUNT"] = (
         duplicado.groupby(["TABLA", "ATRIBUTOS"])["IS_UNIQUE_NUM"]
         .transform("sum")
     )
+        # COLUMNA PK Y UNIQUE
+    def regla(row):
+        if row["IS_PRIMARY_KEY_NUM"] == 1 and row["IS_UNIQUE_NUM"] == 1:
+            return "PK Y UNIQUE"
+        if row["IS_PRIMARY_KEY_NUM"] == 1:
+            return "PK"
+        if row["IS_UNIQUE_NUM"] == 1:
+            return "UNIQUE"
+        return "INDEX"
+
+    duplicado["TIPO"] = duplicado.apply(regla, axis=1)
+    #----------
 
     # Valor por defecto
-    duplicado["MANTENER"] = 0
+    duplicado["MANTENER"] = "Duplica"
 
     # PK siempre se mantiene
     duplicado.loc[
         duplicado["IS_PRIMARY_KEY_NUM"] == 1,
         "MANTENER"
-    ] = 1
+    ] = "Unico"
 
     # UNIQUE se mantiene sólo si es el único UNIQUE del grupo
     duplicado.loc[
@@ -53,11 +66,13 @@ def buscar_duplicado(df):
         & (duplicado["IS_UNIQUE_NUM"] == 1)
         & (duplicado["UNIQUE_COUNT"] == 1),
         "MANTENER"
-    ] = 1
+    ] = "Unico"
 
     duplicado.drop(columns=["UNIQUE_COUNT", "IS_UNIQUE_NUM", "PESO_GRUPO"], inplace=True)
+    
 
-    #duplicado.to_csv("duplicado3.csv",sep=";",index=False)
+
+    duplicado.to_csv("AAAAduplicado.csv",sep=";",index=False)
     return duplicado
 '''
 def main():

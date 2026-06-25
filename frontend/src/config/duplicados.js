@@ -1,25 +1,33 @@
 
+export const duplicadosColumnDefs = [
+    { headerName:"PRIORIDAD-TEXTO",field: "USED-PAGES", flex: 1 },
+    { field: "INDICE", flex: 1,
+        cellClassRules:{
+            "celda-inactivo": params =>
+            String(params.data.INDICE).trim() === "aaaRentaEncasillamiento_PK",
+        }
+     },
+    { field: "TYPE_DESC", flex: 1,
+        cellClassRules:{
+           "celda-punto": params =>
+            String(params.data.TYPE_DESC).trim() === "NONCLUSTERED", 
+        }
+     },
+    { field: "TIPO", flex: 1 },
+    { headerName:"ACCIÓN",field: "MANTENER", flex: 1 },
+    { headerName:"EFECTO DE ELIMINAR",field: "USED-PAGES", flex: 1 },
+    { headerName:"ACCIÓN",field: "MANTENER",flex: 1,
+       cellClassRules: {
+            "celda-texto": params =>
+            String(params.data.MANTENER).trim() === "Duplica",
 
-  export const duplicadosColumnDefs = [
-    {checkboxSelection: true, headerCheckboxSelection: true, width: 60},
-    {field: "TABLA", flex: 1},
-    {field: "INDICE", flex: 1},
-    {field: "ATRIBUTOS", flex: 1},
-    {field: "TYPE_DESC", flex: 1},
-    {field: "IS_PRIMARY_KEY", flex: 1},
-    {field: "IS_UNIQUE", flex: 1},
-    {field: "EVALUACION_INDICE", flex: 1},
-    {field: "USED-PAGES", flex: 1}
+            "celda-borde": params =>
+            String(params.data.MANTENER).trim() === "Unico",
+        }
+    },
 ];
 
+
 export const duplicadosRules = {
-    "fila-pk": params =>
-    params.data.IS_PK == 1,
 
-    "fila-duplicado": params =>
-    params.data.MANTENER == 0,
-
-    "nada": params =>
-    String(params.data.TABLA).trim() ===
-    "RentaEncasillamiento"
 }

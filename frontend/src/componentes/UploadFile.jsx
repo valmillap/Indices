@@ -60,6 +60,7 @@ function UploadFiles({ onUploadSuccess }) {
           onExito={() => {
             setModalAbierto(false);
             setMensaje("Archivo exportado correctamente");
+            onUploadSuccess();
           }}
         />
       )}

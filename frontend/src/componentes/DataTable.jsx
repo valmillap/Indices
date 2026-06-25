@@ -2,9 +2,9 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 
-import "./DataTable.css";
 
-function DataTable({ data, columnDefs, rowClassRules }) {
+import "./DataTable.css";
+function DataTable({ data, columnDefs, rowClassRules}) {
 
   if (!data || data.length === 0) {
     return <div>Sin datos</div>;
@@ -44,22 +44,20 @@ function DataTable({ data, columnDefs, rowClassRules }) {
         width: "80%"
       }}
     >
-      <AgGridReact
+        <AgGridReact
         rowData={data}
         columnDefs={columnDefs}
-        rowClassRules ={rowClassRules}
-        
-        rowSelection="multiple"
+        rowClassRules={rowClassRules}
 
         defaultColDef={{
-          sortable: true,
-          filter: true,
-          resizable: true
+            sortable: true,
+            filter: true,
+            resizable: true
         }}
-        
+
         pagination={true}
         paginationPageSize={50}
-      />
+    />
     </div>
 
   </div>
