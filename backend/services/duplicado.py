@@ -1,8 +1,8 @@
 import pandas as pd
+import numpy as np
 
 def buscar_duplicado(df):
      # Ignorar filas sin ATRIBUTOS
-     #Dilmah454+Fr
     df = df[df["ATRIBUTOS"].str.strip() != ""]
 
     # Buscar duplicados por TABLA + ATRIBUTOS
@@ -68,9 +68,12 @@ def buscar_duplicado(df):
     ] = "Unico"
 
     duplicado.drop(columns=["UNIQUE_COUNT", "IS_UNIQUE_NUM", "PESO_GRUPO"], inplace=True)
+
+
+    duplicado["BENEFICIO"] = np.where(duplicado["MANTENER"] == "Duplica",
+    "Liberar "+ duplicado["USED-PAGES"].astype(str)+  
+    "MB espacio, - " + duplicado["USER_UPDATES"].astype(str)+ " operaciones de mantenimiento","")
     
-
-
     duplicado.to_csv("AAAAduplicado.csv",sep=";",index=False)
     return duplicado
 '''
@@ -80,4 +83,16 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+df["BENEFICIO"] = np.where(
+    df["MANTENER"] == "Duplica",
+    "Liberar "
+    + df["TAMANO_TOTAL"].astype(str)
+    + " espacio, - "
+    + df["USER_UPDATES"].astype(str)
+    + " operaciones de mantenimiento",
+    ""
+)
+
 '''
