@@ -1,11 +1,16 @@
 
 export const duplicadosColumnDefs = [
+    {
+    headerName: "Prioridad",flex:1,
+    valueGetter: params => getPrioridad(params.data["USED-PAGES"])
+},
     { field: "TABLA", flex: 1 },
     { field: "INDICE", flex: 1,},
+    { headerName:"PESO", field: "USED-PAGES", flex: 1,hide: true,},
     { field: "TYPE_DESC", flex: 1,
         cellClassRules:{
            "celda-punto": params =>
-            String(params.data.TYPE_DESC).trim() === "NONCLUSTERED", 
+            String(params.data.TYPE_DESC).trim() === "CLUSTERED", 
         }
      },
      { field: "TIPO", flex: 1,
@@ -25,20 +30,37 @@ export const duplicadosColumnDefs = [
         return params.value;
         }
      },
-    { headerName:"ACCIÓN",field: "MANTENER",flex: 1,
-       cellClassRules: {
-            "celda-texto": params =>
-            String(params.data.MANTENER).trim() === "Duplica",
+    { headerName:"ACCIÓN",field: "MANTENER",flex: 1,wrapText: true, autoHeight: true,
+       cellRenderer: params => {
+            const valor = String(params.data.MANTENER).trim()
+            if (!valor.startsWith("Duplica")) return valor
+
+            const [, ...resto] = valor.split(" ")
+            const indice = resto.join(" ")
+
+            return (
+                <span className="mantener-wrapper">
+                    <span className="mantener-duplica">Duplica </span>
+                    <span className="mantener-indice">{indice}</span>
+                </span>
+            )
         }
     },
-    { headerName:"EFECTO DE ELIMINAR",field: "BENEFICIO", flex: 2,
+    { headerName:"EFECTO DE ELIMINAR",field: "BENEFICIO", flex: 2, wrapText: true,
+    autoHeight: true,
         cellClassRules: {
-            "celda-inactivo": params =>
-            String(params.data.MANTENER).trim() === "Duplica",
+            "celda-interlineado": params =>
+            String(params.data.MANTENER).startsWith("Duplica"),
         }
      }
 ];
+const getPrioridad = (usedPages) => {
+    if (usedPages > 8)  return "🌟 Alta"
+    if (usedPages > 1)  return "🔽 Poco relevante"
+    return "⛔ No relevante"
+}
 
 export const duplicadosRules = {
-
+    "fila-peso": params =>
+        params.data["USED-PAGES"] < 0.015
 }

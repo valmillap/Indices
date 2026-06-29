@@ -2,7 +2,7 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 import pandas as pd
-import pyodbc,shutil, os
+import pyodbc, shutil, os
 
 from services.indice_analisis import generar_df_indice_base
 from services.costo_beneficio import calcular_costo
@@ -155,8 +155,8 @@ def conectar_y_exportar(data: Conexion):
         
         for item in consultas:
             df = pd.read_sql(item["sql"], conn)
-            df.to_csv(f"files/{item['archivo']}", sep=";", index=False)
-            df.to_csv(f"files/{item["archivo"]}", sep=";", index=False)
+            df.to_csv(FILES_DIR/{item['archivo']}, sep=";", index=False)
+            df.to_csv(FILES_DIR/{item["archivo"]}, sep=";", index=False)
         
         cargar()
         return {"ok": True, "mensaje": "Archivo generado correctamente"}

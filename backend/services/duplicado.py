@@ -66,13 +66,30 @@ def buscar_duplicado(df):
         & (duplicado["UNIQUE_COUNT"] == 1),
         "MANTENER"
     ] = "Unico"
+     # --- Nombre del índice que se mantiene por grupo ---
+    idx_unico = (
+        duplicado[duplicado["MANTENER"] == "Unico"]
+        .groupby(["TABLA", "ATRIBUTOS"])["INDICE"]
+        .first()
+        .rename("INDICE_REFERENCIA")
+    )
+
+    duplicado = duplicado.join(idx_unico, on=["TABLA", "ATRIBUTOS"])
+
+    # --- MANTENER con nombre del índice que duplica ---
+    duplicado["MANTENER"] = np.where(
+        duplicado["MANTENER"] == "Duplica",
+        "Duplica " + duplicado["INDICE_REFERENCIA"].fillna("").astype(str),
+        duplicado["MANTENER"]
+    )
 
     duplicado.drop(columns=["UNIQUE_COUNT", "IS_UNIQUE_NUM", "PESO_GRUPO"], inplace=True)
 
 
-    duplicado["BENEFICIO"] = np.where(duplicado["MANTENER"] == "Duplica",
-    "Liberar "+ duplicado["USED-PAGES"].astype(str)+  
-    "MB espacio, - " + duplicado["USER_UPDATES"].astype(str)+ " operaciones de mantenimiento","")
+    duplicado["BENEFICIO"] = np.where(
+    duplicado["MANTENER"].str.startswith("Duplica"),
+    "Liberar " + duplicado["USED-PAGES"].astype(str) +
+    "MB espacio, - " + duplicado["USER_UPDATES"].astype(str) + " ops. de escritura", "")
     
     duplicado.to_csv("AAAAduplicado.csv",sep=";",index=False)
     return duplicado
@@ -83,16 +100,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-df["BENEFICIO"] = np.where(
-    df["MANTENER"] == "Duplica",
-    "Liberar "
-    + df["TAMANO_TOTAL"].astype(str)
-    + " espacio, - "
-    + df["USER_UPDATES"].astype(str)
-    + " operaciones de mantenimiento",
-    ""
-)
 
 '''
