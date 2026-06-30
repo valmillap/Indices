@@ -1,9 +1,11 @@
 
 import pandas as pd
+import numpy as np
 
 def buscar_contenido(df):
-    df = df[df["ATRIBUTOS"].str.strip() != ""]
 
+    df = df[df["ATRIBUTOS"].str.strip() != ""]
+    
     def es_prefijo(indice_grande, indice_pequeno):
 
         cols_grande = [x.strip() for x in indice_grande.split(",")]
@@ -45,24 +47,24 @@ def buscar_contenido(df):
                     if (
                         diferencia < 3
                         and str(contenido["IS_PRIMARY_KEY"]) != "1"
-                        and str(contenido["IS_UNIQUE"]) != "1"
-                    ):
+                        and str(contenido["IS_UNIQUE"]) != "1"):
 
                         contenido["EVALUACION_CONTENIDO"] = "CANDIDATO ELIMINAR"
-                        contenido["MANTENER"] = f"Contiene {contenedor['INDICE']}"
+                        contenido["MANTENER"] = f"Contenidopor {contenedor['INDICE']}"
 
                     elif diferencia >= 3:
 
-                        contenido["EVALUACION_CONTENIDO"] = ("REVISAR")
-                        contenido["MANTENER"] = ""
+                        contenido["EVALUACION_CONTENIDO"] = "REVISAR"
+                        contenido["MANTENER"] = f"Contenidopor {contenedor['INDICE']}"
 
                     else:
 
-                        contenido["EVALUACION_CONTENIDO"] = ("CONSERVAR (PK/UNIQUE)")
-                        contenido["MANTENER"] = ""
+                        contenido["EVALUACION_CONTENIDO"] = "CONSERVAR (PK/UNIQUE)"
+                        contenido["MANTENER"] = f"Contenidopor{contenedor['INDICE']}"
 
                     contenedor["DIFERENCIA_ATRIBUTOS"] = ""
                     contenedor["EVALUACION_CONTENIDO"] = "CONTENEDOR"
+                    contenedor["MANTENER"] = "Contenedor"
 
                     indices_contenidos.append(contenedor)
                     indices_contenidos.append(contenido)
@@ -70,7 +72,25 @@ def buscar_contenido(df):
     indices_contenidos = pd.DataFrame(indices_contenidos)
     indices_contenidos = indices_contenidos.sort_values(["TABLA", "ATRIBUTOS", "INDICE"])
 
+    #--- TIPO PK Y UNIQUE
+    indices_contenidos["IS_PRIMARY_KEY_NUM"] = pd.to_numeric(
+        indices_contenidos["IS_PRIMARY_KEY"], errors="coerce"
+    ).fillna(0)
 
+    indices_contenidos["IS_UNIQUE_NUM"] = pd.to_numeric(
+        indices_contenidos["IS_UNIQUE"], errors="coerce"
+    ).fillna(0)
+     # COLUMNA PK Y UNIQUE
+    def regla(row):
+        if row["IS_PRIMARY_KEY_NUM"] == 1 and row["IS_UNIQUE_NUM"] == 1:
+            return "PK Y UNIQUE"
+        if row["IS_PRIMARY_KEY_NUM"] == 1:
+            return "PK"
+        if row["IS_UNIQUE_NUM"] == 1:
+            return "UNIQUE"
+        return "INDEX"
+
+    indices_contenidos["TIPO"] = indices_contenidos.apply(regla, axis=1)
 
     # --- ORDEN FILAS POR CONTENEDOR
     indices_contenidos["USED-PAGES"] = pd.to_numeric(
@@ -104,6 +124,11 @@ def buscar_contenido(df):
             False
         ]
     )
+    #---- EFECTO DE ELIMINAR
+    indices_contenidos["BENEFICIO"] = np.where(
+    indices_contenidos["MANTENER"].str.startswith("Contenidopor"),
+    "Liberar " + indices_contenidos["USED-PAGES"].astype(str) +
+    "MB espacio, - " + indices_contenidos["USER_UPDATES"].astype(str) + " ops. de escritura", "")
     indices_contenidos.to_csv("indices_contenidos.csv",sep=";",index=False)
 
     return indices_contenidos
