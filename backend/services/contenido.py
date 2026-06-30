@@ -49,18 +49,17 @@ def buscar_contenido(df):
                     ):
 
                         contenido["EVALUACION_CONTENIDO"] = "CANDIDATO ELIMINAR"
+                        contenido["MANTENER"] = f"Contiene {contenedor['INDICE']}"
 
                     elif diferencia >= 3:
 
-                        contenido["EVALUACION_CONTENIDO"] = (
-                            "REVISAR"
-                        )
+                        contenido["EVALUACION_CONTENIDO"] = ("REVISAR")
+                        contenido["MANTENER"] = ""
 
                     else:
 
-                        contenido["EVALUACION_CONTENIDO"] = (
-                            "CONSERVAR (PK/UNIQUE)"
-                        )
+                        contenido["EVALUACION_CONTENIDO"] = ("CONSERVAR (PK/UNIQUE)")
+                        contenido["MANTENER"] = ""
 
                     contenedor["DIFERENCIA_ATRIBUTOS"] = ""
                     contenedor["EVALUACION_CONTENIDO"] = "CONTENEDOR"
