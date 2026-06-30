@@ -66,6 +66,10 @@
 }
 
 /*---- LOOKUP*/
+.celda-heap ::before{
+    content: "●";
+    color: #22c55e;
+}
 .fila-heap{
     background-color:#EDEDED;
 }
