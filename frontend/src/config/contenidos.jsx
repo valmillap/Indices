@@ -1,20 +1,16 @@
 
 
   export const contenidosColumnDefs = [
-    {checkboxSelection: true, headerCheckboxSelection: true, width: 60},
+    {checkboxSelection: params => params.data.MANTENER?.startsWith("Contenidopor"), headerCheckboxSelection: true, width: 60,
+        headerCheckboxSelectionFilteredOnly: true
+    },
     {headerName: "Prioridad",flex:1,
     valueGetter: params => getPrioridad(params.data["USED-PAGES"])},
 
     {field: "TABLA", flex: 1},
-    {field: "INDICE", flex: 1},
+    {field: "INDICE", flex: 2},
     {field: "USED-PAGES", flex: 1,hide: true},
-    { field: "TYPE_DESC", flex: 1,
-        cellClassRules:{
-           "celda-punto": params =>
-            String(params.data.TYPE_DESC).trim() === "CLUSTERED", 
-        }
-     },
-     { field: "TIPO", flex: 1,
+    {field: "TIPO", flex: 1,
         cellRenderer: params => {
         if (params.value === "PK Y UNIQUE") {
             return <span className="pill-a">{params.value}</span>;
@@ -59,7 +55,7 @@
           }
 
       },
-      {field: "EVALUACION_CONTENIDO", flex: 2}
+      {field: "EVALUACION_CONTENIDO", flex: 1}
     
 ];
 

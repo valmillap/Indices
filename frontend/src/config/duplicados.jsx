@@ -1,7 +1,9 @@
 
 export const duplicadosColumnDefs = [
-    {
-    headerName: "Prioridad",flex:1,
+    {checkboxSelection: params => params.data.MANTENER?.startsWith("Duplica"), headerCheckboxSelection: true, width: 60,
+        headerCheckboxSelectionFilteredOnly: true
+    },
+    {headerName: "Prioridad",flex:1,
     valueGetter: params => getPrioridad(params.data["USED-PAGES"])
     },
     { field: "TABLA", flex: 1 },

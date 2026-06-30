@@ -48,6 +48,7 @@ function DataTable({ data, columnDefs, rowClassRules}) {
         rowData={data}
         columnDefs={columnDefs}
         rowClassRules={rowClassRules}
+        rowSelection="multiple"
 
         defaultColDef={{
             sortable: true,
