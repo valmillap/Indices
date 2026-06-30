@@ -108,10 +108,11 @@ def buscar_contenido(df):
 
     return indices_contenidos
 
-    
+    '''
 def main():
     df_1 = pd.read_csv("costo-benefico.csv", sep=";", dtype=str)
     buscar_contenido(df_1)
 
 if __name__ == "__main__":
     main()
+    '''
