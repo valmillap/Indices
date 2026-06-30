@@ -4,8 +4,12 @@
     {checkboxSelection: params => params.data.MANTENER?.startsWith("Contenidopor"), headerCheckboxSelection: true, width: 60,
         headerCheckboxSelectionFilteredOnly: true
     },
-    {headerName: "Prioridad",flex:1,
-    valueGetter: params => getPrioridad(params.data["USED-PAGES"])},
+    {headerName: "Prioridad",flex: 1,
+        valueGetter: params =>
+        params.data.MANTENER?.startsWith("Contenidopor")
+            ? getPrioridad(params.data["USED-PAGES"])
+            : null
+    },
 
     {field: "TABLA", flex: 1},
     {field: "INDICE", flex: 2},
@@ -66,5 +70,6 @@ const getPrioridad = (usedPages) => {
 }
 
 export const contenidosRules = {
-
+    "fila-peso": params =>
+        params.data["USED-PAGES"] < 1
 }
