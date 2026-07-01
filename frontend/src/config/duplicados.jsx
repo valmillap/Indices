@@ -15,7 +15,7 @@ export const duplicadosColumnDefs = [
             String(params.data.TYPE_DESC).trim() === "CLUSTERED", 
         }
      },
-     { field: "TIPO", flex: 1,
+     { field: "TIPO", flex: 0.7,
         cellRenderer: params => {
         if (params.value === "PK Y UNIQUE") {
             return <span className="pill-a">{params.value}</span>;
@@ -48,7 +48,7 @@ export const duplicadosColumnDefs = [
             )
         }
     },
-    { headerName:"EFECTO DE ELIMINAR",field: "BENEFICIO", flex: 2, wrapText: true,
+    { headerName:"EFECTO DE ELIMINAR",field: "BENEFICIO", flex: 1.2, wrapText: true,
     autoHeight: true,
         cellClassRules: {
             "celda-interlineado": params =>

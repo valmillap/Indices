@@ -89,9 +89,9 @@ def buscar_duplicado(df):
     duplicado["BENEFICIO"] = np.where(
     duplicado["MANTENER"].str.startswith("Duplica"),
     "Liberar " + duplicado["USED-PAGES"].astype(str) +
-    "MB espacio, - " + duplicado["USER_UPDATES"].astype(str) + " ops. de escritura", "")
+    "MB, - " + duplicado["USER_UPDATES"].astype(str) + " ops. de escritura", "")
     
-    duplicado.to_csv("AAAAduplicado.csv",sep=";",index=False)
+    #duplicado.to_csv("AAAAduplicado.csv",sep=";",index=False)
     return duplicado
 '''
 def main():

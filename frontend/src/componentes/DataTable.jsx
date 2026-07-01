@@ -41,7 +41,7 @@ function DataTable({ data, columnDefs, rowClassRules}) {
       className="ag-theme-alpine"
       style={{
         height: "700px",
-        width: "80%"
+        width: "90%"
       }}
     >
         <AgGridReact
@@ -51,8 +51,8 @@ function DataTable({ data, columnDefs, rowClassRules}) {
         rowSelection="multiple"
 
         defaultColDef={{
-            sortable: true,
-            filter: true,
+            sortable: false,
+            filter: false,
             resizable: true
         }}
 

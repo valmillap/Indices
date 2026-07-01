@@ -45,7 +45,7 @@
 
             return (
                 <span className="mantener-wrapper">
-                    <span className="mantener-duplica">Contenido </span>
+                    <span className="mantener-duplica">Contenido por </span>
                     <span className="mantener-indice">{indice}</span>
                 </span>
             )

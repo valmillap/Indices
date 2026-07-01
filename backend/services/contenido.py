@@ -129,7 +129,7 @@ def buscar_contenido(df):
     indices_contenidos["MANTENER"].str.startswith("Contenidopor"),
     "Liberar " + indices_contenidos["USED-PAGES"].astype(str) +
     "MB espacio, - " + indices_contenidos["USER_UPDATES"].astype(str) + " ops. de escritura", "")
-    indices_contenidos.to_csv("indices_contenidos.csv",sep=";",index=False)
+    #indices_contenidos.to_csv("indices_contenidos.csv",sep=";",index=False)
 
     return indices_contenidos
 
