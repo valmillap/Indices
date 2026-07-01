@@ -1,18 +1,18 @@
 
 
   export const lookupColumnDefs = [
-    {checkboxSelection: true, headerCheckboxSelection: true, width: 60},
-    {headerName: "Prioridad",flex: 1,
+    {field: "TABLA", flex: 1.5,
+        cellRenderer: params => {
+        if (params.data.TYPE_DESC !== "HEAP") return ""
+        return params.value
+    },
         cellClassRules: {
             "celda-heap": params =>
                 String(params.data.TYPE_DESC).trim() == "HEAP",
         }
     },
-    {field: "TABLA", flex: 1},
     {field: "INDICE", flex: 1},
     {field: "TYPE_DESC", flex: 1},
-    {field: "USER_SEEKS", flex: 1},
-    {field: "USER_SCANS", flex: 1},
     {field: "USER_LOOKUPS",flex: 1,
        cellClassRules: {
 
@@ -20,7 +20,8 @@
                 Number(params.value) > 1000,
         }
     },
-    {field: "USER_UPDATES", flex: 1},
+    {field: "USER_SEEKS", flex: 1},
+    {field: "USER_SCANS", flex: 1},
     {field: "USED-PAGES", flex: 1}
     
 ];

@@ -103,6 +103,11 @@
     color: #22c55e;
     margin-right: 6px;
 }
+.celda-heap::before {
+    content: "📁";
+    color: #22c55e;
+    margin-right: 6px;
+}
 .celda-interlineado {
     /*background-color: rgb(240, 240, 240);*/
     color: #9ca3af;
