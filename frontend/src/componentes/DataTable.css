@@ -71,11 +71,11 @@
     color: #22c55e;
 }
 .fila-heap{
-    background-color:#EDEDED;
+    background-color:#b1ababb7;
 }
 
 .fila-no-heap{
-    background-color:#ffffff;
+    background-color:#ece8e8;
 }
 .fila-peso{
     background-color: rgb(240, 240, 240);
@@ -86,6 +86,7 @@
     background-color:rgb(255, 208, 208);
 }
 /*STYLOS*/
+
 .celda-texto::before{    
     content: "⚠ ";/*❌ ⚠️*/
 }
@@ -103,11 +104,7 @@
     color: #22c55e;
     margin-right: 6px;
 }
-.celda-heap::before {
-    content: "📁";
-    color: #22c55e;
-    margin-right: 6px;
-}
+
 .celda-interlineado {
     /*background-color: rgb(240, 240, 240);*/
     color: #9ca3af;
