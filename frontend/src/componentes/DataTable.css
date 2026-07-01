@@ -52,7 +52,6 @@
 .celda-texto {
     color: #dc2626;
     font-weight: bold;
-    line-height: 1.2 !important; 
 }
 
 
@@ -65,13 +64,17 @@
     color: #f0f0f0;
 }
 .fila-heap{
-    background-color:#e0e0e0;
+    background-color:#dbd9d9a4;
 }
 .fila-no-heap{
     background-color:#ffffff;
 }
+.celda-lookup::before{
+    content: "🚨";
+}
 .celda-lookup{
-    background-color:rgb(255, 208, 208);
+    color: #dc2626;
+    font-weight: bold;
 }
 
 /*---- Fragmentacion */
@@ -125,7 +128,7 @@
 .pill-a { background: #d4c646; }
 .pill-b { background: #ce574ead; }
 .pill-c { background: #4e66ce; }
-.pill-heap { background: #F6ABA1;}
+.pill-heap { background: #bb4d4d;}
 .pill-nonc {background:#979797;}
 
 .mantener-duplica {
