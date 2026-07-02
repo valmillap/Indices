@@ -6,24 +6,34 @@ export const fragColumnDefs = [
     {field: "INDICE", flex: 1},
     {field: "PAGES", flex: 1},
     {field: "FRAGMENTACION", flex: 1,
-        cellClassRules: {
-            "fila-alerta": params =>
-               params.data.FRAGMENTACION < 19,
-            "celda-rojo": params =>
-               params.data.FRAGMENTACION > 20
-          },
+        cellRenderer: params => {
+        if (params.data.FRAGMENTACION > 20) {
+            return <span className="pill-frag-alta">{params.value}</span>;
+            }
+        if (params.data.FRAGMENTACION < 19) {
+            return <span className="pill-frag-medio">{params.value}</span>;
+            }
+        }
     },
     {field: "PAGE_FULLNESS", flex: 1,
         cellClassRules: {
             "fila-alerta": params =>
               params.data["PAGE_FULLNESS"] < 70
           },
+        cellRenderer: params => {
+        if (params.data["PAGE_FULLNESS"] < 70) {
+            return <span className="pill-frag-alta">{params.value}</span>;
+            }
+        if (params.data["PAGE_FULLNESS"] > 70) {
+            return <span className="pill-frag-verde">{params.value}</span>;
+            }
+        }
     },
     {field: "USED-PAGES", flex: 1},
 ];
 
 const getPrioridad = (usedPages) => {
-    if (usedPages > 8)  return "🌟 Alta"
+    if (usedPages > 8)  return "🌟 🟨 ❏ Alta"
     if (usedPages > 1)  return "🔽 Poco relevante"
     return "⛔ No relevante"
 }
@@ -36,6 +46,10 @@ export const fragRules = {
 
 
     /*
+
+
+    pill-frag-alta
+    
      "TABLA",
         "INDICE",
         "PAGES",

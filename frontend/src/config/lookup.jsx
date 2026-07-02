@@ -4,8 +4,15 @@
     {field: "TABLA", flex: 1.1,
         
         cellRenderer: params => {
-        if (params.data.TYPE_DESC !== "HEAP") return "Posible causante lookup"
-        return params.value
+        if (params.data.TYPE_DESC === "HEAP") return params.value
+        const filas = [];
+        params.api.forEachNode(node => filas.push(node.data));
+
+        const total = contarNoHeap(params.data.TABLA, filas);
+
+        return total === 1
+            ? "Causante lookup"
+            : "Posible causante lookup";
     },
         cellClassRules: {
             "celda-heap": params =>
@@ -40,7 +47,7 @@
     {headerName:"SEEKS",field: "USER_SEEKS", flex: 0.4},
     {headerName:"SCANS",field: "USER_SCANS",flex: 0.4},
     {field: "USED-PAGES", flex: 1},
-    {headerName: "COLUMNA",flex:1,
+    {headerName: "COLUMNA",flex:1,hide:true,
     valueGetter: params => getColumna(params.data["TYPE_DESC"]),
     cellClassRules: {
             "celda-italic": params =>
@@ -49,6 +56,14 @@
     },
     
 ];
+const contarNoHeap = (tabla, datos) => {
+    return datos.filter(
+        row =>
+            row.TABLA === tabla &&
+            row.TYPE_DESC !== "HEAP"
+    ).length;
+};
+
 
 const getColumna = (type) => {
     if (type.trim() =="NONCLUSTERED")  return "algo"
