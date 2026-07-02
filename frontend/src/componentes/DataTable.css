@@ -92,9 +92,9 @@
     content: "- "; /*❌ ⚠️*/
     color: #725504;
 }
-.pill-frag-alta{
-    background:#fee2e2;
-    color:#b91c1c;
+.pill-frag-verde{
+    background:#ebfee2;
+    color:#5bb91c;
     padding:2px 10px;
     border-radius:20px;
     font-weight:600;
