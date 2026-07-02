@@ -70,11 +70,17 @@
     background-color:#ffffff;
 }
 .celda-lookup::before{
-    content: "🚨";
+    content: "🔺";/*🔻🚨*/
 }
 .celda-lookup{
     color: #dc2626;
     font-weight: bold;
+}
+.celda-italic{
+    color: #9ca3af;
+    font-style: italic;
+    font-weight: 100;
+    padding-left: 50px;
 }
 
 /*---- Fragmentacion */
