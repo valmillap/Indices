@@ -4,7 +4,7 @@ import "ag-grid-community/styles/ag-theme-alpine.css";
 
 
 import "./DataTable.css";
-function DataTable({ data, columnDefs, rowClassRules}) {
+function DataTable({ data, columnDefs, rowClassRules,toolbar}) {
 
   if (!data || data.length === 0) {
     return <div>Sin datos</div>;
@@ -36,7 +36,7 @@ function DataTable({ data, columnDefs, rowClassRules}) {
   </div>
 
   <div className="tabla-container">
-    
+
     <div
       className="ag-theme-alpine"
       style={{

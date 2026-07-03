@@ -1,6 +1,5 @@
 
-
-  export const lookupColumnDefs = [
+ export const lookupColumnDefs = [
     {field: "TABLA", flex: 1.1,
         
         cellRenderer: params => {
@@ -52,8 +51,21 @@
     cellClassRules: {
             "celda-italic": params =>
                 String(params.data.TYPE_DESC).trim() == "NONCLUSTERED",
-        },
+        }
     },
+    {headerName: "Acción",
+    cellRenderer: (params) => {
+      return (
+        <button
+          onClick={() => {
+            console.log("CLICK OK", params.data);
+          }}
+        >
+          Click
+        </button>
+      );
+    }
+}
     
 ];
 const contarNoHeap = (tabla, datos) => {

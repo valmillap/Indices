@@ -89,8 +89,8 @@
     color: #940000;
 }
 .pill-frag-medio::before {
-    content: "- "; /*❌ ⚠️*/
-    color: #725504;
+    content: "● "; /*❌ ⚠️*/
+    color: #c59b27;
 }
 .pill-frag-verde{
     background:#ebfee2;
@@ -110,7 +110,7 @@
 
 .pill-frag-medio{
     background:#fefae2;
-    color:#b99c1c;
+    color:#b9871c;
     padding:2px 10px;
     border-radius:20px;
     font-weight:600;

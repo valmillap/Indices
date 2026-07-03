@@ -16,10 +16,6 @@ export const fragColumnDefs = [
         }
     },
     {field: "PAGE_FULLNESS", flex: 1,
-        cellClassRules: {
-            "fila-alerta": params =>
-              params.data["PAGE_FULLNESS"] < 70
-          },
         cellRenderer: params => {
         if (params.data["PAGE_FULLNESS"] < 70) {
             return <span className="pill-frag-alta">{params.value}</span>;

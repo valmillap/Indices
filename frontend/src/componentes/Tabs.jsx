@@ -12,6 +12,16 @@ function Tabs() {
   const [data, setData] = useState([]);
   const [columnDefs, setColumnDefs] = useState([]);
   const [rowClassRules, setRowClassRules] = useState({});
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const abrirModal = () => {
+      console.log("CLICK OK");
+    setModalOpen(true);
+  };
+
+  const cerrarModal = () => {
+    setModalOpen(false);
+  };
 
   const cargarDuplicados = async () => {
     const resultado = await getDuplicados();
@@ -42,7 +52,6 @@ function Tabs() {
 
     setData(resultado.data);
     setColumnDefs(costoColumnDefs);
-    setRowClassRules(costoRules);
   };
 
   const cargarContenidos = async () => {
@@ -81,8 +90,23 @@ function Tabs() {
         columnDefs={columnDefs}
         rowClassRules={rowClassRules}
       />
+      {modalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+
+            <h3>Modal</h3>
+
+            <button onClick={cerrarModal}>
+              Cerrar
+            </button>
+
+          </div>
+        </div>
+      )}
+
 
     </div>
+    
   );
 }
 
