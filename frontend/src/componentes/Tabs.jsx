@@ -97,18 +97,6 @@ function Tabs() {
 
   return (
     <div>
-
-      {conexion && (
-        <div className="conexion-banner">
-          <span>
-            Conectado a: <strong>{conexion.database}</strong> ({conexion.server})
-          </span>
-          <button onClick={() => setModalConexionAbierto(true)}>
-            Cambiar base de datos
-          </button>
-        </div>
-      )}
-
       <button onClick={cargarDuplicados}>
         Duplicados
       </button>
@@ -157,21 +145,10 @@ function Tabs() {
         </div>
       )}
 
-      {/* Cambiar de BD sin salir de la pantalla ni perder los datos ya cargados */}
-      {modalConexionAbierto && (
-        <ModalConexion
-          onCerrar={() => setModalConexionAbierto(false)}
-          onExito={async () => {
-            setModalConexionAbierto(false);
-            await cargarConexionActual();
-          }}
-        />
-      )}
-
             {comparacion && (
         <div className="modal-overlay">
           <div className="modal modal-comparacion">
-            <h3>Contenedor vs Contenido</h3>
+            <h3>Detalle</h3>
 
             <div className="comparacion-columnas">
               <div className="comparacion-col">
