@@ -17,7 +17,7 @@ function Tabs() {
 
   // Modal genérico de texto (usado por ejemplo desde el botón "Acción" de lookup)
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalTexto, setModalTexto] = useState("");
+ const [modalFila, setModalFila] = useState(null);
 
   // Conexión activa (servidor / BD) y modal para cambiarla
   const [conexion, setConexion] = useState(null);
@@ -38,8 +38,8 @@ function Tabs() {
     }
   };
 
-  const abrirModalConTexto = (texto) => {
-    setModalTexto(texto);
+ const abrirModalConFila = (fila) => {
+    setModalFila(fila);
     setModalOpen(true);
   };
 
@@ -124,14 +124,21 @@ function Tabs() {
         data={data}
         columnDefs={columnDefs}
         rowClassRules={rowClassRules}
-        context={{ abrirModalConTexto }}
+        context={{ abrirModalConFila }}
       />
 
-      {modalOpen && (
+      {modalOpen && modalFila && (
         <div className="modal-overlay">
           <div className="modal">
-            <h3>Modal</h3>
-            <p>{modalTexto}</p>
+            <h3>Detalle</h3>
+            <div className="modal-detalle">
+              {Object.entries(modalFila).map(([campo, valor]) => (
+                <div key={campo} className="modal-detalle-fila">
+                  <span className="modal-detalle-campo">{campo}</span>
+                  <span className="modal-detalle-valor">{String(valor)}</span>
+                </div>
+              ))}
+            </div>
             <div className="modal-buttons">
               <button onClick={cerrarModal}>
                 Cerrar

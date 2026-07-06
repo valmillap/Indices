@@ -58,7 +58,8 @@
       return (
         <button
           onClick={() => {
-             params.context.abrirModalConTexto("texto modal");
+            params.context.abrirModalConFila(params.data);
+
           }}
         >
           Click
