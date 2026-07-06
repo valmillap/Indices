@@ -72,3 +72,9 @@ export async function getDuplicados() {
 
   return response.json();
 }
+export async function getConexionActual() {
+  const response = await fetch(`${API_URL}/conexion-actual`);
+  return response.json();
+}
+
+

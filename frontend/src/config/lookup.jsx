@@ -58,7 +58,7 @@
       return (
         <button
           onClick={() => {
-            console.log("CLICK OK", params.data);
+             params.context.abrirModalConTexto("texto modal");
           }}
         >
           Click

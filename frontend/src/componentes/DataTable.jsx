@@ -4,7 +4,7 @@ import "ag-grid-community/styles/ag-theme-alpine.css";
 
 
 import "./DataTable.css";
-function DataTable({ data, columnDefs, rowClassRules,toolbar}) {
+function DataTable({ data, columnDefs, rowClassRules, toolbar, context }) {
 
   if (!data || data.length === 0) {
     return <div>Sin datos</div>;
@@ -49,6 +49,7 @@ function DataTable({ data, columnDefs, rowClassRules,toolbar}) {
         columnDefs={columnDefs}
         rowClassRules={rowClassRules}
         rowSelection="multiple"
+        context={context}
 
         defaultColDef={{
             sortable: false,

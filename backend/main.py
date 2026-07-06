@@ -27,6 +27,7 @@ class Conexion(BaseModel):
 
 app = FastAPI()
 df_costo_global = None
+conexion_actual = None  # guarda {server, database, user} de la última conexión exitosa
 # CORS
 app.add_middleware(
     CORSMiddleware,
@@ -138,6 +139,7 @@ async def fragmentacion():
 
 @app.post("/conectar-y-exportar")
 def conectar_y_exportar(data: Conexion):
+    global conexion_actual
     try:
         conn = pyodbc.connect(
             f"DRIVER={{ODBC Driver 17 for SQL Server}};"
@@ -155,11 +157,33 @@ def conectar_y_exportar(data: Conexion):
         
         for item in consultas:
             df = pd.read_sql(item["sql"], conn)
-            df.to_csv(FILES_DIR/{item['archivo']}, sep=";", index=False)
-            df.to_csv(FILES_DIR/{item["archivo"]}, sep=";", index=False)
-        
+            df.to_csv(FILES_DIR / item["archivo"], sep=";", index=False)
+
+        conn.close()
+
+        # Guardamos la conexión activa (sin password) para poder mostrarla
+        # y permitir cambiar de BD desde el frontend sin perder la sesión.
+        conexion_actual = {
+            "server": data.server,
+            "database": data.database,
+            "user": data.user,
+        }
+
         cargar()
-        return {"ok": True, "mensaje": "Archivo generado correctamente"}
+        return {
+            "ok": True,
+            "mensaje": "Archivo generado correctamente",
+            "conexion": conexion_actual,
+        }
     except Exception as e:
         return {"ok": False, "mensaje": str(e)}
+
+
+@app.get("/conexion-actual")
+def obtener_conexion_actual():
+    """Devuelve la BD/servidor actualmente conectados (o null si no hay ninguno)."""
+    if conexion_actual is None:
+        return {"conectado": False}
+    return {"conectado": True, **conexion_actual}
+
     
