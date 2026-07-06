@@ -59,7 +59,37 @@
           }
 
       },
-      {field: "EVALUACION_CONTENIDO", flex: 1}
+      {field: "EVALUACION_CONTENIDO", flex: 1},
+      { headerName: "", width: 90,
+        cellRenderer: params => {
+            const esContenido = String(params.data.MANTENER).startsWith("Contenidopor")
+            if (!esContenido) return null
+
+            const nombreContenedor = String(params.data.MANTENER).trim().split(" ").slice(1).join(" ")
+
+            return (
+                <button
+                    onClick={() => {
+                        let contenedor = null
+                        params.api.forEachNode(node => {
+                            if (
+                                node.data.TABLA === params.data.TABLA &&
+                                node.data.INDICE === nombreContenedor
+                            ) {
+                                contenedor = node.data
+                            }
+                        })
+                        params.context.abrirModalComparacion({
+                            contenido: params.data,
+                            contenedor,
+                        })
+                    }}
+                >
+                    Comparar
+                </button>
+            )
+        }
+      }
     
 ];
 

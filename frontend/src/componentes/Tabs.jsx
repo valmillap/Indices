@@ -17,7 +17,8 @@ function Tabs() {
 
   // Modal genérico de texto (usado por ejemplo desde el botón "Acción" de lookup)
   const [modalOpen, setModalOpen] = useState(false);
- const [modalFila, setModalFila] = useState(null);
+  const [modalFila, setModalFila] = useState(null);
+  const [comparacion, setComparacion] = useState(null);
 
   // Conexión activa (servidor / BD) y modal para cambiarla
   const [conexion, setConexion] = useState(null);
@@ -41,6 +42,14 @@ function Tabs() {
  const abrirModalConFila = (fila) => {
     setModalFila(fila);
     setModalOpen(true);
+  };
+
+   const abrirModalComparacion = ({ contenido, contenedor }) => {
+    setComparacion({ contenido, contenedor });
+  };
+
+  const cerrarModalComparacion = () => {
+    setComparacion(null);
   };
 
   const cerrarModal = () => {
@@ -124,7 +133,7 @@ function Tabs() {
         data={data}
         columnDefs={columnDefs}
         rowClassRules={rowClassRules}
-        context={{ abrirModalConFila }}
+        context={{ abrirModalConFila, abrirModalComparacion }}
       />
 
       {modalOpen && modalFila && (
@@ -158,6 +167,64 @@ function Tabs() {
           }}
         />
       )}
+
+            {comparacion && (
+        <div className="modal-overlay">
+          <div className="modal modal-comparacion">
+            <h3>Contenedor vs Contenido</h3>
+
+            <div className="comparacion-columnas">
+              <div className="comparacion-col">
+                <span className="comparacion-etiqueta">Contenedor</span>
+                <strong>{comparacion.contenedor?.INDICE ?? "—"}</strong>
+                <span className="comparacion-atributos">
+                  {comparacion.contenedor?.ATRIBUTOS ?? "—"}
+                </span>
+              </div>
+
+              <div className="comparacion-col">
+                <span className="comparacion-etiqueta">Contenido</span>
+                <strong>{comparacion.contenido?.INDICE ?? "—"}</strong>
+                <span className="comparacion-atributos">
+                  {comparacion.contenido?.ATRIBUTOS ?? "—"}
+                </span>
+              </div>
+            </div>
+
+            <div className="comparacion-resumen">
+              <div className="comparacion-resumen-item">
+                <span>Diferencia de tamaño</span>
+                <strong>
+                  {(
+                    (Number(comparacion.contenedor?.["TAMANO-TOTAL"]) || 0) -
+                    (Number(comparacion.contenido?.["TAMANO-TOTAL"]) || 0)
+                  ).toFixed(2)} MB
+                </strong>
+              </div>
+              <div className="comparacion-resumen-item">
+                <span>Seeks del índice contenido</span>
+                <strong>{comparacion.contenido?.USER_SEEKS ?? 0}</strong>
+              </div>
+              <div className="comparacion-resumen-item">
+                <span>Scans del índice contenido</span>
+                <strong>{comparacion.contenido?.USER_SCANS ?? 0}</strong>
+              </div>
+              <div className="comparacion-resumen-item">
+                <span>Updates del índice contenido</span>
+                <strong>{comparacion.contenido?.USER_UPDATES ?? 0}</strong>
+              </div>
+            </div>
+
+            <div className="modal-buttons">
+              <button onClick={cerrarModalComparacion}>
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+
 
     </div>
 
