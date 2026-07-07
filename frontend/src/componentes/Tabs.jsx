@@ -139,6 +139,7 @@ function Tabs() {
         columnDefs={columnDefs}
         rowClassRules={rowClassRules}
         context={{ abrirModalConFila, abrirModalComparacion }}
+        context={{ abrirModalConFila, abrirModalComparacion }}
       />
 
       </div>

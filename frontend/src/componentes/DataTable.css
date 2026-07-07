@@ -133,11 +133,6 @@
 }
 
 /*---- duplicado */
-.fila-peso{
-    background-color: rgb(240, 240, 240);
-    color: #9ca3af;
-    font-style: italic;
-}
 .celda-punto::before {
     content: "●";
     color: #22c55e;
@@ -178,4 +173,10 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+}
+.fila-peso{
+    background-color: rgb(240, 240, 240);
+    color: #9ca3af;
+    font-style: italic;
+
 }
