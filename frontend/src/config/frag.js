@@ -7,12 +7,16 @@ export const fragColumnDefs = [
     {field: "PAGES", flex: 1},
     {field: "FRAGMENTACION", flex: 1,
         cellRenderer: params => {
-        if (params.data.FRAGMENTACION > 20) {
+            /**>30 reconstruir. 5 y 30 reorganizar */
+        if (params.data.FRAGMENTACION >= 30) {
             return <span className="pill-frag-alta">{params.value}</span>;
             }
-        if (params.data.FRAGMENTACION < 19) {
+        if (params.data.FRAGMENTACION < 30 & params.data.FRAGMENTACION < 15) {
             return <span className="pill-frag-medio">{params.value}</span>;
             }
+        if (params.data["FRAGMENTACION"] < 10) {
+            return <span className="pill-frag-verde">{params.value}</span>;
+            }   
         }
     },
     {field: "PAGE_FULLNESS", flex: 1,
@@ -40,7 +44,7 @@ const getPaginas = (usedPages, pageFullness, fragmentacion,seeks,scans) => {
         return usedPages * (100 - pageFullness) / 100 + " paginas desaprovechadas"
 
     if ( fragmentacion > 20)
-        return seeks + scans + "busquedas"
+        return seeks + scans + " busquedas"
     return ""
 }
 
