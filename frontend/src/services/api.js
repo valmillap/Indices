@@ -28,6 +28,21 @@ export async function conectarYExportar(form) {
 }
 
 
+export async function cambiarBD(database) {
+  const res = await fetch(`${API_URL}/cambiar-bd`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ database }),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Error HTTP: ${res.status}`);
+  }
+
+  return await res.json(); // retorna { ok, mensaje, conexion }
+}
+
+
 export async function getCosto() {
 
   const response = await fetch(
@@ -64,6 +79,11 @@ export async function getLookup() {
   return response.json();
 }
 
+export async function getConexionActual() {
+  const response = await fetch(`${API_URL}/conexion-actual`);
+  return response.json();
+}
+
 export async function getDuplicados() {
 
   const response = await fetch(
@@ -72,9 +92,3 @@ export async function getDuplicados() {
 
   return response.json();
 }
-export async function getConexionActual() {
-  const response = await fetch(`${API_URL}/conexion-actual`);
-  return response.json();
-}
-
-

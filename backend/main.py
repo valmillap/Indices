@@ -24,10 +24,16 @@ class Conexion(BaseModel):
     user: str
     password: str
 
+class CambioBD(BaseModel):
+    database: str
+
 
 app = FastAPI()
 df_costo_global = None
-conexion_actual = None  # guarda {server, database, user} de la última conexión exitosa
+
+# Credenciales de la conexión activa, guardadas en memoria para poder
+# cambiar de BD sin volver a pedir servidor/usuario/contraseña.
+credenciales_actuales = None  # {server, database, user, password}
 # CORS
 app.add_middleware(
     CORSMiddleware,
@@ -137,53 +143,97 @@ async def fragmentacion():
         "data": df_frag.to_dict("records")
     }
 
+def _conectar_y_exportar(server, database, user, password):
+    """Abre conexión, ejecuta las 3 consultas y guarda los CSV. Lanza excepción si falla."""
+    conn = pyodbc.connect(
+        f"DRIVER={{ODBC Driver 17 for SQL Server}};"
+        f"SERVER={server};"
+        f"DATABASE={database};"
+        f"UID={user};"
+        f"PWD={password}"
+    )
+
+    consultas = [
+        {"sql": CONSULTA_ATRIBUTOS, "archivo": "atributos.csv"},
+        {"sql": CONSULTA_USO_TAMAÑO,   "archivo": "uso.csv"},
+        {"sql": CONSULTA_FRAGMENTACION, "archivo": "frag.csv"},
+    ]
+
+    for item in consultas:
+        df = pd.read_sql(item["sql"], conn)
+        df.to_csv(FILES_DIR / item["archivo"], sep=";", index=False)
+
+    conn.close()
+    cargar()
+
+
 @app.post("/conectar-y-exportar")
 def conectar_y_exportar(data: Conexion):
-    global conexion_actual
+    global credenciales_actuales
     try:
-        conn = pyodbc.connect(
-            f"DRIVER={{ODBC Driver 17 for SQL Server}};"
-            f"SERVER={data.server};"
-            f"DATABASE={data.database};"
-            f"UID={data.user};"
-            f"PWD={data.password}"
-        )
+        _conectar_y_exportar(data.server, data.database, data.user, data.password)
 
-        consultas = [
-            {"sql": CONSULTA_ATRIBUTOS, "archivo": "atributos.csv"},
-            {"sql": CONSULTA_USO_TAMAÑO,   "archivo": "uso.csv"},
-            {"sql": CONSULTA_FRAGMENTACION, "archivo": "frag.csv"},
-        ]
-        
-        for item in consultas:
-            df = pd.read_sql(item["sql"], conn)
-            df.to_csv(FILES_DIR / item["archivo"], sep=";", index=False)
-
-        conn.close()
-
-        # Guardamos la conexión activa (sin password) para poder mostrarla
-        # y permitir cambiar de BD desde el frontend sin perder la sesión.
-        conexion_actual = {
+        # Guardamos las credenciales completas en memoria: permiten cambiar
+        # de BD después sin volver a pedir servidor/usuario/contraseña.
+        credenciales_actuales = {
             "server": data.server,
             "database": data.database,
             "user": data.user,
+            "password": data.password,
         }
 
-        cargar()
         return {
             "ok": True,
             "mensaje": "Archivo generado correctamente",
-            "conexion": conexion_actual,
+            "conexion": _conexion_publica(),
         }
     except Exception as e:
         return {"ok": False, "mensaje": str(e)}
 
 
+@app.post("/cambiar-bd")
+def cambiar_bd(data: CambioBD):
+    """Cambia solo la base de datos, reutilizando servidor/usuario/password
+    de la conexión activa. No requiere volver a escribir todo el formulario."""
+    global credenciales_actuales
+
+    if credenciales_actuales is None:
+        return {"ok": False, "mensaje": "No hay una conexión activa. Conéctate primero."}
+
+    try:
+        _conectar_y_exportar(
+            credenciales_actuales["server"],
+            data.database,
+            credenciales_actuales["user"],
+            credenciales_actuales["password"],
+        )
+
+        credenciales_actuales["database"] = data.database
+
+        return {
+            "ok": True,
+            "mensaje": "Base de datos cambiada correctamente",
+            "conexion": _conexion_publica(),
+        }
+    except Exception as e:
+        return {"ok": False, "mensaje": str(e)}
+
+
+def _conexion_publica():
+    """Versión de las credenciales sin password, segura para exponer al frontend."""
+    if credenciales_actuales is None:
+        return None
+    return {
+        "server": credenciales_actuales["server"],
+        "database": credenciales_actuales["database"],
+        "user": credenciales_actuales["user"],
+    }
+
+
 @app.get("/conexion-actual")
 def obtener_conexion_actual():
-    """Devuelve la BD/servidor actualmente conectados (o null si no hay ninguno)."""
-    if conexion_actual is None:
+    """Devuelve la BD/servidor actualmente conectados (o conectado=False si no hay ninguno)."""
+    conexion = _conexion_publica()
+    if conexion is None:
         return {"conectado": False}
-    return {"conectado": True, **conexion_actual}
-
-    
+    return {"conectado": True, **conexion}

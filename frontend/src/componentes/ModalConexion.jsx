@@ -1,10 +1,20 @@
 import { useState } from "react";
-import { conectarYExportar } from "../services/api";
+import { conectarYExportar, cambiarBD } from "../services/api";
+import "./Modal.css";
 
-export default function ModalConexion({ onCerrar, onExito }) {
+/**
+ * Modal de conexión.
+ * - Si no hay conexión activa (conexionActual == null): pide servidor, BD, usuario y password.
+ * - Si ya hay una conexión activa: solo pide la BD nueva y reutiliza servidor/usuario/password
+ *   guardados en el backend, sin pedirle al usuario que vuelva a escribir todo.
+ */
+export default function ModalConexion({ onCerrar, onExito, conexionActual }) {
+  const yaConectado = Boolean(conexionActual);
+
   const [form, setForm] = useState({
     server: "", database: "", user: "", password: ""
   });
+  const [databaseNueva, setDatabaseNueva] = useState("");
   const [mensaje, setMensaje] = useState("");
   const [cargando, setCargando] = useState(false);
 
@@ -14,10 +24,11 @@ export default function ModalConexion({ onCerrar, onExito }) {
 
   const handleConectar = async () => {
     setCargando(true);
+    setMensaje("");
     try {
       const data = await conectarYExportar(form);
       setMensaje(data.mensaje);
-      if (data.ok) onExito();
+      if (data.ok) onExito(data.conexion);
     } catch (err) {
       setMensaje("Error al conectar");
     } finally {
@@ -25,58 +36,89 @@ export default function ModalConexion({ onCerrar, onExito }) {
     }
   };
 
+  const handleCambiarBD = async () => {
+    if (!databaseNueva.trim()) {
+      setMensaje("Escribe el nombre de la base de datos");
+      return;
+    }
+    setCargando(true);
+    setMensaje("");
+    try {
+      const data = await cambiarBD(databaseNueva.trim());
+      setMensaje(data.mensaje);
+      if (data.ok) onExito(data.conexion);
+    } catch (err) {
+      setMensaje("Error al cambiar de base de datos");
+    } finally {
+      setCargando(false);
+    }
+  };
+
   return (
-    <div style={styles.overlay}>
-      <div style={styles.modal}>
-        <h2>Datos de Conexión</h2>
+    <div className="modal-overlay">
+      <div className="modal">
+        <h3>{yaConectado ? "Cambiar base de datos" : "Datos de conexión"}</h3>
 
-        {["server", "database", "user"].map((campo) => (
-          <div key={campo} style={styles.campo}>
-            <label>{campo}</label>
-            <input
-              name={campo}
-              value={form[campo]}
-              onChange={handleChange}
-              placeholder={campo}
-            />
-          </div>
-        ))}
+        {yaConectado ? (
+          <>
+            <p className="modal-conexion-actual">
+              Conectado a <strong>{conexionActual.server}</strong> como{" "}
+              <strong>{conexionActual.user}</strong>. Solo necesitas indicar
+              la nueva base de datos.
+            </p>
 
-        <div style={styles.campo}>
-          <label>password</label>
-          <input
-            name="password"
-            type="password"
-            value={form.password}
-            onChange={handleChange}
-            placeholder="contraseña"
-          />
-        </div>
+            <div className="modal-campo">
+              <label>Nueva base de datos</label>
+              <input
+                value={databaseNueva}
+                onChange={(e) => setDatabaseNueva(e.target.value)}
+                placeholder={conexionActual.database}
+                autoFocus
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            {["server", "database", "user"].map((campo) => (
+              <div key={campo} className="modal-campo">
+                <label>{campo}</label>
+                <input
+                  name={campo}
+                  value={form[campo]}
+                  onChange={handleChange}
+                  placeholder={campo}
+                />
+              </div>
+            ))}
 
-        {mensaje && <p>{mensaje}</p>}
+            <div className="modal-campo">
+              <label>password</label>
+              <input
+                name="password"
+                type="password"
+                value={form.password}
+                onChange={handleChange}
+                placeholder="contraseña"
+              />
+            </div>
+          </>
+        )}
 
-        <div style={styles.botones}>
+        {mensaje && <p className="modal-mensaje">{mensaje}</p>}
+
+        <div className="modal-buttons">
           <button onClick={onCerrar}>Cancelar</button>
-          <button onClick={handleConectar} disabled={cargando}>
-            {cargando ? "Conectando..." : "Conectar"}
+          <button
+            className="modal-btn-primario"
+            onClick={yaConectado ? handleCambiarBD : handleConectar}
+            disabled={cargando}
+          >
+            {cargando
+              ? (yaConectado ? "Cambiando..." : "Conectando...")
+              : (yaConectado ? "Cambiar BD" : "Conectar")}
           </button>
         </div>
       </div>
     </div>
   );
 }
-/*quitar*/
-const styles = {
-  overlay: {
-    position: "fixed", inset: 0,
-    background: "rgba(0,0,0,0.5)",
-    display: "flex", alignItems: "center", justifyContent: "center"
-  },
-  modal: {
-    background: "white", padding: "2rem",
-    borderRadius: "8px", minWidth: "320px",
-    display: "flex", flexDirection: "column", gap: "1rem"
-  },
-  campo: { display: "flex", flexDirection: "column", gap: "4px" },
-  botones: { display: "flex", justifyContent: "flex-end", gap: "1rem" }
-};

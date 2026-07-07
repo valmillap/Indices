@@ -7,17 +7,31 @@ import { costoColumnDefs, costoRules } from "../config/costo-beneficio";
 import { contenidosColumnDefs, contenidosRules } from "../config/contenidos";
 import DataTable from "./DataTable";
 import ModalConexion from "./ModalConexion";
+import Navbar from "./Navbar";
 import "./Modal.css";
+
+const TABS = [
+  { id: "duplicados", label: "Duplicados" },
+  { id: "lookup", label: "Heap Lookup" },
+  { id: "frag", label: "Fragmentación - pagefullness" },
+  { id: "costo", label: "Costo" },
+  { id: "contenidos", label: "Contenidos" },
+];
 
 function Tabs() {
 
   const [data, setData] = useState([]);
   const [columnDefs, setColumnDefs] = useState([]);
   const [rowClassRules, setRowClassRules] = useState({});
+  const [tabActiva, setTabActiva] = useState(null);
 
-  // Modal genérico de texto (usado por ejemplo desde el botón "Acción" de lookup)
+  // Modal genérico que muestra los datos de una fila (por ejemplo, desde
+  // el botón "Acción" de lookup)
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalTexto, setModalTexto] = useState("");
+  const [modalFila, setModalFila] = useState(null);
+
+  // Modal de comparación contenedor vs contenido (índices redundantes)
+  const [comparacion, setComparacion] = useState(null);
 
   // Conexión activa (servidor / BD) y modal para cambiarla
   const [conexion, setConexion] = useState(null);
@@ -38,9 +52,17 @@ function Tabs() {
     }
   };
 
-  const abrirModalConTexto = (texto) => {
-    setModalTexto(texto);
+  const abrirModalConFila = (fila) => {
+    setModalFila(fila);
     setModalOpen(true);
+  };
+
+  const abrirModalComparacion = ({ contenido, contenedor }) => {
+    setComparacion({ contenido, contenedor });
+  };
+
+  const cerrarModalComparacion = () => {
+    setComparacion(null);
   };
 
   const cerrarModal = () => {
@@ -86,52 +108,53 @@ function Tabs() {
     setRowClassRules(contenidosRules);
   };
 
+  const CARGADORES = {
+    duplicados: cargarDuplicados,
+    lookup: cargarHeap,
+    frag: cargarFrag,
+    costo: cargarCosto,
+    contenidos: cargarContenidos,
+  };
+
+  const seleccionarTab = (tab) => {
+    setTabActiva(tab.id);
+    CARGADORES[tab.id]?.();
+  };
+
   return (
     <div>
 
-      {conexion && (
-        <div className="conexion-banner">
-          <span>
-            Conectado a: <strong>{conexion.database}</strong> ({conexion.server})
-          </span>
-          <button onClick={() => setModalConexionAbierto(true)}>
-            Cambiar base de datos
-          </button>
-        </div>
-      )}
+      <Navbar
+        tabs={TABS}
+        tabActiva={tabActiva}
+        onSeleccionar={seleccionarTab}
+        conexion={conexion}
+        onCambiarBD={() => setModalConexionAbierto(true)}
+      />
 
-      <button onClick={cargarDuplicados}>
-        Duplicados
-      </button>
-
-      <button onClick={cargarHeap}>
-        Heap Lookup
-      </button>
-
-      <button onClick={cargarFrag}>
-        Fragmentacion- pagefullness
-      </button>
-
-      <button onClick={cargarCosto}>
-        Costo
-      </button>
-
-      <button onClick={cargarContenidos}>
-        Contenidos
-      </button>
+      <div className="tabs-contenido">
 
       <DataTable
         data={data}
         columnDefs={columnDefs}
         rowClassRules={rowClassRules}
-        context={{ abrirModalConTexto }}
+        context={{ abrirModalConFila, abrirModalComparacion }}
       />
 
-      {modalOpen && (
+      </div>
+
+      {modalOpen && modalFila && (
         <div className="modal-overlay">
           <div className="modal">
-            <h3>Modal</h3>
-            <p>{modalTexto}</p>
+            <h3>Detalle de la fila</h3>
+            <div className="modal-detalle">
+              {Object.entries(modalFila).map(([campo, valor]) => (
+                <div key={campo} className="modal-detalle-fila">
+                  <span className="modal-detalle-campo">{campo}</span>
+                  <span className="modal-detalle-valor">{String(valor)}</span>
+                </div>
+              ))}
+            </div>
             <div className="modal-buttons">
               <button onClick={cerrarModal}>
                 Cerrar
@@ -144,12 +167,69 @@ function Tabs() {
       {/* Cambiar de BD sin salir de la pantalla ni perder los datos ya cargados */}
       {modalConexionAbierto && (
         <ModalConexion
+          conexionActual={conexion}
           onCerrar={() => setModalConexionAbierto(false)}
-          onExito={async () => {
+          onExito={(nuevaConexion) => {
             setModalConexionAbierto(false);
-            await cargarConexionActual();
+            if (nuevaConexion) setConexion(nuevaConexion);
           }}
         />
+      )}
+
+      {comparacion && (
+        <div className="modal-overlay">
+          <div className="modal modal-comparacion">
+            <h3>Contenedor vs Contenido</h3>
+
+            <div className="comparacion-columnas">
+              <div className="comparacion-col">
+                <span className="comparacion-etiqueta">Contenedor</span>
+                <strong>{comparacion.contenedor?.INDICE ?? "—"}</strong>
+                <span className="comparacion-atributos">
+                  {comparacion.contenedor?.ATRIBUTOS ?? "—"}
+                </span>
+              </div>
+
+              <div className="comparacion-col">
+                <span className="comparacion-etiqueta">Contenido</span>
+                <strong>{comparacion.contenido?.INDICE ?? "—"}</strong>
+                <span className="comparacion-atributos">
+                  {comparacion.contenido?.ATRIBUTOS ?? "—"}
+                </span>
+              </div>
+            </div>
+
+            <div className="comparacion-resumen">
+              <div className="comparacion-resumen-item">
+                <span>Diferencia de tamaño</span>
+                <strong>
+                  {(
+                    (Number(comparacion.contenedor?.["TAMANO-TOTAL"]) || 0) -
+                    (Number(comparacion.contenido?.["TAMANO-TOTAL"]) || 0)
+                  ).toFixed(2)} MB
+                </strong>
+              </div>
+              <div className="comparacion-resumen-item">
+                <span>Seeks del índice contenido</span>
+                <strong>{comparacion.contenido?.USER_SEEKS ?? 0}</strong>
+              </div>
+              <div className="comparacion-resumen-item">
+                <span>Scans del índice contenido</span>
+                <strong>{comparacion.contenido?.USER_SCANS ?? 0}</strong>
+              </div>
+              <div className="comparacion-resumen-item">
+                <span>Updates del índice contenido</span>
+                <strong>{comparacion.contenido?.USER_UPDATES ?? 0}</strong>
+              </div>
+            </div>
+
+            <div className="modal-buttons">
+              <button onClick={cerrarModalComparacion}>
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
     </div>

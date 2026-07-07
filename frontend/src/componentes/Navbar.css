@@ -1,0 +1,106 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.navbar-marca {
+    font-weight: 700;
+    font-size: 15px;
+    color: #111827;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.navbar-tabs {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.navbar-tab {
+    border: none;
+    background: transparent;
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar-tab:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.navbar-tab--activa {
+    background: #111827;
+    color: #ffffff;
+}
+
+.navbar-tab--activa:hover {
+    background: #111827;
+    color: #ffffff;
+}
+
+.navbar-conexion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.navbar-conexion-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #374151;
+}
+
+.navbar-conexion-punto {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 3px #dcfce7;
+}
+
+.navbar-btn-bd {
+    border: 1px solid #86efac;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.navbar-btn-bd:hover {
+    background: #bbf7d0;
+    border-color: #4ade80;
+}
+
+@media (max-width: 720px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .navbar-conexion {
+        margin-left: auto;
+    }
+}
