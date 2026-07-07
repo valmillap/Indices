@@ -90,8 +90,6 @@
             )
         }
       }
-
-    
 ];
 
 const getPrioridad = (usedPages) => {

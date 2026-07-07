@@ -25,8 +25,24 @@ export const fragColumnDefs = [
             }
         }
     },
+    {field: "USER_SEEKS", flex: 1, hide:true},
+    {field: "USER_SCANS", flex: 1, hide:true},
+    {field: "USER_UPDATES", flex: 1, hide:true},
     {field: "USED-PAGES", flex: 1},
+    {headerName: "PAGINAS MALGASTADAS",flex:1,
+    valueGetter: params => getPaginas(params.data["USED-PAGES"], params.data["PAGE_FULLNESS"],params.data["FRAGMENTACION"],
+         params.data["USER_SEEKS"],params.data["USER_SCANS"])
+    }
 ];
+
+const getPaginas = (usedPages, pageFullness, fragmentacion,seeks,scans) => {
+    if ( pageFullness < 70)
+        return usedPages * (100 - pageFullness) / 100 + " paginas desaprovechadas"
+
+    if ( fragmentacion > 20)
+        return seeks + scans + "busquedas"
+    return ""
+}
 
 const getPrioridad = (usedPages) => {
     if (usedPages > 8)  return "🌟 🟨 ❏ Alta"

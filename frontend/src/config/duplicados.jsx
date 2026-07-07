@@ -6,8 +6,8 @@ export const duplicadosColumnDefs = [
     {headerName: "Prioridad",flex:1,
     valueGetter: params => getPrioridad(params.data["USED-PAGES"])
     },
-    { field: "TABLA", flex: 1 },
-    { field: "INDICE", flex: 1,},
+    { field: "TABLA", flex: 1, hide: true},
+    { field: "INDICE", flex: 1.6},
     { headerName:"PESO", field: "USED-PAGES", flex: 1,hide: true,},
     { field: "TYPE_DESC", flex: 1,
         cellClassRules:{
@@ -15,7 +15,7 @@ export const duplicadosColumnDefs = [
             String(params.data.TYPE_DESC).trim() === "CLUSTERED", 
         }
      },
-     { field: "TIPO", flex: 0.7,
+     { field: "TIPO", flex: 0.9,
         cellRenderer: params => {
         if (params.value === "PK Y UNIQUE") {
             return <span className="pill-a">{params.value}</span>;

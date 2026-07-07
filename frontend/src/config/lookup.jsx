@@ -53,7 +53,7 @@
                 String(params.data.TYPE_DESC).trim() == "NONCLUSTERED",
         }
     },
-    {headerName: "Acción",
+    {headerName: "Acción", hide:true,
     cellRenderer: (params) => {
       return (
         <button
