@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getDuplicados, getLookup, getFrag, getCosto, getContenidos, getConexionActual } from "../services/api";
+import { getDuplicados, getLookup, getFrag, getCosto, getContenidos, getConexionActual, cerrarSesion } from "../services/api";
 import { duplicadosColumnDefs, duplicadosRules } from "../config/duplicados";
 import { lookupColumnDefs, lookupRules } from "../config/lookup";
 import { fragColumnDefs, fragRules } from "../config/frag";
@@ -49,6 +49,22 @@ function Tabs() {
       }
     } catch (err) {
       console.error("No se pudo obtener la conexión actual", err);
+    }
+  };
+
+  const handleCerrarSesion = async () => {
+    try {
+      await cerrarSesion();
+    } catch (err) {
+      console.error("No se pudo cerrar la sesión en el backend", err);
+    } finally {
+      // La sesión se limpia igual en el frontend aunque falle la llamada,
+      // para que la BD nunca quede accesible "abierta" en pantalla.
+      setConexion(null);
+      setData([]);
+      setColumnDefs([]);
+      setRowClassRules({});
+      setTabActiva(null);
     }
   };
 
@@ -130,6 +146,7 @@ function Tabs() {
         onSeleccionar={seleccionarTab}
         conexion={conexion}
         onCambiarBD={() => setModalConexionAbierto(true)}
+        onCerrarSesion={handleCerrarSesion}
       />
 
       <div className="tabs-contenido">
@@ -139,7 +156,7 @@ function Tabs() {
         columnDefs={columnDefs}
         rowClassRules={rowClassRules}
         context={{ abrirModalConFila, abrirModalComparacion }}
-        context={{ abrirModalConFila, abrirModalComparacion }}
+        titulo={TABS.find((t) => t.id === tabActiva)?.label}
       />
 
       </div>

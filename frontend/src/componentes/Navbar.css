@@ -94,6 +94,23 @@
     border-color: #4ade80;
 }
 
+.navbar-btn-cerrar-sesion {
+    border: 1px solid #fca5a5;
+    background: #fee2e2;
+    color: #991b1b;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.navbar-btn-cerrar-sesion:hover {
+    background: #fecaca;
+    border-color: #f87171;
+}
+
 @media (max-width: 720px) {
     .navbar {
         flex-wrap: wrap;

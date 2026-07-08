@@ -5,7 +5,7 @@ import "./Navbar.css";
  * - Izquierda: pestañas de la app (Duplicados, Heap Lookup, etc).
  * - Derecha: BD activa + botón para cambiarla, sin salir de la pantalla.
  */
-function Navbar({ tabs, tabActiva, onSeleccionar, conexion, onCambiarBD }) {
+function Navbar({ tabs, tabActiva, onSeleccionar, conexion, onCambiarBD, onCerrarSesion }) {
   return (
     <nav className="navbar">
       <div className="navbar-marca">Índices</div>
@@ -34,6 +34,9 @@ function Navbar({ tabs, tabActiva, onSeleccionar, conexion, onCambiarBD }) {
             </span>
             <button className="navbar-btn-bd" onClick={onCambiarBD}>
               Cambiar BD
+            </button>
+            <button className="navbar-btn-cerrar-sesion" onClick={onCerrarSesion}>
+              Cerrar sesión
             </button>
           </>
         ) : (

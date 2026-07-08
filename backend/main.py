@@ -26,14 +26,17 @@ class Conexion(BaseModel):
 
 class CambioBD(BaseModel):
     database: str
+    password: str
 
 
 app = FastAPI()
 df_costo_global = None
 
-# Credenciales de la conexión activa, guardadas en memoria para poder
-# cambiar de BD sin volver a pedir servidor/usuario/contraseña.
-credenciales_actuales = None  # {server, database, user, password}
+# Datos de la conexión activa, guardados en memoria SOLO para mostrar en el
+# frontend y para reutilizar servidor/usuario al cambiar de BD.
+# La contraseña NUNCA se guarda: cada operación (conectar o cambiar de BD)
+# la recibe en la petición y se descarta apenas termina de usarla.
+credenciales_actuales = None  # {server, database, user}
 # CORS
 app.add_middleware(
     CORSMiddleware,
@@ -173,13 +176,13 @@ def conectar_y_exportar(data: Conexion):
     try:
         _conectar_y_exportar(data.server, data.database, data.user, data.password)
 
-        # Guardamos las credenciales completas en memoria: permiten cambiar
-        # de BD después sin volver a pedir servidor/usuario/contraseña.
+        # Guardamos únicamente servidor/BD/usuario para mostrar la conexión
+        # activa y para reutilizarlos al cambiar de BD. La contraseña no se
+        # guarda en ningún momento.
         credenciales_actuales = {
             "server": data.server,
             "database": data.database,
             "user": data.user,
-            "password": data.password,
         }
 
         return {
@@ -193,8 +196,9 @@ def conectar_y_exportar(data: Conexion):
 
 @app.post("/cambiar-bd")
 def cambiar_bd(data: CambioBD):
-    """Cambia solo la base de datos, reutilizando servidor/usuario/password
-    de la conexión activa. No requiere volver a escribir todo el formulario."""
+    """Cambia solo la base de datos, reutilizando servidor/usuario de la
+    conexión activa. La contraseña SIEMPRE se vuelve a pedir porque nunca
+    se guarda en el backend."""
     global credenciales_actuales
 
     if credenciales_actuales is None:
@@ -205,7 +209,7 @@ def cambiar_bd(data: CambioBD):
             credenciales_actuales["server"],
             data.database,
             credenciales_actuales["user"],
-            credenciales_actuales["password"],
+            data.password,
         )
 
         credenciales_actuales["database"] = data.database
@@ -217,6 +221,17 @@ def cambiar_bd(data: CambioBD):
         }
     except Exception as e:
         return {"ok": False, "mensaje": str(e)}
+
+
+@app.post("/cerrar-sesion")
+def cerrar_sesion():
+    """Cierra la sesión activa: olvida la conexión (servidor/BD/usuario) y los
+    datos ya cargados. La contraseña nunca estuvo guardada, así que basta con
+    limpiar esta información en memoria."""
+    global credenciales_actuales, df_costo_global
+    credenciales_actuales = None
+    df_costo_global = None
+    return {"ok": True, "mensaje": "Sesión cerrada"}
 
 
 def _conexion_publica():
