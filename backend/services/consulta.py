@@ -6,16 +6,16 @@ CONSULTA_ATRIBUTOS = """
         t.name                                          AS Tabla,
         i.name                                          AS Indice,
         i.type_desc                                     AS Tipo,
-        i.is_primary_key                                AS EsPK,
-        i.is_unique                                     AS EsUnique,
-        i.is_disabled                                   AS EstaDeshabilitado,
-        i.ignore_dup_key                                AS IgnoraDuplicados,
+        CAST(i.is_primary_key AS int)                   AS EsPK,
+        CAST(i.is_unique AS int)                        AS EsUnique,
+        CAST(i.is_disabled AS int)                      AS EstaDeshabilitado,
+        CAST(i.ignore_dup_key AS int)                   AS IgnoraDuplicados,
         ic.key_ordinal                                  AS OrdenColumna,
         c.name                                          AS Columna,
-        ic.is_descending_key                            AS EsDescendente,
-        ic.is_included_column                           AS EsIncluida,
+        CAST(ic.is_descending_key AS int)               AS EsDescendente,
+        CAST(ic.is_included_column AS int)              AS EsIncluida,
         ic.partition_ordinal                            AS OrdenParticion,
-        ic.column_store_order_ordinal                   AS ColStoreOrder  -- NULL si no aplica
+        ic.column_store_order_ordinal                   AS ColStoreOrder  
     FROM sys.indexes i
     INNER JOIN sys.tables t 
         ON i.object_id = t.object_id

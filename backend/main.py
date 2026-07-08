@@ -196,9 +196,7 @@ def conectar_y_exportar(data: Conexion):
 
 @app.post("/cambiar-bd")
 def cambiar_bd(data: CambioBD):
-    """Cambia solo la base de datos, reutilizando servidor/usuario de la
-    conexión activa. La contraseña SIEMPRE se vuelve a pedir porque nunca
-    se guarda en el backend."""
+    """Cambia solo la base de datos"""
     global credenciales_actuales
 
     if credenciales_actuales is None:
