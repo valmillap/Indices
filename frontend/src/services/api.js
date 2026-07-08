@@ -28,11 +28,11 @@ export async function conectarYExportar(form) {
 }
 
 
-export async function cambiarBD(database) {
+export async function cambiarBD(database, password) {
   const res = await fetch(`${API_URL}/cambiar-bd`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ database }),
+    body: JSON.stringify({ database, password }),
   });
 
   if (!res.ok) {
@@ -40,6 +40,18 @@ export async function cambiarBD(database) {
   }
 
   return await res.json(); // retorna { ok, mensaje, conexion }
+}
+
+export async function cerrarSesion() {
+  const res = await fetch(`${API_URL}/cerrar-sesion`, {
+    method: "POST",
+  });
+
+  if (!res.ok) {
+    throw new Error(`Error HTTP: ${res.status}`);
+  }
+
+  return await res.json(); // retorna { ok, mensaje }
 }
 
 
