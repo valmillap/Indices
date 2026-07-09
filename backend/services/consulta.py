@@ -26,6 +26,7 @@ CONSULTA_ATRIBUTOS = """
         ON ic.object_id = c.object_id 
         AND ic.column_id = c.column_id
 
+    ORDER BY t.name, i.name, ic.key_ordinal, ic.is_included_column, ic.column_id
 """
 
 CONSULTA_USO_TAMAÑO = """
