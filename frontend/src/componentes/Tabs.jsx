@@ -157,6 +157,7 @@ function Tabs() {
         rowClassRules={rowClassRules}
         context={{ abrirModalConFila, abrirModalComparacion }}
         titulo={TABS.find((t) => t.id === tabActiva)?.label}
+        tabId={tabActiva}
       />
 
       </div>

@@ -4,14 +4,16 @@ import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
+import { PANEL_INFO } from "../config/PanelInfo";
 
 import "./DataTable.css";
 
-function DataTable({ data, columnDefs, rowClassRules, toolbar, context, titulo }) {
+function DataTable({ data, columnDefs, rowClassRules, toolbar, context, titulo,tabId}) {
 
   const gridRef = useRef(null);
   const tablaRef = useRef(null);
   const [exportando, setExportando] = useState(false);
+  const info = PANEL_INFO[tabId]; 
 
   if (!data || data.length === 0) {
     return <div>Sin datos</div>;
@@ -112,28 +114,56 @@ function DataTable({ data, columnDefs, rowClassRules, toolbar, context, titulo }
 
   return (
     <div className="panel">
+       {info && (
+    <div className="panel-info-container">
+      <div className="panel-info">
+        <h3>Descripción y ejemplo</h3>
 
-  <div className="panel-info-container">
-    <div className="panel-info">
-      <h3>1</h3>
+        <p>{info.descripcion}</p>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
+        {info.ejemplo && info.ejemplo.length > 0 && (
+          <table className="panel-info-ejemplo">
+            <thead>
+              <tr>
+                <th>Tabla</th>
+                <th>Índice</th>
+                <th>Atributos</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              {info.ejemplo.map((fila, i) => (
+                <tr key={i}>
+                  <td>{fila.tabla}</td>
+                  <td>{fila.indice}</td>
+                  <td>{fila.atributos}</td>
+                  <td>{fila.accion}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
+
+      <div className="panel-info">
+        <h3>Criterio y beneficio</h3>
+
+        <p className="panel-info-subtitulo">Criterio</p>
+        <ul>
+          {info.criterio.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+
+        <p className="panel-info-subtitulo">Beneficio</p>
+        <ul>
+          {info.beneficio.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      </div>
     </div>
-
-    <div className="panel-info">
-      <h3>2</h3>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-         incididunt ut labore et dolore magna aliqua.
-      </p>
-    </div>
-
-  </div>
+  )}
 
   <div className="tabla-toolbar">
     <button

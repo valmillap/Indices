@@ -1,0 +1,52 @@
+.panel-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #374151;
+}
+
+.panel-info p {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    color: #4b5563;
+    line-height: 1.4;
+}
+
+.panel-info-subtitulo {
+    font-weight: 700;
+    color: #1f2937 !important;
+    margin-bottom: 4px !important;
+}
+
+.panel-info ul {
+    margin: 0 0 12px 0;
+    padding-left: 18px;
+}
+
+.panel-info li {
+    font-size: 13px;
+    color: #4b5563;
+    line-height: 1.4;
+    margin-bottom: 3px;
+}
+
+.panel-info-ejemplo {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.panel-info-ejemplo th,
+.panel-info-ejemplo td {
+    border: 1px solid #e5e7eb;
+    padding: 6px 8px;
+    text-align: left;
+}
+
+.panel-info-ejemplo th {
+    background: #eef2f7;
+    color: #374151;
+    font-weight: 600;
+}

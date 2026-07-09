@@ -1,7 +1,7 @@
 // Contenido de los dos paneles informativos que aparecen sobre cada tabla:
 // izquierdo = Descripción y ejemplo, derecho = Criterio y beneficio.
 // Se indexa por el mismo "id" de pestaña usado en Tabs.jsx (TABS).
-export const PANEL_INFO = {
+export const PANEL_INFO= {
   duplicados: {
     descripcion:
       "Corresponden a índices que poseen exactamente los mismos atributos (columnas), por lo que cumplen la misma función dentro de una tabla.",
