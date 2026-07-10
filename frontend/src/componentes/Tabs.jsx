@@ -136,6 +136,13 @@ function Tabs() {
     setTabActiva(tab.id);
     CARGADORES[tab.id]?.();
   };
+  
+  useEffect(() => {
+  if (conexion) {
+    seleccionarTab(TABS[0]);
+  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [conexion]);
 
   return (
     <div>

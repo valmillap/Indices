@@ -1,16 +1,21 @@
 import pandas as pd
 import numpy as np
 
+def _a_binario(serie):
+    numerico = pd.to_numeric(serie, errors="coerce")
+    texto = serie.astype(str).str.strip().str.lower().map({"true": 1, "false": 0})
+    return numerico.where(numerico.notna(), texto).fillna(0).astype(int)
+
 def buscar_duplicado(df):
      # Ignorar filas sin ATRIBUTOS
-    df = df[df["ATRIBUTOS"].str.strip() != ""]
+    df = df[df["ATRIBUTOS"].fillna("").str.strip() != ""]
 
     # Buscar duplicados por TABLA + ATRIBUTOS
     duplicado = df[df.duplicated(subset=["TABLA", "ATRIBUTOS"],keep=False)]
     duplicado = duplicado.sort_values(["TABLA", "ATRIBUTOS", "INDICE"])
 
     # --- ORDEN FILAS POR PK- used pages
-    duplicado["IS_PRIMARY_KEY_NUM"] = pd.to_numeric(duplicado["IS_PRIMARY_KEY"],errors="coerce").fillna(0)
+    duplicado["IS_PRIMARY_KEY_NUM"] = _a_binario(duplicado["IS_PRIMARY_KEY"])
 
     duplicado["USED-PAGES"] = pd.to_numeric(duplicado["USED-PAGES"],errors="coerce").fillna(0)
 
@@ -23,13 +28,9 @@ def buscar_duplicado(df):
     
     # COLUMNA
         # Convertir a numérico
-    duplicado["IS_PRIMARY_KEY_NUM"] = pd.to_numeric(
-        duplicado["IS_PRIMARY_KEY"], errors="coerce"
-    ).fillna(0)
+    duplicado["IS_PRIMARY_KEY_NUM"] = _a_binario(duplicado["IS_PRIMARY_KEY"])
 
-    duplicado["IS_UNIQUE_NUM"] = pd.to_numeric(
-        duplicado["IS_UNIQUE"], errors="coerce"
-    ).fillna(0)
+    duplicado["IS_UNIQUE_NUM"] = _a_binario(duplicado["IS_UNIQUE"])
 
     #----------
     # Cantidad de índices UNIQUE por grupo
@@ -91,7 +92,7 @@ def buscar_duplicado(df):
     "Liberar " + duplicado["USED-PAGES"].astype(str) +
     "MB, - " + duplicado["USER_UPDATES"].astype(str) + " ops. de escritura", "")
     
-    #duplicado.to_csv("AAAAduplicado.csv",sep=";",index=False)
+    duplicado.to_csv("AAAAduplicado.csv",sep=";",index=False)
     return duplicado
 '''
 def main():
