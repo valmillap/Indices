@@ -1,7 +1,6 @@
 
  export const lookupColumnDefs = [
-    {field: "TABLA", flex: 1.1,
-        
+    {field: "TABLA", flex: 1, hide: false,
         cellRenderer: params => {
         if (params.data.TYPE_DESC === "HEAP") return params.value
         const filas = [];
@@ -13,7 +12,7 @@
             ? "Causante lookup"
             : "Posible causante lookup";
     },
-        cellClassRules: {
+     cellClassRules: {
             "celda-heap": params =>
                 String(params.data.TYPE_DESC).trim() == "HEAP",
             "celda-borde": params =>
@@ -22,8 +21,8 @@
                 String(params.data.TYPE_DESC).trim() == "NONCLUSTERED",
         }
     },
-    {field: "INDICE", flex: 1},
-    {field: "TYPE_DESC", flex: 0.7,
+    {field: "INDICE", flex: 1,hide: false},
+    {field: "TYPE_DESC", flex: 0.7,hide: false,
         cellRenderer: params => {
         if (params.value === "HEAP") {
             return <span className="pill-heap">{params.value}</span>;
@@ -33,7 +32,7 @@
             }
         }
     },
-    {headerName:"LOOKUPS",field: "USER_LOOKUPS",flex: 0.5,
+    {headerName:"LOOKUPS",field: "USER_LOOKUPS",flex: 0.5,hide: false,
        cellClassRules: {
             "celda-lookup": params =>
                 Number(params.value) > 1000,
@@ -43,9 +42,8 @@
         return params.value
         }
     },
-    {headerName:"SEEKS",field: "USER_SEEKS", flex: 0.4},
-    {headerName:"SCANS",field: "USER_SCANS",flex: 0.4},
-    {field: "USED-PAGES", flex: 1},
+    {headerName:"SEEKS",field: "USER_SEEKS", flex: 0.4,hide: false},
+    {headerName:"SCANS",field: "USER_SCANS",flex: 0.4,hide: false},
     {headerName: "COLUMNA",flex:1,hide:true,
     valueGetter: params => getColumna(params.data["TYPE_DESC"]),
     cellClassRules: {
