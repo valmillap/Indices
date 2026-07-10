@@ -11,10 +11,10 @@ export const fragColumnDefs = [
         if (params.data.FRAGMENTACION >= 30) {
             return <span className="pill-frag-alta">{params.value}</span>;
             }
-        if (params.data.FRAGMENTACION < 30 & params.data.FRAGMENTACION < 15) {
+        if (params.data.FRAGMENTACION < 30 & params.data.FRAGMENTACION > 15) {
             return <span className="pill-frag-medio">{params.value}</span>;
             }
-        if (params.data["FRAGMENTACION"] < 10) {
+        if (params.data["FRAGMENTACION"] <= 15) {
             return <span className="pill-frag-verde">{params.value}</span>;
             }   
         }
