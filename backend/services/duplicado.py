@@ -68,6 +68,19 @@ def buscar_duplicado(df):
         "MANTENER"
     ] = "Unico"
      # --- Nombre del índice que se mantiene por grupo ---
+    # Si NINGÚN índice del grupo es PK ni UNIQUE (ej. dos índices NONCLUSTERED
+    # comunes sobre las mismas columnas), hasta acá nadie quedó marcado
+    # "Unico" y el join de abajo dejaría INDICE_REFERENCIA en NaN real para
+    # todo el grupo -> rompe la respuesta JSON. En ese caso se usa el primer
+    # índice del grupo (según el orden ya aplicado más arriba) como
+    # referencia de respaldo, para que siempre haya un "ganador".
+    tiene_unico = (
+        duplicado.groupby(["TABLA", "ATRIBUTOS"])["MANTENER"]
+        .transform(lambda s: (s == "Unico").any())
+    )
+    primero_del_grupo = ~duplicado.duplicated(subset=["TABLA", "ATRIBUTOS"], keep="first")
+    duplicado.loc[~tiene_unico & primero_del_grupo, "MANTENER"] = "Unico"
+
     idx_unico = (
         duplicado[duplicado["MANTENER"] == "Unico"]
         .groupby(["TABLA", "ATRIBUTOS"])["INDICE"]
