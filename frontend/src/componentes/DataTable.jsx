@@ -1,37 +1,33 @@
-import { useRef, useState } from "react";
+import { useRef, useState, forwardRef, useImperativeHandle } from "react";
 import { AgGridReact } from "ag-grid-react";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
-import { PANEL_INFO } from "../config/PanelInfo";
 
+import { PANEL_INFO } from "../config/PanelInfo";
+import { agregarImagenAjustada } from "./pdfImagen";
 import "./DataTable.css";
 
-function DataTable({ data, columnDefs, rowClassRules, toolbar, context, titulo,tabId}) {
+const DataTable = forwardRef(function DataTable(
+  { data, columnDefs, rowClassRules, context, titulo, tabId },
+  ref
+) {
 
   const gridRef = useRef(null);
   const tablaRef = useRef(null);
   const [exportando, setExportando] = useState(false);
-  const info = PANEL_INFO[tabId]; 
-
-  if (!data || data.length === 0) {
-    return <div>Sin datos</div>;
-  }
+  const info = PANEL_INFO[tabId];
 
   /**
-   * Exporta la tabla a PDF usando html2canvas + jsPDF, tomando el DOM real
-   * de ag-grid (con sus reglas de fila/celda y su estilo tal cual se ven en
-   * pantalla), mostrando TODAS las filas aunque la tabla tenga paginación.
-   *
-   * ag-grid solo mantiene en el DOM las filas visibles en su viewport
-   * (virtualización), así que no basta con desactivar la paginación: hay
-   * que cambiar el layout a "autoHeight" para que el grid crezca y
-   * renderice todas las filas de una vez, sin scroll interno.
+   * Captura el DOM real de ag-grid como imagen, mostrando TODAS las filas
+   * aunque la tabla tenga paginación (ver explicación de domLayout más abajo).
+   * No arma el PDF acá: solo devuelve la imagen, para que tanto el botón
+   * individual como la exportación combinada de las 5 tablas puedan usarla.
    */
-  const exportarPDF = async () => {
+  const capturarComoImagen = async () => {
     const api = gridRef.current?.api;
-    if (!api || !tablaRef.current) return;
+    if (!api || !tablaRef.current || !data || data.length === 0) return null;
 
     setExportando(true);
     try {
@@ -39,26 +35,22 @@ function DataTable({ data, columnDefs, rowClassRules, toolbar, context, titulo,t
       // condicionado por "exportando" más abajo) antes de tocar el grid.
       await new Promise((resolve) => requestAnimationFrame(resolve));
 
-      // 1) Sin paginación y con autoHeight: ag-grid renderiza TODAS las
-      // filas en el DOM, sin virtualizar ni recortar por scroll.
+      // Sin paginación y con autoHeight: ag-grid renderiza TODAS las filas
+      // en el DOM, sin virtualizar ni recortar por scroll.
       api.setGridOption("pagination", false);
       api.setGridOption("domLayout", "autoHeight");
 
-      // Esperar a que ag-grid vuelva a renderizar con todas las filas.
       await new Promise((resolve) => {
         const listener = () => {
           api.removeEventListener("modelUpdated", listener);
           resolve();
         };
         api.addEventListener("modelUpdated", listener);
-        // Por si el evento no llega a dispararse, hay un respaldo con timeout.
         setTimeout(resolve, 500);
       });
 
-      // Dar un par de frames extra al navegador para pintar todas las filas.
       await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
 
-      // 2) Capturar el DOM de la tabla tal como se ve (clases, colores, pills, etc).
       const canvas = await html2canvas(tablaRef.current, {
         scale: 2,
         useCORS: true,
@@ -67,54 +59,44 @@ function DataTable({ data, columnDefs, rowClassRules, toolbar, context, titulo,t
         windowHeight: tablaRef.current.scrollHeight,
       });
 
-      // 3) Armar el PDF, partiendo la imagen en varias páginas si es muy alta.
-      const pdf = new jsPDF({
-        orientation: "landscape",
-        unit: "pt",
-        format: "a4",
-      });
-
-      const margin = 24;
-      const pageWidth = pdf.internal.pageSize.getWidth() - margin * 2;
-      const pageHeight = pdf.internal.pageSize.getHeight() - margin * 2;
-
-      const imgWidth = pageWidth;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      const imgData = canvas.toDataURL("image/png");
-
-      const nombreTabla = titulo || "tabla";
-      const fecha = new Date().toLocaleDateString("es-CL");
-
-      pdf.setFontSize(12);
-      pdf.text(`${nombreTabla} - ${fecha}`, margin, margin - 6);
-
-      let heightLeft = imgHeight;
-      let position = margin;
-
-      pdf.addImage(imgData, "PNG", margin, position, imgWidth, imgHeight);
-      heightLeft -= pageHeight;
-
-      while (heightLeft > 0) {
-        position = heightLeft * -1 + margin;
-        pdf.addPage();
-        pdf.addImage(imgData, "PNG", margin, position, imgWidth, imgHeight);
-        heightLeft -= pageHeight;
-      }
-
-      pdf.save(`${nombreTabla}_${fecha.replaceAll("/", "-")}.pdf`);
-    } catch (err) {
-      console.error("Error exportando PDF", err);
+      return {
+        dataUrl: canvas.toDataURL("image/png"),
+        width: canvas.width,
+        height: canvas.height,
+      };
     } finally {
-      // 4) Restaurar el layout y la paginación originales de la tabla.
       api.setGridOption("domLayout", "normal");
       api.setGridOption("pagination", true);
       setExportando(false);
     }
   };
 
+  // Permite que Tabs.jsx dispare la captura de esta tabla desde afuera,
+  // para el botón "Exportar todo a PDF" (5 tablas en un solo archivo).
+  useImperativeHandle(ref, () => ({
+    capturarComoImagen,
+  }));
+
+  const exportarPDF = async () => {
+    const imagen = await capturarComoImagen();
+    if (!imagen) return;
+
+    const pdf = new jsPDF({ orientation: "landscape", unit: "pt", format: "a4" });
+    const nombreTabla = titulo || "tabla";
+    const fecha = new Date().toLocaleDateString("es-CL");
+
+    agregarImagenAjustada(pdf, imagen.dataUrl, imagen.width, imagen.height, `${nombreTabla} - ${fecha}`);
+    pdf.save(`${nombreTabla}_${fecha.replaceAll("/", "-")}.pdf`);
+  };
+
+  if (!data || data.length === 0) {
+    return <div>Sin datos</div>;
+  }
+
   return (
     <div className="panel">
-       {info && (
+
+  {info && (
     <div className="panel-info-container">
       <div className="panel-info">
         <h3>Descripción y ejemplo</h3>
@@ -171,7 +153,7 @@ function DataTable({ data, columnDefs, rowClassRules, toolbar, context, titulo,t
       onClick={exportarPDF}
       disabled={exportando}
     >
-      {exportando ? "Generando PDF..." : "Exportar PDF"}
+      {exportando ? "Generando PDF..." : "Exportar esta tabla a PDF"}
     </button>
   </div>
 
@@ -210,6 +192,6 @@ function DataTable({ data, columnDefs, rowClassRules, toolbar, context, titulo,t
 </div>
 
   );
-}
+});
 
 export default DataTable;
