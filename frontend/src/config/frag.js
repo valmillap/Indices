@@ -7,25 +7,25 @@ export const fragColumnDefs = [
     {field: "PAGES", flex: 0.6},
     {field: "FRAGMENTACION", flex: 1,
         cellRenderer: params => {
-            /**>30 reconstruir. 5 y 30 reorganizar */
+            /**>30 reconstruir. 5 y 30 reorganizar *///  Math.trunc(params.value)/
         if (params.data.FRAGMENTACION >= 30) {
-            return <span className="pill-frag-alta">{truncar(params.value)}</span>;
+            return <span className="pill-frag-alta">{(params.value).toFixed(2)}</span>;
             }
         if (params.data.FRAGMENTACION < 30 & params.data.FRAGMENTACION > 15) {
-            return <span className="pill-frag-medio">{truncar(params.value)}</span>;
+            return <span className="pill-frag-medio">{(params.value).toFixed(2)}</span>;
             }
         if (params.data["FRAGMENTACION"] <= 15) {
-            return <span className="pill-frag-verde">{truncar(params.value)}</span>;
+            return <span className="pill-frag-verde">{(params.value).toFixed(2)}</span>;
             }   
         }
     },
     {field: "PAGE_FULLNESS", flex: 1,
         cellRenderer: params => {
         if (params.data["PAGE_FULLNESS"] < 70) {
-            return <span className="pill-frag-alta">{truncar(params.value)}</span>;
+            return <span className="pill-frag-alta">{(params.value).toFixed(2)}</span>;
             }
         if (params.data["PAGE_FULLNESS"] > 70) {
-            return <span className="pill-frag-verde">{truncar(params.value)}</span>;
+            return <span className="pill-frag-verde">{(params.value).toFixed(2)}</span>;
             }
         }
     },
@@ -38,12 +38,6 @@ export const fragColumnDefs = [
          params.data["USER_SEEKS"],params.data["USER_SCANS"])
     }
 ];
-const truncar = (valor) => {
-    const num = Number(valor);
-    if (Number.isNaN(num)) return valor;
-    return Math.trunc(num);
-};
-
 
 const getPaginas = (usedPages, pageFullness, fragmentacion, seeks, scans) => {
     let resultado = [];
