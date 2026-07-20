@@ -264,3 +264,35 @@
     font-style: italic;
 
 }
+/*-----nuevo------*/
+.prioridad{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-weight:600;
+    height:100%;
+}
+
+.prioridad::before{
+    content:"";
+
+    width:4px;
+    height:18px;
+
+    border-radius:3px;
+
+    flex-shrink:0;
+}
+
+.prioridad-alta::before{
+    background:#ef4444;
+}
+
+.prioridad-media::before{
+    background:#f59e0b;
+}
+
+.prioridad-baja::before{
+    background:#9ca3af;
+}

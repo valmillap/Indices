@@ -1,241 +1,118 @@
 Tabla;Indice;TypeDesc;EsPK;EsUnique;user_seeks;user_scans;user_lookups;user_updates;last_user_seek;last_user_scan;TamanoTotal_MB;UsedPages_MB;DataPages_MB
-AccidentesDeTrabajo;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-AccidentesDeTrabajo;aaaaaAccidentesDeTrabajo_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-AdicionalDosSalud;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-AdicionalDosSalud;aaaaaAdicionalDosSalud_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-AdicionalDosSalud;Dos_FechaContratoIsapre;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-AdicionalDosSalud;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-AdicionalDosSalud;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Afp;;HEAP;False;False;0.0;0.0;1.0;0.0;;;0.015625;0.015625;0.007812
-Afp;aaaaaAfp_PK;NONCLUSTERED;True;True;0.0;1.0;0.0;0.0;;2026-06-04 09:11:44.943;0.015625;0.015625;0.007812
-Afp;Id_Afp;NONCLUSTERED;False;True;;;;;;;0.015625;0.015625;0.007812
-Afp;Id_RegPrevisional;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-AFP_JUBILACION_VOLUNTARIO;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-AFP_T_JUBILACION_VOLUNTARIO;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-AguinaldoTemporal;;HEAP;False;False;;;;;;;0.367187;0.328125;0.140625
-AguinaldoTemporal;aaaaaAguinaldoTemporal_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.054687
-AguinaldoTemporal;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.03125
-AguinaldoTemporal;Id_EstablecimientoFun;NONCLUSTERED;False;False;;;;;;;0.039062;0.039062;0.039062
-AguinaldoTemporal;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.03125
-AguinaldoTemporal;Rut_Temporal;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.046875
-Anexo_Finiquito;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Anexo_Finiquito;aaAnexo_Finiquito_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Anexo_Finiquito;Correlativo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Anexo_Finiquito;Correlativo_Anexo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Anexo_Finiquito;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Anexo_Finiquito;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Anexo_PlanCta;;HEAP;False;False;0.0;0.0;0.0;0.0;;;0.03125;0.03125;0.0
-Anexo_PlanCta;aaAnexo_PlanCta_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Anexo_PlanCta_Privado;;HEAP;False;False;0.0;0.0;0.0;1.0;;;0.0;0.0;0.0
-Anexo_PlanCta_Privado;aaAnexo_PlanCta_Privado_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Anexo_PlanCta_Privado;Codigo_Cuenta;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Anexo_PlanCta_Privado;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Anexo_PlanCta_Privado;Id_HaberDcto;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Anexo_PlanCta_Privado;Tipo_Cuenta;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-AnexoPlanCuentaPrivado;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-AnexoPlanCuentaPrivado;aaaaaAnexoPlanCuentaPrivado_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-AnexoPlanCuentaPrivado;AnoProceso;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-AnexoPlanCuentaPrivado;Codigo_Cuenta;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-AnexoPlanCuentaPrivado;MesProceso;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-AnexoPlanCuentaPrivado;Rut;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-AnexoPlandeCuenta;;HEAP;False;False;;;;;;;0.070312;0.070312;0.03125
-AnexoPlandeCuenta;aaAnexoPlandeCuenta_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.015625
-AnexoPlandeCuenta;Ano_Proceso;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-AnexoPlandeCuenta;Codigo_Area;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-AnexoPlandeCuenta;CodigoCuenta;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.015625
-AnexoPlandeCuenta;Mes_Proceso;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-AñoRenta;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-Anotaciones;;HEAP;False;False;;;;;;;0.007812;0.007812;0.0
-Anotaciones;aaaaaAnotaciones_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Anotaciones;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Anotaciones;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Anotaciones;Id_Merito_Demerito;NONCLUSTERED;False;True;;;;;;;0.015625;0.015625;0.007812
-Anotaciones;Id_TipoAnotacion;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Antecedentes;;HEAP;False;False;0.0;1.0;0.0;0.0;;2026-06-04 09:07:45.233;1.015625;0.726562;0.710937
-Antecedentes;aaaaaAntecedentes_PK;NONCLUSTERED;True;True;;;;;;;0.382812;0.257812;0.242187
-Antecedentes;Id_Antecedentes;NONCLUSTERED;False;False;;;;;;;0.195312;0.125;0.109375
-Antecedentes;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.320312;0.203125;0.1875
-Antecedentes;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.265625;0.1875;0.164062
-AperturaDeCuentas;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-AperturaDeCuentas;aaAperturaDeCuentas_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-AperturaDeCuentas;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-AperturaDeCuentas;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Asignaciones_Transparencia;aaaAsignaciones_Transparencia_PK;CLUSTERED;True;True;;;;;;;0.101562;0.046875;0.03125
-Asignaciones_Transparencia;Id_Haber;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Asignaturas;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-Asignaturas;aaaaaAsignaturas_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Asistencia;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Asistencia;aaaaaAsistencia_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Asistencia;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Asistencia;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Bancos;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
+Abono_Convenios;PrimariaAbono_Convenios;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Acceso_Por_Areas;PrimariaClave;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+AccesoMoviles;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
+ActivaMensajes;PK_ActivaMensajes;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Ano_Proceso;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
+Anula_Cuotas_Convenio;Primaria_Anula_Cuotas_Convenio;CLUSTERED;True;True;;;;;;;0.039062;0.039062;0.023437
+Areas;;HEAP;False;False;0.0;11.0;5.0;0.0;;2026-07-01 12:25:04.597;0.015625;0.015625;0.007812
+Areas;aaaaaAreas_PK;NONCLUSTERED;True;True;5.0;0.0;0.0;0.0;2026-07-01 12:25:06.563;;0.015625;0.015625;0.007812
+Areas;DESCRIPCION;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+AreaSistemas;PK_AreaSistemas;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+AreaSistemas_Contabilidad;PK_AreaSistemas_Contabilidad;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+AseoPorSectores;Prim_AseoPorSectores;CLUSTERED;True;True;;;;;;;0.046875;0.046875;0.03125
+AST_Transacciones;PK_Transacciones_AutoServicio_Transbank;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+AST_Transacciones_eSign;PK_AST_Transacciones_eSign;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+AST_Transacciones_FolioTicket;PK_AST_Transacciones_FolioTicket;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+AST_Transacciones_Onepay;PK_Transaccion_Onepay;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+AutorizacionUsuarios;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Bancos;;HEAP;False;False;;;;;;;0.03125;0.03125;0.023437
 Bancos;aaaaaBancos_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Bancos;Id_Banco;NONCLUSTERED;False;True;;;;;;;0.015625;0.015625;0.007812
-Base_CalculoLicencia;;HEAP;False;False;0.0;0.0;2.0;0.0;;;24.007812;23.984375;23.976562
-Base_CalculoLicencia;aaaBase_CalculoLicencia_PK;NONCLUSTERED;True;True;2.0;0.0;0.0;0.0;2026-06-04 10:00:08.660;;3.132812;3.125;3.085937
-BaseCalculo_PostNatalParental;aaaBaseCalculo_PostNatalParental_PK;CLUSTERED;True;True;;;;;;;0.257812;0.1875;0.171875
-BaseCalculo_PostNatalParental;Id_CorrelativoPermiso;NONCLUSTERED;False;False;;;;;;;0.078125;0.03125;0.015625
-BaseCalculo_PostNatalParental;Rut;NONCLUSTERED;False;False;;;;;;;0.078125;0.03125;0.015625
-Bienestar_MacroCalculo;aaaBienestar_MacroCalculo_PK;CLUSTERED;True;True;12.0;0.0;0.0;0.0;2026-06-04 09:07:12.937;;0.070312;0.015625;0.007812
-Bienestar_TipoMoneda;aaaBienestar_TipoMoneda_PK;CLUSTERED;True;True;6.0;0.0;0.0;0.0;2026-06-04 09:07:12.910;;0.070312;0.015625;0.007812
-Bienios_Cumplidos;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-Bienios_Cumplidos;aaaaaBienios_Cumplidos_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Bienios_Cumplidos;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-CABEZA;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Calificacion;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Calificacion;aaaaaCalificacion_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Calificacion;Id_Establecimeinto;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Calificacion;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Calificacion;Periodo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Capacitacion;;HEAP;False;False;;;;;;;0.070312;0.015625;0.007812
-Capacitacion;aaaaaCapacitacion_PK;NONCLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
-Capacitacion;Id_Capacitacion;NONCLUSTERED;False;False;;;;;;;0.070312;0.015625;0.007812
-Capacitacion;Rut_Funcionario;NONCLUSTERED;False;False;;;;;;;0.070312;0.015625;0.007812
-Carga;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-CargaDescuentosVarios;;HEAP;False;False;;;;;;;0.140625;0.117187;0.101562
-CargaDescuentosVarios_Aviso;;HEAP;False;False;;;;;;;2.070312;2.03125;2.023437
-CargaDescuentosVarios_Aviso;aaaaaCargaDescuentosVarios_Aviso_PK;NONCLUSTERED;True;True;;;;;;;1.382812;1.273437;1.257812
-CargaFechaTermino;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-CargaFechaTermino_Aviso;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-CargaPagosLicencia;;HEAP;False;False;;;;;;;0.070312;0.015625;0.007812
-CargaPagosLicencia;FechaInicio;NONCLUSTERED;False;False;;;;;;;0.070312;0.015625;0.007812
-CargaPagosLicencia;FechaTermino;NONCLUSTERED;False;False;;;;;;;0.070312;0.015625;0.007812
-CargaPagosLicencia;NLicencia;NONCLUSTERED;False;False;;;;;;;0.070312;0.015625;0.007812
-CargaPagosLicencia;Rut;NONCLUSTERED;False;False;;;;;;;0.070312;0.015625;0.007812
-CargaPagosLicencia_Aviso;;HEAP;False;False;;;;;;;0.007812;0.007812;0.0
-CargaPagosLicencia_Aviso;NLicencia;NONCLUSTERED;False;False;;;;;;;0.070312;0.015625;0.007812
-CargaPagosLicencia_Aviso;Rut;NONCLUSTERED;False;False;;;;;;;0.070312;0.015625;0.007812
-CargasRetroactivas;;HEAP;False;False;0.0;3.0;0.0;1.0;;2026-06-04 10:00:09.037;0.679687;0.46875;0.265625
-CargasRetroactivas;aaaaaCargasRetroactivas_PK;NONCLUSTERED;True;True;;;;;;;0.210937;0.132812;0.1875
-CargasRetroactivas;Id_Carga_Retro;NONCLUSTERED;False;False;;;;;;;0.164062;0.117187;0.132812
-CargasRetroactivas;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.210937;0.109375;0.140625
-CargasRetroactivas;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.15625;0.070312;0.09375
-CargoFuncionario;;HEAP;False;False;0.0;1.0;0.0;1.0;;2026-06-04 09:07:06.943;0.125;0.085937;0.078125
-CargoFuncionario;aaaaaCargoFuncionario_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-CargoFuncionario;Id_Cargo;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-CarreraDocente;aaaCarreraDocente_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-CarreraDocente;Ano;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-CarreraDocente;Correlativo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-CarreraDocente;Mes;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-CarreraDocente;Rut;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-CategoriaAsistEducacion;aaaCategoriaAsistEducacion_PK;CLUSTERED;True;True;5.0;0.0;0.0;0.0;2026-06-04 09:07:07.537;;0.015625;0.015625;0.007812
-CausalesEgreso;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-CausalesEgreso;aaaaaCausalesEgreso_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-CausalesEgreso;Id_Codigo;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-CCAF_LosAndes;;HEAP;False;False;;;;;;;0.039062;0.03125;0.0
-CCAF_LosAndes;aaCCAF_LosAndes_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes;K1_Ano;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-CCAF_LosAndes;K1_Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-CCAF_LosAndes;K1_Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-CCAF_LosAndes;K1_Mes;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-CCAF_LosAndes_AfiliadoVoluntario;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes_AfiliadoVoluntario;aaCCAF_LosAndes_AfiliadoVoluntario_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes_AfiliadoVoluntario;K1_Ano;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes_AfiliadoVoluntario;K1_Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes_AfiliadoVoluntario;K1_Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes_AfiliadoVoluntario;K1_Mes;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes_DepositosConvenidos;;HEAP;False;False;;;;;;;0.007812;0.007812;0.0
-CCAF_LosAndes_DepositosConvenidos;aaCCAF_LosAndes_DepositosConvenidos_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes_DepositosConvenidos;K1_Ano;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-CCAF_LosAndes_DepositosConvenidos;K1_Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-CCAF_LosAndes_DepositosConvenidos;K1_Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-CCAF_LosAndes_DepositosConvenidos;K1_Mes;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-CCAF_LosAndes_SIL;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes_SIL;aaCCAF_LosAndes_SIL_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes_SIL;K1_Ano;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes_SIL;K1_Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes_SIL;K1_Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-CCAF_LosAndes_SIL;K1_Mes;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Centros_Estudios;;HEAP;False;False;0.0;1.0;0.0;0.0;;2026-06-04 09:07:45.233;0.125;0.078125;0.070312
-Centros_Estudios;aaCentros_Estudios_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Centros_Estudios;Id_Centros_Estudios;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Certificados;PK_Certificados;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
-Cheques;;HEAP;False;False;0.0;0.0;1.0;1.0;;;0.007812;0.007812;0.0
-Cheques;aaaaaCheques_PK;NONCLUSTERED;True;True;0.0;1.0;0.0;1.0;;2026-06-04 09:11:44.680;0.015625;0.015625;0.007812
-Cheques;Id_Establecimiento;NONCLUSTERED;False;False;0.0;1.0;0.0;1.0;;2026-06-04 10:00:09.600;0.015625;0.015625;0.007812
-ClasificacionFuncionarios;;HEAP;False;False;0.0;0.0;9.0;0.0;;;0.015625;0.015625;0.007812
-ClasificacionFuncionarios;aaClasificacionFuncionarios_PK;NONCLUSTERED;True;True;9.0;0.0;0.0;0.0;2026-06-04 09:07:07.633;;0.015625;0.015625;0.007812
-CometidoFuncionario;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-CometidoFuncionario;aaaaaCometidoFuncionario_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-CometidoFuncionario;Id_Cometido;NONCLUSTERED;False;True;;;;;;;0.015625;0.015625;0.007812
-CometidoFuncionario;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-CometidoFuncionario;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-ComponentesINE;;HEAP;False;False;0.0;0.0;16.0;0.0;;;0.015625;0.015625;0.007812
-ComponentesINE;aaComponentesINE_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-ComponentesINE;Id_Componente_INE;NONCLUSTERED;False;False;16.0;0.0;0.0;0.0;2026-06-04 09:07:07.720;;0.015625;0.015625;0.007812
-ComponentesINE;Orden;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Constantes;;HEAP;False;False;0.0;2.0;29.0;0.0;;2026-06-04 10:53:47.850;0.015625;0.015625;0.007812
-Constantes;aaaaaConstantes_PK;NONCLUSTERED;True;True;0.0;1.0;0.0;0.0;;2026-06-04 09:13:41.847;0.015625;0.015625;0.007812
-Constantes;Id_Constante;NONCLUSTERED;False;True;28.0;0.0;0.0;0.0;2026-06-04 09:07:27.107;;0.015625;0.015625;0.007812
-ContingenciaLeySanna;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-ContingenciaLeySanna;aaaContingenciaLeySanna_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-CONTRATO;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-CuentaBanco;;HEAP;False;False;0.0;1.0;0.0;0.0;;2026-06-04 09:08:40.930;1.109375;0.507812;0.257812
-CuentaBanco;aaaaaCuentaBanco_PK;NONCLUSTERED;True;True;;;;;;;0.148437;0.078125;0.148437
-CuentaBanco;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.140625;0.078125;0.132812
-CuentaBanco;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.140625;0.054687;0.101562
-DatosPersonales_Finiquito;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-DatosPersonales_Finiquito;aaDatosPersonales_Finiquito_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-DatosPersonales_Finiquito;Codigo_Causal;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DatosPersonales_Finiquito;Codigo_Ley;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DatosPersonales_Finiquito;Correlativo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DatosPersonales_Finiquito;Estado_Finiquito;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DatosPersonales_Finiquito;Fecha_Inicio;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DatosPersonales_Finiquito;Fecha_Pago;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DatosPersonales_Finiquito;Fecha_Termino;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DatosPersonales_Finiquito;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DatosPersonales_Finiquito;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Decreto_Pago;;HEAP;False;False;;;;;;;0.34375;0.21875;0.125
-Decreto_Pago;aaDecreto_Pago_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.03125
-Decreto_Pago;ID_Haber;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.015625
-Decreto_Pago;SW_Clasificador2008;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.039062
-DescuentoBienestar;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-DescuentoBienestar;aaaDescuentoBienestar_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-DescuentoBienestar;Id_Bienestar;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DescuentoBienestar;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DescuentoBienestar;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DescuentoBienestar_Auxiliar;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Descuentos;;HEAP;False;False;0.0;3.0;8.0;2.0;;2026-06-04 09:07:17.203;0.039062;0.039062;0.03125
-Descuentos;aaaaaDescuentos_PK;NONCLUSTERED;True;True;9.0;0.0;0.0;0.0;2026-06-04 09:07:45.640;;0.015625;0.015625;0.007812
-Descuentos_Finiquito;;HEAP;False;False;0.0;0.0;260.0;1.0;;;0.023437;0.023437;0.015625
-Descuentos_Finiquito;aaDescuentos_Finiquito_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Descuentos_Finiquito;Id_Dcto;NONCLUSTERED;False;False;260.0;0.0;0.0;0.0;2026-06-04 09:07:18.480;;0.015625;0.015625;0.007812
-DescuentoSindicato;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-DescuentoSindicato;aaaDescuentoSindicato_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-DescuentoSindicato;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DescuentoSindicato;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DescuentoSindicato;Id_Sindicato;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-DescuentoSindicato_Auxiliar;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-DescuentosNoEfectuados;;HEAP;False;False;0.0;0.0;1.0;1.0;;;0.0;0.0;0.0
-DescuentosNoEfectuados;aaaaaDescuentosNoEfectuados_PK;NONCLUSTERED;True;True;0.0;1.0;0.0;1.0;;2026-06-04 09:11:44.670;0.0;0.0;0.0
-DescuentosNoEfectuados;Id_Descuento;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.0;0.0;0.0
-DescuentosNoEfectuados;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.0;0.0;0.0
-DescuentosNoEfectuados;Id_Funcionario;NONCLUSTERED;False;False;0.0;1.0;0.0;1.0;;2026-06-04 10:00:09.590;0.0;0.0;0.0
-DescuentosNoEfectuadosSuple;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-DescuentosNoEfectuadosSuple;aaaDescuentosNoEfectuadosSuple_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-DETALLE;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Detalle_DecretoPago;;HEAP;False;False;0.0;2.0;4239.0;0.0;;2026-06-04 09:07:14.677;245.320312;245.289062;245.28125
-Detalle_DecretoPago;aaDetalle_DecretoPago_PK;NONCLUSTERED;True;True;3939.0;299.0;0.0;0.0;2026-06-04 09:07:45.170;2026-06-04 09:07:03.407;48.445312;48.34375;48.195312
-Detalle_DecretoPago;Cta_CodigoTrabajo;NONCLUSTERED;False;False;;;;;;;68.945312;68.84375;68.445312
-Detalle_DecretoPago;Cta_Contrata;NONCLUSTERED;False;False;;;;;;;68.945312;68.851562;68.453125
-Detalle_DecretoPago;Cta_Planta;NONCLUSTERED;False;False;;;;;;;68.945312;68.851562;68.453125
-Detalle_DecretoPago;Cta_Suplencia;NONCLUSTERED;False;False;;;;;;;68.945312;68.859375;68.460937
-DETALLE2;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-DetalleCCAF;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-DetalleCCAF;aaDetalleCCAF_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-DetalleDesDificil;;HEAP;False;False;0.0;0.0;1.0;0.0;;;0.0;0.0;0.0
-DetalleDesDificil;aaaaaDetalleDesDificil_PK;NONCLUSTERED;True;True;0.0;1.0;0.0;0.0;;2026-06-04 09:10:10.903;0.0;0.0;0.0
-DetalleRentas;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Dias_Feriados;;HEAP;False;False;;;;;;;0.085937;0.03125;0.023437
-Dias_Feriados;aaaaaDias_Feriados_PK;NONCLUSTERED;True;True;;;;;;;0.03125;0.03125;0.015625
-Dias_Feriados;Ano;NONCLUSTERED;False;False;;;;;;;0.078125;0.039062;0.023437
-Dias_Feriados;Dia;NONCLUSTERED;False;False;;;;;;;0.078125;0.03125;0.015625
-Dias_Feriados;Mes;NONCLUSTERED;False;False;;;;;;;0.078125;0.03125;0.015625
-DIPRES;;HEAP;False;False;;;;;;;2.007812;1.96875;1.960937
-DistribucionDesDificil;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-DistribucionDesDificil;aaaaaDistribucionDesDificil_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-DocenteCapRedEnlace;;HEAP;False;False;;;;;;;0.007812;0.007812;0.0
-DocenteCapRedEnlace;aaaaaDocenteCapRedEnlace_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Bancos;BancosCodigo_Area;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Bancos_BoletasGarantias;Prim_Bancos_BoletasGarantias;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+Bancos_Superintendencia;PrimariaBancoSuperIntendencia;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+Bienestar;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Boletas_De_Garantia;Prim_Boletas_De_Garantia;CLUSTERED;True;True;;;;;;;6.953125;6.703125;6.664062
+BoletasDeGarantias_Cuentas;PK_BoletasDeGarantias_Cuentas;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+BoletasDeGarantias_Descripcion;PK_BoletasDeGarantias_Descripcion;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Boletines_Detalle_Pago;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Boletines_Detalle_Pago_Tra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Boletines_Permisos_Circulacion;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Cajas;PK_Cajas;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+Calle;Calle_PK;CLUSTERED;True;True;2.0;2.0;0.0;0.0;2026-07-01 12:22:19.180;2026-07-01 12:22:19.177;0.0;0.0;0.0
+CambioClave;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
+Centro_Costo;;HEAP;False;False;;;;;;;0.054687;0.054687;0.046875
+Centro_Costo;aaaaaCentro_Costo_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Cheques;PK_Cheques;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Cola_de_Llamados;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Cola_de_Llamados;aaaaaCola_Llamados_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Comuna;Comuna_PK;CLUSTERED;True;True;2.0;2.0;0.0;0.0;2026-07-01 12:22:19.177;2026-07-01 12:22:19.173;0.0;0.0;0.0
+Comunas;;HEAP;False;False;;;;;;;0.039062;0.039062;0.015625
+Comunas;aaaaaComunas_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Comunas;NOMBRE;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.015625
+Concepto_BoletaGarantia;PK_Concepto_BoletaGarantia;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Condonacion_Convenios_20033;Prim_Condonacion_Conv;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Conexion_Net;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
+Conexion_Web;;HEAP;False;False;;;;;;;0.023437;0.023437;0.015625
+Configuracion_Usuario_Item;PK_Configuracion_Usuario_Item;CLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
+ConfiguracionCorreo;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Consultas_abastesimiento;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Contabilidad_Paso;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Contribuyente;Contribuyente_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Contribuyente;FK_Sexo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Correlativo;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Correlativo_Convenios;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
+Correlativo_Orden_Ingreso;PK_Correlativo_Orden_Ingreso;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+Correlativo2;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Correlativo3;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+CorrelativoDescargos;PK_CorrelativoDescargos;CLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
+Correlativos_Abastecimiento;PK_Correlativos_Abastecimiento;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+CuentaCorrienteProveedores;;HEAP;False;False;;;;;;;65.007812;65.007812;65.0
+CuentaCorrienteProveedores;missing_index_6782;NONCLUSTERED;False;False;;;;;;;71.695312;71.601562;71.273437
+Departamentos;CODIGO_AREA;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Departamentos;Codigo_Departamento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Departamentos;Codigo_Direccion;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Departamentos;PK_Departamentos;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+Det_Contribuyente_bloqueado;Det_Contribuyente;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Det_Orden_Ingreso;;HEAP;False;False;;;;;;;37.320312;37.296875;37.289062
+Det_Orden_Ingreso;IND_Det_Orden_Ingreso;NONCLUSTERED;True;True;;;;;;;38.070312;38.046875;37.796875
+Detalle_Consultas_Abastesimiento;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Detalle_Entrega_Dinero_Caja_Chica;PrimariaKeyDetalleDinero;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Detalle_InteresTributario;PK__Detalle___EDF8D063220D72F6;CLUSTERED;True;True;;;;;;;0.320312;0.257812;0.242187
+Detalle_Orden_Ingreso;Ano Proceso;NONCLUSTERED;False;False;;;;;;;12.828125;12.828125;12.75
+Detalle_Orden_Ingreso;Area;NONCLUSTERED;False;False;;;;;;;12.890625;12.84375;12.765625
+Detalle_Orden_Ingreso;Correlativo;NONCLUSTERED;False;False;;;;;;;13.328125;13.28125;13.179687
+Detalle_Orden_Ingreso;Departamento;NONCLUSTERED;False;False;;;;;;;12.953125;12.867187;12.78125
+Detalle_Orden_Ingreso;Detalle_IngresoNumero_Ingreso;NONCLUSTERED;False;False;;;;;;;15.882812;15.859375;15.789062
+Detalle_Orden_Ingreso;Item;NONCLUSTERED;False;False;;;;;;;12.953125;12.859375;12.773437
+Detalle_Orden_Ingreso;PK_Detalle_Orden_Ingreso;CLUSTERED;True;True;;;;;;;24.578125;24.53125;24.429687
+Detalle_SMS;ID_Detalle_SMS;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+DetalleCondonacion100;PrimariaDetalleCondonacion100;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+DetalleConvenios;Idx_DetalleConveniosTag;NONCLUSTERED;False;False;;;;;;;0.757812;0.679687;0.664062
+DetalleConvenios;PrimariaDetalleConvenios;CLUSTERED;True;True;;;;;;;3.320312;3.210937;3.195312
+DetalleConveniosRebajados;PK_DetalleConveniosRebajados;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+DetalleCuentasCheques;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+DetalleDescargos;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+DetalleDeudaInicial;;HEAP;False;False;;;;;;;4.632812;4.601562;4.59375
+DetalleDeudaInicial;DetDeudaIni_Ano_Proceso;NONCLUSTERED;False;False;;;;;;;0.882812;0.789062;0.773437
+DetalleDeudaInicial;DetDeudaIni_Codigo_Area;NONCLUSTERED;False;False;;;;;;;0.882812;0.789062;0.773437
+DetalleDeudaInicial;DetDeudaIni_Num_Convenio;NONCLUSTERED;False;False;;;;;;;0.945312;0.890625;0.875
+DetalleDeudaInicial;IndexRol;NONCLUSTERED;False;False;;;;;;;1.382812;1.328125;1.3125
+DetalleDeudasRebajadas;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+DetalleDeudasRebajadas;DetalleDeudasRebajadas_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+DetalleDeudoresMunicipales;;HEAP;False;False;0.0;0.0;3595.0;0.0;;;137.320312;137.265625;137.257812
+DetalleDeudoresMunicipales;aaaaaDetalleDeudoresMunicip_PK;NONCLUSTERED;True;True;3595.0;0.0;0.0;0.0;2026-07-01 12:24:22.713;;96.570312;96.476562;96.210937
+DetalleDeudoresMunicipales;Ano;NONCLUSTERED;False;False;;;;;;;59.382812;59.320312;59.15625
+DetalleDeudoresMunicipales;Correlativo;NONCLUSTERED;False;False;;;;;;;74.070312;74.070312;73.875
+DetalleDeudoresMunicipales;DetalleDeudoresMunicipalesCodi;NONCLUSTERED;False;False;;;;;;;59.382812;59.328125;59.15625
+DetalleDeudoresMunicipales;Item_Pago;NONCLUSTERED;False;False;;;;;;;74.070312;74.070312;73.875
+DetalleDeudoresMunicipales;Orden_Ingreso;NONCLUSTERED;False;False;;;;;;;83.382812;83.34375;83.109375
+DetalleDeudoresMunicipales_Eliminadas;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+DetalleDireccion;DetalleDireccion_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+DetalleIngresosDiarios;Ano;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+DetalleIngresosDiarios;Area;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+DetalleIngresosDiarios;Correlativo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+DetalleIngresosDiarios;IDOrden;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+DetalleIngresosDiarios;ItemPago;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+DetalleIngresosDiarios;Numero;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+DetalleIngresosDiarios;Orden;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+DetalleIngresosDiarios;PK_DetalleIngresosDiarios;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Dias_Feriados;Dias_Feriados_PK;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Dibam_OC;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Direcciones;;HEAP;False;False;;;;;;;0.078125;0.023437;0.015625
+Direcciones;aaaaaDirecciones_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Direcciones;CODIGO_AREA;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Direcciones;Codigo_Direccion;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
 Documento_Condicion;;HEAP;False;False;;;;;;;0.0;0.0;0.0
 Documento_Dato;;HEAP;False;False;;;;;;;0.0;0.0;0.0
 Documento_Exportar;;HEAP;False;False;;;;;;;0.0;0.0;0.0
@@ -243,632 +120,326 @@ Documento_Fuentes;;HEAP;False;False;;;;;;;0.0;0.0;0.0
 Documento_Principal;;HEAP;False;False;;;;;;;0.0;0.0;0.0
 Documento_Relaciones;;HEAP;False;False;;;;;;;0.0;0.0;0.0
 Documento_Texto;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-ErroresMigracionNet;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-ErroresMigracionNet;ID;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-ErroresMigracionNet;PK_ErroresMigracionNet;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Escalafones;;HEAP;False;False;0.0;1.0;0.0;1.0;;2026-06-04 09:07:07.557;0.015625;0.015625;0.007812
-Escalafones;aaaaaEscalafones_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Escalafones;Id_Escalafon;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Establecimiento;;HEAP;False;False;0.0;4.0;0.0;3.0;;2026-06-04 09:07:06.920;0.132812;0.078125;0.070312
-Establecimiento;aaaaaEstablecimiento_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Establecimiento;IdEstablecimiento;NONCLUSTERED;False;False;0.0;5.0;0.0;0.0;;2026-06-04 09:07:27.167;0.015625;0.015625;0.007812
-Estado_LME;;HEAP;False;False;;;;;;;0.078125;0.023437;0.007812
-Estado_LME;aaaEstado_LME_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-EstadoCivil;aaaEstadoCivil_PK;CLUSTERED;True;True;10.0;0.0;0.0;0.0;2026-06-04 09:07:07.363;;0.015625;0.015625;0.007812
-EstadoEstudio;aaaEstadoEstudio_PK;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-EstadoPrevisional;aaaEstadoPrevisional_PK;CLUSTERED;True;True;17.0;0.0;0.0;1.0;2026-06-04 09:07:14.390;;0.015625;0.015625;0.007812
-Estamento;aaaEstamento_PK;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Estamento_Dipres;aaaEstamento_Dipres_PK;CLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
-FactorActual;PK_FactorActual;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
-Feriados;;HEAP;False;False;;;;;;;0.515625;0.359375;0.34375
-Feriados;aaaaaFeriados_PK;NONCLUSTERED;True;True;;;;;;;0.265625;0.164062;0.140625
-Feriados;Id_Correlativo;NONCLUSTERED;False;True;;;;;;;0.171875;0.070312;0.054687
-Feriados;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.195312;0.140625;0.125
-Feriados;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.179687;0.078125;0.0625
-Feriados;Id_Periodo;NONCLUSTERED;False;False;;;;;;;0.171875;0.078125;0.0625
-Ficha_EducacionHrs;;HEAP;False;False;0.0;5.0;0.0;4.0;;2026-06-04 10:00:09.063;2.320312;2.3125;2.304687
-Ficha_EducacionHrs;aaaaaFicha_EducacionHrs_PK;NONCLUSTERED;True;True;;;;;;;0.382812;0.242187;0.226562
-Ficha_EducacionHrs;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.320312;0.210937;0.195312
-Ficha_EducacionHrs;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.320312;0.164062;0.148437
-Ficha_EducacionHrs;Tipo_Horas;NONCLUSTERED;False;False;;;;;;;0.320312;0.164062;0.148437
-FichaAfiliadoVoluntario;aaFichaAfiliadoVoluntario_PK;CLUSTERED;True;True;0.0;3.0;0.0;2.0;;2026-06-04 10:00:08.993;0.0;0.0;0.0
-FichaAfiliadoVoluntario;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-FichaAfiliadoVoluntario;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-FichaAfiliadoVoluntario;Rut_Afiliado;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-FichaDetalle_AEduca;;HEAP;False;False;0.0;0.0;1.0;0.0;;;0.0;0.0;0.0
-FichaDetalle_AEduca;aaFichaDetalle_AEduca_PK;NONCLUSTERED;True;True;0.0;1.0;0.0;0.0;;2026-06-04 09:10:10.897;0.0;0.0;0.0
-FichaDetalle_AEduca;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-FichaDetalle_AEduca;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-FichaDetalle_AEduca;Tipo_Horas;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-FichaEducacion;;HEAP;False;False;0.0;4.0;0.0;2.0;;2026-06-04 09:08:40.930;1.007812;0.984375;0.976562
-FichaEducacion;aaaaaFichaEducacion_PK;NONCLUSTERED;True;True;;;;;;;0.320312;0.179687;0.164062
-FichaEducacion;FichaEducacion_Indice;NONCLUSTERED;False;False;;;;;;;0.320312;0.1875;0.171875
-FichaEducacion;Id_Cargo;NONCLUSTERED;False;False;;;;;;;0.257812;0.140625;0.125
-FichaEducacion;Id_Escalafon;NONCLUSTERED;False;False;;;;;;;0.257812;0.140625;0.125
-FichaEducacion;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.320312;0.164062;0.148437
-FichaEducacion;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.257812;0.125;0.109375
-FichaFuncionario;;HEAP;False;False;0.0;12.0;3842.0;5.0;;2026-06-04 10:00:09.203;1.882812;1.84375;1.835937
-FichaFuncionario;<Indice_liq>;NONCLUSTERED;False;False;;;;;;;0.320312;0.203125;0.1875
-FichaFuncionario;aaaaaFichaFuncionario_PK;NONCLUSTERED;True;True;;;;;;;0.320312;0.171875;0.15625
-FichaFuncionario;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.320312;0.15625;0.140625
-FichaFuncionario;Id_Funcionario;NONCLUSTERED;False;False;3842.0;0.0;0.0;0.0;2026-06-04 09:13:41.823;;0.257812;0.125;0.109375
-FichaLeyesPrevisional;;HEAP;False;False;0.0;3.0;0.0;2.0;;2026-06-04 09:10:10.910;0.507812;0.507812;0.5
-FichaLeyesPrevisional;aaFichaLeyesPrev_PK;NONCLUSTERED;True;True;;;;;;;0.257812;0.125;0.109375
-FichaLeyesPrevisional;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.257812;0.117187;0.101562
-FichaLeyesPrevisional;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.195312;0.085937;0.070312
-FichaPersonal;;HEAP;False;False;0.0;0.0;0.0;1.0;;;1.132812;1.125;1.117187
-FichaPersonal;aaaaaFichaPersonal_PK;NONCLUSTERED;True;True;0.0;1.0;0.0;0.0;;2026-06-04 09:07:45.233;0.320312;0.171875;0.15625
-FichaPersonal;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.320312;0.15625;0.140625
-FichaPersonal;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.257812;0.125;0.109375
-Firmas_Liquidacion;aaaFirmas_Liquidacion_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Formato_CargaDescuento;;HEAP;False;False;;;;;;;0.023437;0.023437;0.015625
-FormatoCargaFamiliar;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-FormatoCargaFamiliar;FechaInicio;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-FormatoCargaFamiliar;FechaTermino;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-FormatoCargaFamiliar;NombreArchivo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-FormatoCargaLicencia;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-FormatoCargaLicencia;FechaInicio;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-FormatoCargaLicencia;FechaTermino;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-FormatoCargaLicencia;NombreArchivo;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-FuncionariosDocentesConFeriados;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-FuncionariosDocentesConFeriados;aaaaaFuncionariosDocentesConFeriados_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-FuncionarioSuplementaria;;HEAP;False;False;0.0;1.0;0.0;0.0;;2026-06-04 09:12:57.233;36.695312;36.664062;36.65625
-FuncionarioSuplementaria;aaFuncionarioSuplementaria_PK;NONCLUSTERED;True;True;;;;;;;17.757812;17.695312;17.617187
-FuncionarioSuplementaria_AEduca;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-FuncionarioSuplementaria_AEduca;aaFuncionarioSuplementaria_AEduca_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-GrupoFamiliar;;HEAP;False;False;;;;;;;1.65625;0.734375;0.46875
-GrupoFamiliar;aaaaaGrupoFamiliar_PK;NONCLUSTERED;True;True;;;;;;;0.140625;0.054687;0.132812
-GrupoFamiliar;Id_Carga_Carga;NONCLUSTERED;False;False;;;;;;;0.078125;0.03125;0.070312
-GrupoFamiliar;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.140625;0.070312;0.117187
-GrupoFamiliar;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.15625;0.0625;0.085937
-Haberes;;HEAP;False;False;0.0;0.0;7.0;0.0;;;0.101562;0.046875;0.039062
-Haberes;aaaaaHaberes_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Haberes;HaberModo;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Haberes;Id_Haber;NONCLUSTERED;False;True;7.0;0.0;0.0;0.0;2026-06-04 10:53:21.910;;0.015625;0.015625;0.007812
-Haberes_Finiquito;;HEAP;False;False;0.0;0.0;466.0;0.0;;;0.09375;0.039062;0.03125
-Haberes_Finiquito;aaHaberes_Finiquito_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Haberes_Finiquito;Id_Haber;NONCLUSTERED;False;False;466.0;0.0;0.0;0.0;2026-06-04 09:07:17.183;;0.015625;0.015625;0.007812
-Haberes_Sistema;aaaHaberes_Sistema_PK;CLUSTERED;True;True;19.0;0.0;0.0;2.0;2026-06-04 09:07:27.160;;0.015625;0.015625;0.007812
-Haberes_Sistema;Id_Haber;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-HaberesEncasillamiento;aaaHaberesEncasillamiento_PK;CLUSTERED;True;True;;;;;;;0.101562;0.046875;0.023437
-HaberesEncasillamiento;Id_Haber;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-HaberesINE;;HEAP;False;False;0.0;0.0;471.0;0.0;;;0.03125;0.03125;0.023437
-HaberesINE;aaHaberesINE_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-HaberesINE;Id_Componente_INE;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-HaberesINE;Id_Haber;NONCLUSTERED;False;False;471.0;0.0;0.0;0.0;2026-06-04 09:07:10.537;;0.015625;0.015625;0.007812
-Historial_Contratos;;HEAP;False;False;0.0;0.0;4298.0;1641.0;;;29.078125;29.054687;29.039062
-Historial_Contratos;aaaaaHistorial_Contratos_PK;NONCLUSTERED;True;True;2100.0;0.0;0.0;1641.0;2026-06-04 09:13:41.833;;8.132812;8.09375;8.054687
-Historial_Contratos;Fecha_Ingreso;NONCLUSTERED;False;False;0.0;0.0;0.0;1641.0;;;6.632812;6.554687;6.515625
-Historial_Contratos;Fecha_Inicio;NONCLUSTERED;False;False;3637.0;0.0;0.0;1641.0;2026-06-04 09:13:41.720;;6.703125;6.609375;6.5625
-Historial_Contratos;Fecha_Termino;NONCLUSTERED;False;False;178.0;0.0;0.0;1641.0;2026-06-04 09:12:56.280;;5.390625;5.359375;5.3125
-Historial_Contratos;Id_Correlativo;NONCLUSTERED;False;False;0.0;0.0;0.0;1641.0;;;5.515625;5.40625;5.367187
-Historial_Contratos;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;1641.0;;;6.382812;6.3125;6.273437
-Historial_Contratos;Id_funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;1641.0;;;4.820312;4.78125;4.75
-Historial_Egreso;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Historial_Egreso;aaaaaHistorial_Egreso_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Historial_Egreso;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Historial_Egreso;Id_Historial;NONCLUSTERED;False;True;;;;;;;0.0;0.0;0.0
-Historial_Egreso;Rut_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Historial_Egreso1;;HEAP;False;False;;;;;;;0.007812;0.007812;0.0
-Historial_Egreso1;aaaaaHistorial_Egreso1_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-HistorialUnidadE;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-HistorialUnidadE;aaaaaHistorialUnidadE_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-HistorialUnidadE;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistorialUnidadE;Id_Historial;NONCLUSTERED;False;True;;;;;;;0.0;0.0;0.0
-HistoricoAfp;;HEAP;False;False;0.0;0.0;19.0;19.0;;;0.507812;0.375;0.304687
-HistoricoAfp;aaHistoricoAfp_PK;NONCLUSTERED;True;True;19.0;0.0;0.0;19.0;2026-06-04 09:11:45.160;;0.1875;0.09375;0.085937
-HistoricoAfp;Ano;NONCLUSTERED;False;False;0.0;0.0;0.0;19.0;;;0.1875;0.078125;0.070312
-HistoricoAfp;Id_Afp;NONCLUSTERED;False;False;0.0;0.0;0.0;19.0;;;0.125;0.070312;0.0625
-HistoricoAfp;Mes;NONCLUSTERED;False;False;0.0;0.0;0.0;19.0;;;0.179687;0.085937;0.085937
-HistoricoBienios;;HEAP;False;False;;;;;;;0.507812;0.492187;0.484375
-HistoricoBienios;AnoProceso;NONCLUSTERED;False;False;;;;;;;0.257812;0.101562;0.085937
-HistoricoBienios;MesProceso;NONCLUSTERED;False;False;;;;;;;0.257812;0.101562;0.085937
-HistoricoBienios;PK_HistoricoBienios;NONCLUSTERED;True;True;;;;;;;0.382812;0.226562;0.210937
-HistoricoBienios;Rut;NONCLUSTERED;False;False;;;;;;;0.257812;0.148437;0.132812
-HistoricoCambioEstablecimiento;;HEAP;False;False;;;;;;;1.914062;0.960937;0.640625
-HistoricoCambioEstablecimiento;aaHistoricoCambioEstablecimiento_PK;NONCLUSTERED;True;True;;;;;;;0.335937;0.195312;0.265625
-HistoricoCambioEstablecimiento;Ano;NONCLUSTERED;False;False;;;;;;;0.265625;0.171875;0.242187
-HistoricoCambioEstablecimiento;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.273437;0.15625;0.195312
-HistoricoCambioEstablecimiento;Mes;NONCLUSTERED;False;False;;;;;;;0.265625;0.1875;0.234375
-HistoricoCargasRetroactivas;;HEAP;False;False;0.0;1.0;0.0;10.0;;2026-06-04 09:06:24.190;0.734375;0.507812;0.265625
-HistoricoCargasRetroactivas;aaHistoricoCargasRetroactivas_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;10.0;;;0.265625;0.171875;0.21875
-HistoricoCargasRetroactivas;Ano;NONCLUSTERED;False;False;1.0;0.0;0.0;10.0;2026-06-04 09:11:44.870;;0.164062;0.078125;0.09375
-HistoricoCargasRetroactivas;Id_Carga_Retro;NONCLUSTERED;False;False;0.0;0.0;0.0;10.0;;;0.234375;0.109375;0.117187
-HistoricoCargasRetroactivas;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;10.0;;;0.226562;0.109375;0.125
-HistoricoCargasRetroactivas;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;10.0;;;0.171875;0.085937;0.09375
-HistoricoCargasRetroactivas;Mes;NONCLUSTERED;False;False;1.0;0.0;0.0;10.0;2026-06-04 09:11:44.870;;0.234375;0.125;0.132812
-HistoricoCargasRetroactivas;TipoCarga_Retro;NONCLUSTERED;False;False;0.0;0.0;0.0;10.0;;;0.15625;0.085937;0.109375
-HistoricoCheques;;HEAP;False;False;;;;;;;0.023437;0.023437;0.015625
-HistoricoCheques;aaaaaHistoricoCheques_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-HistoricoCheques;Ano;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-HistoricoCheques;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-HistoricoCheques;ID_Numero;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-HistoricoCheques;Mes;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-HistoricoConstantes;;HEAP;False;False;0.0;0.0;46.0;46.0;;;0.75;0.523437;0.460937
-HistoricoConstantes;aaHistoricoConstantes_PK;NONCLUSTERED;True;True;46.0;0.0;0.0;46.0;2026-06-04 09:13:42.247;;0.234375;0.132812;0.140625
-HistoricoConstantes;Rut;NONCLUSTERED;False;False;0.0;0.0;0.0;46.0;;;0.296875;0.15625;0.164062
-HistoricoCuentaBanco;;HEAP;False;False;0.0;0.0;0.0;4427.0;;;26.132812;26.078125;26.070312
-HistoricoCuentaBanco;aaaaaHistoricoCuentaBanco_PK;NONCLUSTERED;True;True;4427.0;0.0;0.0;4427.0;2026-06-04 09:09:22.047;;23.695312;23.632812;23.546875
-HistoricoCuentaBanco;Ano;NONCLUSTERED;False;False;0.0;0.0;0.0;4427.0;;;11.390625;11.328125;11.273437
-HistoricoCuentaBanco;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;4427.0;;;16.453125;16.4375;16.328125
-HistoricoCuentaBanco;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;4427.0;;;14.007812;13.992187;13.9375
-HistoricoCuentaBanco;Mes;NONCLUSTERED;False;False;0.0;0.0;0.0;4427.0;;;11.390625;11.367187;11.304687
-HistoricoDctosNoEfectuados;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-HistoricoDctosNoEfectuados;aaaaaHistoricoDctosNoEfectu_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-HistoricoDctosNoEfectuados;Ano;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoDctosNoEfectuados;Id_Descuento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoDctosNoEfectuados;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoDctosNoEfectuados;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoDctosNoEfectuados;Mes;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoDetalleDesDificil;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-HistoricoDetalleDesDificil;aaaaaHistoricoDetalleDesDificil_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-HistoricoFicha_EducacionHrs;;HEAP;False;False;0.0;1.0;1.0;9248.0;;2026-06-04 09:07:04.843;341.945312;341.945312;341.9375
-HistoricoFicha_EducacionHrs;aaaaaHistoricoFicha_Educaci_PK;NONCLUSTERED;True;True;9248.0;0.0;0.0;9247.0;2026-06-04 09:11:45.383;;48.070312;47.992187;47.828125
-HistoricoFicha_EducacionHrs;Ano;NONCLUSTERED;False;False;0.0;0.0;0.0;9247.0;;;21.757812;21.75;21.679687
-HistoricoFicha_EducacionHrs;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;9247.0;;;30.445312;30.398437;30.21875
-HistoricoFicha_EducacionHrs;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;9247.0;;;26.570312;26.5;26.421875
-HistoricoFicha_EducacionHrs;Mes;NONCLUSTERED;False;False;0.0;0.0;0.0;9247.0;;;22.632812;22.585937;22.507812
-HistoricoFicha_EducacionHrs;Tipo_Horas;NONCLUSTERED;False;False;0.0;0.0;0.0;9247.0;;;26.570312;26.5;26.421875
-HistoricoFichaAfiliadoVoluntario;aaHistoFichaAfiliadoVoluntario_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-HistoricoFichaAfiliadoVoluntario;Ano;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoFichaAfiliadoVoluntario;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoFichaAfiliadoVoluntario;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoFichaAfiliadoVoluntario;Mes;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoFichaAfiliadoVoluntario;Rut_Afiliado;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoFichaDetalle_AEduca;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-HistoricoFichaDetalle_AEduca;aaHistoricoFichaDetalle_AEduca_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-HistoricoFichaDetalle_AEduca;Ano;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoFichaDetalle_AEduca;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoFichaDetalle_AEduca;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoFichaDetalle_AEduca;Mes;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoFichaDetalle_AEduca;Tipo_Horas;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoFichaEducacion;;HEAP;False;False;0.0;1.0;1.0;6859.0;;2026-06-04 09:07:05.813;146.640625;146.5625;146.546875
-HistoricoFichaEducacion;aaaaaHistoricoFichaEducacio_PK;NONCLUSTERED;True;True;6859.0;0.0;0.0;6858.0;2026-06-04 09:11:45.383;;32.757812;32.734375;32.625
-HistoricoFichaEducacion;Ano;NONCLUSTERED;False;False;0.0;0.0;0.0;6858.0;;;15.882812;15.8125;15.757812
-HistoricoFichaEducacion;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;6858.0;;;22.445312;22.398437;22.265625
-HistoricoFichaEducacion;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;6858.0;;;19.382812;19.375;19.3125
-HistoricoFichaEducacion;Mes;NONCLUSTERED;False;False;0.0;0.0;0.0;6858.0;;;16.007812;15.953125;15.890625
-HistoricoFichaFuncionario;;HEAP;False;False;0.0;0.0;0.0;6858.0;;;247.703125;247.664062;247.648437
-HistoricoFichaFuncionario;aaaaaHistoricoFichaFunciona_PK;NONCLUSTERED;True;True;6858.0;0.0;0.0;6858.0;2026-06-04 09:09:22.060;;32.757812;32.734375;32.625
-HistoricoFichaFuncionario;Ano;NONCLUSTERED;False;False;0.0;0.0;0.0;6858.0;;;15.890625;15.867187;15.804687
-HistoricoFichaFuncionario;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;6858.0;;;22.640625;22.609375;22.46875
-HistoricoFichaFuncionario;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;6858.0;;;19.382812;19.375;19.3125
-HistoricoFichaFuncionario;Indice_Licencias;NONCLUSTERED;False;False;0.0;0.0;0.0;6858.0;;;35.515625;35.46875;35.257812
-HistoricoFichaFuncionario;Mes;NONCLUSTERED;False;False;0.0;0.0;0.0;6858.0;;;16.390625;16.375;16.304687
-HistoricoFichaLeyesPrevisional;;HEAP;False;False;0.0;0.0;0.0;4258.0;;;67.078125;67.03125;67.015625
-HistoricoFichaLeyesPrevisional;aaHistoricoFichaLeyesPrev_PK;NONCLUSTERED;True;True;4258.0;0.0;0.0;4258.0;2026-06-04 09:10:59.767;;17.882812;17.828125;17.757812
-HistoricoFichaLeyesPrevisional;Ano;NONCLUSTERED;False;False;0.0;0.0;0.0;4258.0;;;8.640625;8.601562;8.554687
-HistoricoFichaLeyesPrevisional;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;4258.0;;;12.828125;12.820312;12.726562
-HistoricoFichaLeyesPrevisional;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;4258.0;;;10.632812;10.5625;10.515625
-HistoricoFichaLeyesPrevisional;Mes;NONCLUSTERED;False;False;0.0;0.0;0.0;4258.0;;;8.765625;8.726562;8.664062
-HistoricoGrupoFamiliar;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-HistoricoGrupoFamiliar;aaHistoricoGrupoFamiliar_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-HistoricoGrupoFamiliar;Ano;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoGrupoFamiliar;Id_Carga_Carga;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoGrupoFamiliar;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoGrupoFamiliar;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoGrupoFamiliar;Mes;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoImpuesto;PK_HistoricoImpuesto;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
-HistoricoIsapres;;HEAP;False;False;0.0;0.0;14.0;14.0;;;0.335937;0.203125;0.179687
-HistoricoIsapres;aaHistoricoIsapres_PK;NONCLUSTERED;True;True;14.0;0.0;0.0;14.0;2026-06-04 09:11:45.323;;0.171875;0.0625;0.0625
-HistoricoIsapres;Ano;NONCLUSTERED;False;False;0.0;0.0;0.0;14.0;;;0.125;0.070312;0.046875
-HistoricoIsapres;Id_Isapre;NONCLUSTERED;False;False;0.0;0.0;0.0;14.0;;;0.179687;0.070312;0.046875
-HistoricoIsapres;Mes;NONCLUSTERED;False;False;0.0;0.0;0.0;14.0;;;0.132812;0.085937;0.0625
-HistoricoLiquidacion;;HEAP;False;False;0.0;16.0;0.0;1557.0;;2026-06-04 09:07:13.410;97.320312;97.320312;97.3125
-HistoricoLiquidacion;aaaaaHistoricoLiquidacion_PK;NONCLUSTERED;True;True;1541.0;0.0;0.0;1541.0;2026-06-04 09:11:07.963;;12.632812;12.5625;12.507812
-HistoricoLiquidacion;Ano;NONCLUSTERED;False;False;0.0;0.0;0.0;1541.0;;;6.132812;6.039062;6.007812
-HistoricoLiquidacion;Id_Estable;NONCLUSTERED;False;False;0.0;0.0;0.0;1541.0;;;8.570312;8.53125;8.476562
-HistoricoLiquidacion;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;1541.0;;;7.507812;7.46875;7.429687
-HistoricoLiquidacion;Mes;NONCLUSTERED;False;False;0.0;0.0;0.0;1541.0;;;7.570312;7.53125;7.484375
-HistoricoLiquidacionHrs;;HEAP;False;False;0.0;5.0;0.0;2052.0;;2026-06-04 09:07:13.703;81.757812;81.679687;81.671875
-HistoricoLiquidacionHrs;aaaaaHistoricoLiquidacionHr_PK;NONCLUSTERED;True;True;2047.0;1.0;0.0;2047.0;2026-06-04 09:11:17.923;2026-06-04 09:11:45.383;17.507812;17.484375;17.414062
-HistoricoLiquidacionHrs;Ano;NONCLUSTERED;False;False;0.0;0.0;0.0;2047.0;;;9.820312;9.742187;9.703125
-HistoricoLiquidacionHrs;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;2047.0;;;11.007812;10.960937;10.890625
-HistoricoLiquidacionHrs;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;2047.0;;;9.757812;9.679687;9.640625
-HistoricoLiquidacionHrs;Id_TipoContrato;NONCLUSTERED;False;False;0.0;0.0;0.0;2047.0;;;8.882812;8.851562;8.796875
-HistoricoLiquidacionHrs;Mes;NONCLUSTERED;False;False;0.0;0.0;0.0;2047.0;;;7.945312;7.914062;7.867187
-HistoricoLiquidacionHrs;Tipo_Horas;NONCLUSTERED;False;False;0.0;0.0;0.0;2047.0;;;9.757812;9.679687;9.640625
-HistoricoLiquidacionHrs_AEduca;;HEAP;False;False;0.0;3.0;0.0;3.0;;2026-06-04 09:07:13.753;0.0;0.0;0.0
-HistoricoLiquidacionHrs_AEduca;aaHistoricoLiquidacionHrs_AEduca_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-HistoricoMovDctos;;HEAP;False;False;0.0;0.0;0.0;8.0;;;0.585937;0.390625;0.179687
-HistoricoMovDctos;aaHistoricoMovDctos_PK;NONCLUSTERED;True;True;8.0;0.0;0.0;8.0;2026-06-04 09:11:44.783;;0.148437;0.09375;0.125
-HistoricoMovDctos;Ano;NONCLUSTERED;False;False;0.0;0.0;0.0;8.0;;;0.164062;0.054687;0.0625
-HistoricoMovDctos;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;8.0;;;0.164062;0.054687;0.070312
-HistoricoMovDctos;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;8.0;;;0.101562;0.046875;0.054687
-HistoricoMovDctos;Id_Hd;NONCLUSTERED;False;False;0.0;0.0;0.0;8.0;;;0.179687;0.085937;0.085937
-HistoricoMovDctos;Mes;NONCLUSTERED;False;False;0.0;0.0;0.0;8.0;;;0.109375;0.054687;0.0625
-HistoricoMovDctos;Tipo_Hd;NONCLUSTERED;False;False;0.0;0.0;0.0;8.0;;;0.179687;0.085937;0.085937
-HistoricoMovLiquidacion;;HEAP;False;False;0.0;0.0;0.0;5346.0;;;86.328125;86.3125;86.296875
-HistoricoMovLiquidacion;aaaaaHistoricoMovLiquidacio_PK;NONCLUSTERED;True;True;5346.0;0.0;0.0;5346.0;2026-06-04 09:11:44.660;;68.632812;68.539062;68.265625
-HistoricoMovLiquidacion;Ano;NONCLUSTERED;False;False;0.0;0.0;0.0;5346.0;;;28.515625;28.46875;28.367187
-HistoricoMovLiquidacion;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;5346.0;;;33.890625;33.835937;33.617187
-HistoricoMovLiquidacion;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;5346.0;;;31.382812;31.328125;31.234375
-HistoricoMovLiquidacion;Id_Hd;NONCLUSTERED;False;False;0.0;0.0;0.0;5346.0;;;29.078125;29.039062;28.898437
-HistoricoMovLiquidacion;Id_TipoContrato;NONCLUSTERED;False;False;0.0;0.0;0.0;5346.0;;;26.140625;26.125;25.976562
-HistoricoMovLiquidacion;Mes;NONCLUSTERED;False;False;0.0;0.0;0.0;5346.0;;;28.578125;28.578125;28.46875
-HistoricoMovLiquidacion;Tipo_HabeDcto;NONCLUSTERED;False;False;0.0;0.0;0.0;5346.0;;;25.765625;25.742187;25.609375
-HistoricoMovPlanillaSuple;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-HistoricoMovPlanillaSuple;aaaaaHistoricoMovPlanillaSu_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-HistoricoMovPlanillaSuple;Ano;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoMovPlanillaSuple;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoMovPlanillaSuple;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoMovPlanillaSuple;Id_Hd;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoMovPlanillaSuple;Mes;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoMutual;;HEAP;False;False;0.0;0.0;0.0;1.0;;;0.09375;0.039062;0.023437
-HistoricoMutual;aaaHistoricoMutual_PK;NONCLUSTERED;True;True;1.0;0.0;0.0;1.0;2026-06-04 09:11:44.857;;0.015625;0.015625;0.007812
-HistoricoMutual;Ano;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.015625;0.015625;0.007812
-HistoricoMutual;Mes;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.015625;0.015625;0.007812
-HistoricoNivelEducativo;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-HistoricoNivelEducativo;aaaaaHistoricoNivelEducativ_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-HistoricoNivelEducativo;Ano;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-HistoricoNivelEducativo;Id_Nivel;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-HistoricoParametrosGenerales;;HEAP;False;False;0.0;4.0;1.0;5.0;;2026-06-04 09:07:12.987;0.203125;0.132812;0.117187
-HistoricoParametrosGenerales;aaHistoricoParam_PK;NONCLUSTERED;True;True;0.0;1.0;0.0;1.0;;2026-06-04 09:11:44.827;0.015625;0.015625;0.007812
-HistoricoPlanillaSuplementaria;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-HistoricoPlanillaSuplementaria;aaaaaHistoricoPlanillaSuple_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-HistoricoPlanillaSuplementaria;Ano;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoPlanillaSuplementaria;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoPlanillaSuplementaria;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-HistoricoPlanillaSuplementaria;Mes;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Horas_Aula_Actividad;aaaHoras_Aula_Actividad_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Idiomas;aaaIdiomas_PK;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-ImportaCargasFamiliares;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-ImportaCargasFamiliares;FechaInicio;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-ImportaCargasFamiliares;FechaTermino;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-ImportaCargasFamiliares;Rut;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-ImportaCargasFamiliares;RutCarga;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-ImportaCargasFamiliares_Aviso;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-ImportaCargasFamiliares_Aviso;Rut;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-ImportaCargasFamiliares_Aviso;RutCarga;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Impuesto;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-Impuesto;aaaaaImpuesto_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Impuesto;Id_Tramo;NONCLUSTERED;False;True;;;;;;;0.015625;0.015625;0.007812
-Indices;;HEAP;False;False;0.0;0.0;2.0;0.0;;;0.015625;0.015625;0.007812
-Indices;A¤o;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Indices;aaaaaIndices_PK;NONCLUSTERED;True;True;2.0;0.0;0.0;0.0;2026-06-04 10:53:38.627;;0.015625;0.015625;0.007812
+DocumentosEnConvenios;PK_DocumentosEnConvenios;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+DocumentosProtestados;Rut;CLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+DocumentosSerializadosFirmaDigital;PK_DocumentosSerializadosFirmaDigital;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+EmpresasEnPoderesNotariales;PK_EmpresasEnPoderesNotariales;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Enc_Contribuyente_bloqueado;PK_Enc_Contribuyente;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Enc_Orden_Ingreso;;HEAP;False;False;;;;;;;166.320312;166.296875;166.289062
+Enc_Orden_Ingreso;INDICE_Enc_Orden_Ingreso;NONCLUSTERED;True;True;;;;;;;25.570312;25.523437;25.359375
+Encabezado_InteresTributario;PK__Encabeza__C938E1412E4174E6;CLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
+Encabezado_Orden_Ingreso;Ano;NONCLUSTERED;False;False;;;;;;;6.03125;6.984375;7.210937
+Encabezado_Orden_Ingreso;Area;NONCLUSTERED;False;False;;;;;;;5.367187;6.523437;6.765625
+Encabezado_Orden_Ingreso;Departamento;NONCLUSTERED;False;False;;;;;;;10.078125;10.03125;9.953125
+Encabezado_Orden_Ingreso;Fecha;NONCLUSTERED;False;False;;;;;;;11.640625;11.59375;11.523437
+Encabezado_Orden_Ingreso;FechaVencimineto;NONCLUSTERED;False;False;;;;;;;11.640625;11.617187;11.539062
+Encabezado_Orden_Ingreso;idx_Nombre;NONCLUSTERED;False;False;;;;;;;27.882812;27.835937;27.59375
+Encabezado_Orden_Ingreso;idx_Rol;NONCLUSTERED;False;False;;;;;;;8.453125;8.429687;8.367187
+Encabezado_Orden_Ingreso;Item;NONCLUSTERED;False;False;;;;;;;10.078125;10.03125;9.953125
+Encabezado_Orden_Ingreso;NumeroIngreso;NONCLUSTERED;False;False;;;;;;;10.007812;9.953125;9.90625
+Encabezado_Orden_Ingreso;PK_Encabezado_Orden_Ingreso;CLUSTERED;True;True;;;;;;;136.828125;136.679687;136.296875
+Encabezado_Orden_Ingreso;Rut;NONCLUSTERED;False;False;;;;;;;18.132812;18.117187;18.0
+Encabezado_SMS;ID_Encabezado_SMS;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+EncabezadoCondonacion100;PrimariaEncabezadoCondonacion100;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+EncabezadoConvenios;Idx_EncabezadoConvenioTag;NONCLUSTERED;False;False;;;;;;;0.203125;0.132812;0.109375
+EncabezadoConvenios;IndexFechaConvenio;NONCLUSTERED;False;False;;;;;;;0.164062;0.070312;0.054687
+EncabezadoConvenios;IndexItem_Pago;NONCLUSTERED;False;False;;;;;;;0.125;0.085937;0.0625
+EncabezadoConvenios;PrimariaEncabezadoConvenios;CLUSTERED;True;True;;;;;;;1.070312;1.0;0.984375
+EncabezadoConveniosRebajados;PK_EncabezadoConveniosRebajados;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+EncabezadoDescargos;PK_EncabezadoDescargos;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+EncabezadoDeudoresMunicipales;Agrupa_Deuda;NONCLUSTERED;False;False;;;;;;;68.703125;68.664062;68.25
+EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_Ano;NONCLUSTERED;False;False;;;;;;;51.515625;51.492187;51.265625
+EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_Ano_Convenio;NONCLUSTERED;False;False;;;;;;;43.015625;42.96875;42.796875
+EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_Cuota;NONCLUSTERED;False;False;;;;;;;51.515625;51.492187;51.265625
+EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_Cuota_Convenio;NONCLUSTERED;False;False;;;;;;;43.015625;42.96875;42.796875
+EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_EmitidoPor;NONCLUSTERED;False;False;;;;;;;59.640625;59.609375;59.304687
+EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_fecha_pago;NONCLUSTERED;False;False;;;;;;;51.507812;51.453125;51.234375
+EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_Numero_Convenio;NONCLUSTERED;False;False;;;;;;;43.007812;42.976562;42.804687
+EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_Observacion_01;NONCLUSTERED;False;False;;;;;;;137.820312;135.953125;133.046875
+EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_Observacion_02;NONCLUSTERED;False;False;;;;;;;55.257812;54.703125;54.15625
+EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_Placa_Vehiculo;NONCLUSTERED;False;False;;;;;;;53.820312;53.726562;53.507812
+EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_Rol_Patente;NONCLUSTERED;False;False;;;;;;;43.007812;42.953125;42.78125
+EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_Rol_Propiedad;NONCLUSTERED;False;False;;;;;;;56.070312;56.007812;55.78125
+EncabezadoDeudoresMunicipales;Fecha_Cambio_Item;NONCLUSTERED;False;False;;;;;;;51.507812;51.5;51.273437
+EncabezadoDeudoresMunicipales;Fecha_Emision;NONCLUSTERED;False;False;1453.0;0.0;0.0;0.0;2026-07-01 12:24:22.713;;51.382812;51.328125;51.117187
+EncabezadoDeudoresMunicipales;Fecha_Vencimiento;NONCLUSTERED;False;False;;;;;;;51.695312;51.671875;51.328125
+EncabezadoDeudoresMunicipales;Idx_ConvenioTag_PlacaVehiculo;NONCLUSTERED;False;False;;;;;;;59.195312;59.148437;58.890625
+EncabezadoDeudoresMunicipales;Idx_Extranjero;NONCLUSTERED;False;False;;;;;;;38.695312;38.640625;38.5
+EncabezadoDeudoresMunicipales;Idx_ItemPlacaCajaTag;NONCLUSTERED;False;False;;;;;;;69.820312;69.796875;69.46875
+EncabezadoDeudoresMunicipales;Idx_NumIngreso_AnoProceso_CodArea_NumCaja;NONCLUSTERED;False;False;;;;;;;58.570312;58.515625;58.296875
+EncabezadoDeudoresMunicipales;Idx_PagoAutomatico_Condonacion;NONCLUSTERED;False;False;;;;;;;96.820312;96.789062;96.1875
+EncabezadoDeudoresMunicipales;Nombre;NONCLUSTERED;False;False;;;;;;;140.320312;140.304687;139.25
+EncabezadoDeudoresMunicipales;Orden_Ingreso;NONCLUSTERED;False;False;;;;;;;42.632812;42.601562;42.484375
+EncabezadoDeudoresMunicipales;PK_EncabezadoDeudoresMunicipales;CLUSTERED;True;True;2142.0;0.0;1453.0;0.0;2026-07-01 12:24:22.543;;1059.640625;1059.578125;1056.601562
+EncabezadoDeudoresMunicipales;Rol;NONCLUSTERED;False;False;;;;;;;35.882812;35.835937;35.695312
+EncabezadoDeudoresMunicipales;Rol_Patente;NONCLUSTERED;False;False;;;;;;;43.007812;42.953125;42.78125
+EncabezadoDeudoresMunicipales;Rol_Propiedad;NONCLUSTERED;False;False;;;;;;;56.070312;56.007812;55.78125
+EncabezadoDeudoresMunicipales;Rut;NONCLUSTERED;False;False;;;;;;;82.757812;82.679687;82.273437
+EncabezadoDeudoresMunicipales_Eliminadas;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+EncabezadoIngresosDiarios;Ano;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+EncabezadoIngresosDiarios;Area;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+EncabezadoIngresosDiarios;Caja;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+EncabezadoIngresosDiarios;Fecha;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+EncabezadoIngresosDiarios;IdOrdenIngreso;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+EncabezadoIngresosDiarios;ItemPago;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+EncabezadoIngresosDiarios;OrdenIngreso;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+EncabezadoIngresosDiarios;PK_EncabezadoIngresosDiarios;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+EncabezadoIngresosDiarios;Placa;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+EncabezadoIngresosDiarios;Rut;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+EncCas_TabCall;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+EncCas_TabCamp;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+EncCas_TabUnid;;HEAP;False;False;;;;;;;0.015625;0.015625;0.0
+EncCas_TabUnid;UV_UnidVec;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+EstadoCivil;EstadoCivil_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+EstadoLogeo;PK_EstadoLogeo;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Facturas_OC;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Familias;;HEAP;False;False;;;;;;;0.039062;0.039062;0.023437
+Familias;aaaaaFamilias_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+FEL_CertificadoSerializado;PK_FEL_CertificadoSerializado;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+FEL_Firmantes;PK_FEL_Firmantes;CLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
+FEL_Parametros;;HEAP;False;False;;;;;;;0.070312;0.015625;0.007812
+FEL_Parametros;aaFEL_Parametros_PK;NONCLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
+FirmaElectronica_ActivacionCertificado;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+FirmaElectronica_Areas;PK_Firmas_Areas;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+FirmaElectronica_Asunto;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+FirmaElectronica_CertificadoDigital;PK_FirmaElectronica_CertificadoDigital;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+FirmaElectronica_CertificadoDigital_BS64;PK_FirmaElectronica_CertificadoDigital_BS64_1;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+FirmaElectronica_Configuracion_Correo;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+FirmaElectronica_Lista_Distribucion_Correo;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+FirmaElectronica_Repositorio;PK_FirmaElectronica_Repositorio;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+FirmaElectronica_Tipo_Usuario;PK_Tipo_UsuarioFE;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+FirmaElectronica_Usuarios;PK_FirmaElectronica_Usuarios;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+FirmaElectronica_Usuarios_Areas;PK_FirmaElectronica_Usuarios_Areas;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+FirmaElectronica_Usuarios_FE_Areas;PK_FirmaElectronica_Usuarios_FE_Areas;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Folios;PK_Folios;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+FondoComun_Cuentas;PK_FondoComun_Cuentas;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+FondosEnPoder;PK_FondosEnPoder;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Formas_De_Pago;;HEAP;False;False;;;;;;;0.03125;0.03125;0.007812
+Formas_De_Pago;aaaaaFormas_De_Pago_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Formas_De_Pago;DESCRIPCION;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Formularios;;HEAP;False;False;0.0;0.0;560.0;317.0;;;3.40625;1.03125;0.367187
+Formularios;Caption;NONCLUSTERED;False;False;0.0;0.0;0.0;317.0;;;0.210937;0.125;0.359375
+Formularios;Name;NONCLUSTERED;False;False;132.0;0.0;0.0;317.0;2026-07-01 12:22:19.647;;0.195312;0.101562;0.351562
+Formularios;Sys;NONCLUSTERED;False;False;432.0;0.0;0.0;317.0;2026-07-01 12:25:26.390;;0.453125;0.085937;0.15625
+GCM_DetalleDeudaGestionada;GCM_DetalleDeudaGestionada_Año;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+GCM_DetalleDeudaGestionada;GCM_DetalleDeudaGestionada_Cuota;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+GCM_DetalleDeudaGestionada;GCM_DetalleDeudaGestionada_FKIndex1;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+GCM_DetalleDeudaGestionada;GCM_DetalleDeudaGestionada_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+GCM_DetalleDeudaGestionada;GCM_DetalleDeudaGestionada_Placa;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+GCM_DetalleDeudaGestionada;GCM_DetalleDeudaGestionada_RolPatente;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+GCM_DetalleDeudaGestionada;GCM_DetalleDeudaGestionada_RolPropiedad;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+GCM_DetalleDeudaGestionada;GCM_DetalleDeudaGestionada_Vencimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Giros;;HEAP;False;False;;;;;;;0.023437;0.023437;0.015625
+Giros;aaaaaGiros_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Giros_DOMDigital;PK_Giros_DOMDigital;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Grupos_De_Usuarios;;HEAP;False;False;;;;;;;0.046875;0.046875;0.039062
+HistoricoClaves;;HEAP;False;False;;;;;;;0.023437;0.023437;0.015625
+HistoricoLogin;PK_HistoricoLogin;CLUSTERED;True;True;;;;;;;4.890625;4.742187;4.703125
+Hoja1;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Hoja2;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Hoja3;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+HONORARIO_PorcentajeRetencion;PK_Honorario_Porcentaje_Ret;CLUSTERED;True;True;16.0;0.0;0.0;0.0;2026-07-01 15:47:29.367;;0.015625;0.015625;0.007812
+HONORARIO_PorcentajeRetencion_Tra;PK_Honorario_Porcentaje_Ret_Tra;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+HONORARIOS;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+HonorariosContabilidad;;HEAP;False;False;;;;;;;0.46875;0.367187;0.351562
+Impuestos_Adicionales;PK_Impuestos_Adicionales;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+INDICE_2024;;HEAP;False;False;;;;;;;0.070312;0.023437;0.015625
+Indices;;HEAP;False;False;0.0;0.0;6474.0;0.0;;;0.039062;0.039062;0.03125
+Indices;aaaaaIndices_PK;NONCLUSTERED;True;True;6474.0;0.0;0.0;0.0;2026-07-01 12:24:23.517;;0.085937;0.039062;0.015625
+Indices;Año;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
 Indices;Mes;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Ingreso_De_Datos;;HEAP;False;False;;;;;;;45.445312;45.4375;45.429687
-InstitucionesAVP;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-InstitucionesAVP;aaInstitucionesAVP_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-InstitucionesAVP;Id_institucion;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-InstitucionesAVP;Tipo_Institucion;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Isapres;;HEAP;False;False;0.0;1.0;1.0;1.0;;2026-06-22 09:38:49.917;0.023437;0.023437;0.015625
-Isapres;aaaaaIsapres_PK;NONCLUSTERED;True;True;1.0;1.0;0.0;0.0;2026-06-04 09:07:04.667;2026-06-04 09:11:45.180;0.015625;0.015625;0.007812
-Isapres;Id_Isapre;NONCLUSTERED;False;True;;;;;;;0.015625;0.015625;0.007812
-LicenciaMedica;;HEAP;False;False;0.0;2.0;0.0;0.0;;2026-06-04 10:00:08.660;18.257812;18.257812;18.25
-LicenciaMedica;aaaLicenciaMedica_PK;NONCLUSTERED;True;True;;;;;;;3.320312;3.265625;3.226562
-LicenciaMedica_Historial;aaaLicenciaMedica_Historial_PK;CLUSTERED;True;True;;;;;;;2.945312;2.875;2.84375
-LicenciaMedica1;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-LicenciaMedica1;PK_LicenciaMedica1;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-LicenciaMedicaLME_NoCargada;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-LicenciaMedicaSanna;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-LicenciaMedicaSanna;aaaLicenciaMedicaSanna_PK;NONCLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
-LicenciaMedicaSanna_Historial;aaaLicenciaMedicaSanna_Historial_PK;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Liquidacion;;HEAP;False;False;0.0;5.0;0.0;5.0;;2026-06-04 09:10:59.783;0.367187;0.203125;0.0
-Liquidacion;aaaaaLiquidacion_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;2.0;;;0.070312;0.015625;0.007812
-Liquidacion;Id_Estable;NONCLUSTERED;False;False;1.0;0.0;0.0;2.0;2026-06-04 10:00:09.270;;0.070312;0.015625;0.007812
-Liquidacion;Id_Funcionario;NONCLUSTERED;False;False;0.0;1.0;0.0;2.0;;2026-06-04 10:00:09.237;0.070312;0.015625;0.007812
-LiquidacionHrs;;HEAP;False;False;0.0;4.0;0.0;4.0;;2026-06-04 09:11:07.973;1.3125;0.5625;0.0
-LiquidacionHrs;aaaaaLiquidacionHrs_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812
-LiquidacionHrs;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812
-LiquidacionHrs;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812
-LiquidacionHrs;Id_TipoContrato;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.125;0.015625;0.007812
-LiquidacionHrs;Tipo_Horas;NONCLUSTERED;False;False;0.0;1.0;0.0;1.0;;2026-06-04 10:00:09.300;0.070312;0.015625;0.007812
-LiquidacionHrs_AEduca;;HEAP;False;False;0.0;3.0;0.0;3.0;;2026-06-04 09:07:13.180;0.0;0.0;0.0
-LiquidacionHrs_AEduca;aaLiquidacionHrs_AEduca_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-LRE_Aportes;;HEAP;False;False;0.0;0.0;6.0;0.0;;;0.015625;0.015625;0.007812
-LRE_Aportes;aaaLRE_Aportes_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-LRE_Aportes;Id_Aporte;NONCLUSTERED;False;False;6.0;0.0;0.0;0.0;2026-06-04 09:07:14.373;;0.015625;0.015625;0.007812
-LRE_CausalesTerminoContrato;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-LRE_CausalesTerminoContrato;aaaLRE_CausalesTerminoContrato_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-LRE_Descuentos;;HEAP;False;False;0.0;0.0;10.0;0.0;;;0.015625;0.015625;0.007812
-LRE_Descuentos;aaaLRE_Descuentos_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-LRE_Descuentos;Id_Descuento;NONCLUSTERED;False;False;10.0;0.0;0.0;0.0;2026-06-04 09:07:12.480;;0.015625;0.015625;0.007812
-LRE_Esquema;;HEAP;False;False;0.0;0.0;147.0;148.0;;;0.078125;0.023437;0.007812
-LRE_Esquema;aaaLRE_Esquema_PK;NONCLUSTERED;True;True;147.0;1.0;0.0;148.0;2026-06-04 09:07:12.230;2026-06-04 09:07:10.823;0.015625;0.015625;0.007812
-LRE_Haberes;;HEAP;False;False;0.0;0.0;28.0;2.0;;;0.023437;0.023437;0.007812
-LRE_Haberes;aaaLRE_Haberes_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;2.0;;;0.015625;0.015625;0.007812
-LRE_Haberes;Id_Haber;NONCLUSTERED;False;False;28.0;0.0;0.0;2.0;2026-06-04 09:07:12.417;;0.015625;0.015625;0.007812
-LRE_Totales;;HEAP;False;False;0.0;0.0;11.0;2.0;;;0.015625;0.015625;0.007812
-LRE_Totales;aaaLRE_Totales_PK;NONCLUSTERED;True;True;2.0;0.0;0.0;0.0;2026-06-04 09:07:14.383;;0.015625;0.015625;0.007812
-LRE_Totales;Id_Total;NONCLUSTERED;False;False;11.0;0.0;0.0;0.0;2026-06-04 09:07:12.587;;0.015625;0.015625;0.007812
-MacroCalculo;;HEAP;False;False;0.0;0.0;10.0;0.0;;;0.015625;0.015625;0.007812
-MacroCalculo;aaaaaMacroCalculo_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-MacroCalculo;Macro_id;NONCLUSTERED;False;False;10.0;0.0;0.0;0.0;2026-06-04 09:07:45.213;;0.015625;0.015625;0.007812
-MaestroRentas;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Mentor;aaaMentor_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Mentor;Correlativo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Mentor;Rut_Mentor;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Mentoria;aaaMentoria_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Mentoria;Rut_Alumno;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Mentoria;Rut_Mentor;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-ModoDctos;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-ModoDctos;aaaaaModoDctos_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-ModoDctos;Id_ModoDctos;NONCLUSTERED;False;True;;;;;;;0.015625;0.015625;0.007812
-ModoPactado;aaaModoPactado_PK;CLUSTERED;True;True;12.0;0.0;0.0;0.0;2026-06-04 09:07:07.427;;0.015625;0.015625;0.007812
-ModoPactadoAuge;aaaModoPactadoAuge_PK;CLUSTERED;True;True;4.0;0.0;0.0;0.0;2026-06-04 09:07:07.440;;0.015625;0.015625;0.007812
-Movimiento_Finiquito;;HEAP;False;False;;;;;;;0.007812;0.007812;0.0
-Movimiento_Finiquito;aaMovimiento_Finiquito_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Movimiento_Finiquito;Correlativo;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Movimiento_Finiquito;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Movimiento_Finiquito;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Movimiento_Finiquito;Id_Movimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Movimiento_Finiquito;Tipo_Movimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-MovimientoAnexo_Finiquito;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-MovimientoAnexo_Finiquito;aaMovimientoAnexo_Finiquito_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-MovimientoAnexo_Finiquito;Correlativo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-MovimientoAnexo_Finiquito;Correlativo_Anexo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-MovimientoAnexo_Finiquito;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-MovimientoAnexo_Finiquito;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-MovimientoAnexo_Finiquito;Id_MovimientoAnexo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-MovimientoAnexo_Finiquito;Tipo_MovimientoAnexo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-MovimientoHaberDctos;;HEAP;False;False;0.0;8.0;0.0;2.0;;2026-06-04 10:00:08.720;0.632812;0.609375;0.601562
-MovimientoHaberDctos;aaaaaMovimientoHaberDctos_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;1.0;;;0.445312;0.359375;0.34375
-MovimientoHaberDctos;Id_EstabContrato;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.445312;0.320312;0.304687
-MovimientoHaberDctos;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.507812;0.398437;0.382812
-MovimientoHaberDctos;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.445312;0.320312;0.304687
-MovimientoHaberDctos;Id_HaberDcto;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.320312;0.164062;0.148437
-MovimientoHaberDctos;Id_TipoContrato;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.382812;0.234375;0.21875
-MovimientoHaberDctos;Tipo_Hd;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.320312;0.203125;0.1875
-MovimientoHaberDctos_Auxiliar;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-MovimientoLiquidacion;;HEAP;False;False;0.0;1.0;0.0;1.0;;2026-06-04 09:11:17.937;7.976562;5.648437;0.0
-MovimientoLiquidacion;aaaaaMovimientoLiquidacion_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812
-MovimientoLiquidacion;Id_Establecimiento;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812
-MovimientoLiquidacion;Id_Funcionario;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812
-MovimientoLiquidacion;Id_Hd;NONCLUSTERED;False;False;0.0;1.0;0.0;1.0;;2026-06-04 10:00:09.380;0.070312;0.015625;0.007812
-MovimientoLiquidacion;Id_TipoContrato;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812
-MovimientoLiquidacion;Tipo_HabeDcto;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;0.070312;0.015625;0.007812
-MovimientoPlanillaSuple;;HEAP;False;False;0.0;0.0;0.0;1.0;;;29.257812;29.226562;29.21875
-MovimientoPlanillaSuple;aaaMovimientoPlanillaSuple_PK;NONCLUSTERED;True;True;;;;;;;32.945312;32.859375;32.71875
-MovimientoPlanillaSuple;Id_TipoContrato;NONCLUSTERED;False;False;0.0;1.0;0.0;1.0;;2026-06-04 09:06:37.400;11.953125;11.796875;11.71875
-MovPlanillaHaberDctos;;HEAP;False;False;0.0;2.0;0.0;3.0;;2026-06-04 10:00:09.097;0.015625;0.015625;0.0
-MovPlanillaHaberDctos;aaaMovPlanillaHaberDctos_PK;NONCLUSTERED;True;True;0.0;0.0;0.0;1.0;;;0.085937;0.03125;0.007812
-MovPlanillaHaberDctos;Id_EstabContrato;NONCLUSTERED;False;False;0.0;1.0;0.0;2.0;;2026-06-04 09:06:37.240;0.078125;0.03125;0.007812
-MovPlanillaHaberDctos;Id_TipoContrato;NONCLUSTERED;False;False;0.0;1.0;0.0;2.0;;2026-06-04 09:06:37.300;0.078125;0.03125;0.007812
-Municipalidad;;HEAP;False;False;0.0;3.0;2.0;3.0;;2026-06-04 10:53:21.870;0.015625;0.015625;0.007812
-Municipalidad;aaaaaMunicipalidad_PK;NONCLUSTERED;True;True;2.0;0.0;0.0;0.0;2026-06-04 10:53:21.870;;0.015625;0.015625;0.007812
-Municipalidad;Codigo_Comuna;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Mutualidad;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-Mutualidad;aaaCodSuperInt_Mutual_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-NivelEducativo;;HEAP;False;False;0.0;6.0;0.0;0.0;;2026-06-22 16:49:39.420;0.015625;0.015625;0.007812
-NivelEducativo;aaaaaNivelEducativo_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-NivelEducativo;Id_Nivel;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-NoRecepcionLME;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-NoRecepcionLME;aaaNoRecepcionLME_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-OrdenTrabajo;;HEAP;False;False;;;;;;;9.632812;9.601562;9.59375
-OrdenTrabajo;aaaOrdenTrabajo_PK;NONCLUSTERED;True;True;;;;;;;2.695312;2.648437;2.617187
-Otras_InstitucionesPrev;;HEAP;False;False;0.0;0.0;5.0;0.0;;;0.015625;0.015625;0.007812
-Otras_InstitucionesPrev;aaOtras_InstitucionesPrev_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Otras_InstitucionesPrev;Id_Codigo;NONCLUSTERED;False;False;5.0;0.0;0.0;0.0;2026-06-04 09:06:25.100;;0.015625;0.015625;0.007812
-PagosLicenciasMedicas;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Parametros_FormatoCheque;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-ParametrosGenerales;;HEAP;False;False;0.0;9.0;7.0;9.0;;2026-06-04 09:11:44.807;0.015625;0.015625;0.007812
-ParametrosGenerales;aaaaaParametrosGenerales_PK;NONCLUSTERED;True;True;1.0;0.0;0.0;0.0;2026-06-04 10:00:08.683;;0.015625;0.015625;0.007812
-ParametrosGenerales;Codigo_Area;NONCLUSTERED;False;True;7.0;0.0;0.0;0.0;2026-06-04 10:53:21.897;;0.015625;0.015625;0.007812
-Permiso_Defuncion;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-Permiso_Defuncion;ID_Causante;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Permiso_Defuncion;ID_Funcionario;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Permiso_Defuncion;ID_Reemplazo;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Permiso_Defuncion;Nro_Decreto;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Permisos_Varios;;HEAP;False;False;;;;;;;0.203125;0.109375;0.09375
-Permisos_Varios;aaaaaPermisosVarios_PK;NONCLUSTERED;True;True;;;;;;;0.09375;0.046875;0.03125
-Permisos_Varios;Id_TipoPermiso;NONCLUSTERED;False;False;;;;;;;0.085937;0.039062;0.015625
-PermisosAdministrativos;;HEAP;False;False;;;;;;;0.757812;0.710937;0.703125
-PermisosAdministrativos;aaaaaPermisosAdministrativo_PK;NONCLUSTERED;True;True;;;;;;;0.515625;0.40625;0.382812
-PermisosAdministrativos;Correlativo;NONCLUSTERED;False;False;;;;;;;0.320312;0.15625;0.140625
-PermisosAdministrativos;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.320312;0.210937;0.195312
-PermisosAdministrativos;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.390625;0.25;0.226562
-PermisosAdministrativos;Periodo;NONCLUSTERED;False;False;;;;;;;0.257812;0.140625;0.125
-PermisosAdminSinRemuneracion;;HEAP;False;False;;;;;;;0.03125;0.03125;0.015625
-PermisosAdminSinRemuneracion;aaaaaPermisosAdminSinRemune_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-PermisosAdminSinRemuneracion;Correlativo;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosAdminSinRemuneracion;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosAdminSinRemuneracion;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosAdminSinRemuneracion;Periodo;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosLegales;;HEAP;False;False;;;;;;;2.195312;2.148437;2.140625
-PermisosLegales;aaaaaPermisosLegales_PK;NONCLUSTERED;True;True;;;;;;;1.882812;1.773437;1.757812
-PermisosLegales;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;1.570312;1.492187;1.476562
-PermisosLegales;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;1.195312;1.140625;1.125
-PermisosLegales;Periodo;NONCLUSTERED;False;False;;;;;;;1.195312;1.140625;1.125
-PermisosPost_Natal;aaaPermisosPost_Natal_PK;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
-PermisosPost_Natal;Correlativo;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosPost_Natal;Fecha_Evento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosPost_Natal;ID_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosPost_Natal;ID_Funcionario;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosPost_Natal;Tipo_Permiso;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosPost_Natal_Otorgados;aaaPermisosPost_Natal_Otorgados_PK;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
-PermisosPost_Natal_Otorgados;Fecha_Evento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosPost_Natal_Otorgados;ID_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosPost_Natal_Otorgados;ID_Funcionario;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosPost_Natal_Otorgados;Tipo_Permiso;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PermisosPostNatalParental;aaaPermisosPostNatalParental_PK;CLUSTERED;True;True;;;;;;;0.265625;0.15625;0.132812
-PermisosPostNatalParental;Id_Correlativo;NONCLUSTERED;False;False;;;;;;;0.078125;0.03125;0.015625
-PermisosPostNatalParental;Rut;NONCLUSTERED;False;False;;;;;;;0.078125;0.03125;0.015625
-PlandeCuenta;;HEAP;False;False;;;;;;;0.328125;0.21875;0.140625
-PlandeCuenta;aaaaaPlandeCuenta_PK;NONCLUSTERED;True;True;;;;;;;0.148437;0.054687;0.085937
-PlandeCuenta;Ano_Proceso;NONCLUSTERED;False;False;;;;;;;0.039062;0.039062;0.023437
-PlandeCuenta;Codigo_Area;NONCLUSTERED;False;False;;;;;;;0.164062;0.054687;0.039062
-PlandeCuenta;CodigoCuenta;NONCLUSTERED;False;False;0.0;1.0;0.0;0.0;;2026-06-04 09:06:25.457;0.179687;0.085937;0.085937
-PlandeCuenta;SW_Clasificador2008;NONCLUSTERED;False;False;;;;;;;0.117187;0.0625;0.039062
-PlanillaSuplementaria;;HEAP;False;False;0.0;12.0;1.0;12.0;;2026-06-04 09:07:13.963;108.703125;108.648437;108.632812
-PlanillaSuplementaria;aaaPlanillaSuplementaria_PK;NONCLUSTERED;True;True;0.0;1.0;0.0;0.0;;2026-06-04 09:08:39.863;16.195312;16.171875;16.101562
-PlanillaSuplementariaHrs;;HEAP;False;False;0.0;7.0;1.0;7.0;;2026-06-04 09:07:14.307;79.632812;79.632812;79.625
-PlanillaSuplementariaHrs;aaaPlanillaSuplementariaHrs_PK;NONCLUSTERED;True;True;1.0;0.0;0.0;0.0;2026-06-04 09:12:57.233;;17.757812;17.695312;17.617187
-PlantaMaestra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-PlantaMaestra;aaaaaPlantaMaestra_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-PlantaMaestra;Id_Cargo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-PlantaMaestra;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Postulantes_DAEM;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-Postulantes_DAEM;aaaaaPostulantes_DAEM_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-PostulantesPorRamos_DAEM;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-PostulantesPorRamos_DAEM;aaPostulantesPorRamos_DAEM_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-PostulantesPorRamos_DAEM;Id_asignatura;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-PostulantesPorRamos_DAEM;RutPostulante;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Previred;;HEAP;False;False;0.0;0.0;1.0;0.0;;;607.257812;607.25;607.242187
-Previred;aaPrevired_PK;NONCLUSTERED;True;True;1.0;0.0;0.0;0.0;2026-06-04 09:08:39.980;;23.828125;23.796875;23.679687
-Previred;K1_Ano;NONCLUSTERED;False;False;;;;;;;8.507812;8.453125;8.414062
-Previred;K1_Correlativo;NONCLUSTERED;False;False;;;;;;;10.570312;10.546875;10.5
-Previred;K1_Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;13.945312;13.882812;13.820312
-Previred;K1_Id_Funcionario;NONCLUSTERED;False;False;;;;;;;10.570312;10.546875;10.5
-Previred;K1_Id_ProcesoPS;NONCLUSTERED;False;False;;;;;;;10.570312;10.546875;10.5
-Previred;K1_Id_Remuneracion;NONCLUSTERED;False;False;;;;;;;10.570312;10.546875;10.5
-Previred;K1_Mes;NONCLUSTERED;False;False;;;;;;;8.507812;8.46875;8.421875
-Previred;K1_NroContrato;NONCLUSTERED;False;False;;;;;;;10.570312;10.546875;10.5
-Proceso_Firma_Liquidaciones;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-ProcesosPlanillaSuplementaria;;HEAP;False;False;0.0;1.0;2.0;3.0;;2026-06-04 10:00:09.087;0.328125;0.21875;0.203125
-ProcesosPlanillaSuplementaria;aaMovPlanillaHaberDctos_PK;NONCLUSTERED;True;True;0.0;2.0;0.0;2.0;;2026-06-04 10:00:09.077;0.101562;0.046875;0.03125
-ProfesionalesMedicos;;HEAP;False;False;;;;;;;0.867187;0.570312;0.515625
-ProfesionalesMedicos;aaaProfesionalesMedicos_PK;NONCLUSTERED;True;True;;;;;;;0.226562;0.125;0.140625
-Proyectos;;HEAP;False;False;0.0;0.0;1.0;0.0;;;0.015625;0.015625;0.007812
-Proyectos;aaProyectos_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Proyectos;Id_Proyecto;NONCLUSTERED;False;False;1.0;0.0;0.0;0.0;2026-06-04 09:07:06.383;;0.015625;0.015625;0.007812
-Recaudacion_Licencia;;HEAP;False;False;;;;;;;10.882812;10.859375;10.851562
-Recaudacion_Licencia;aaaRecaudacion_Licencia_PK;NONCLUSTERED;True;True;;;;;;;2.695312;2.625;2.59375
-RecaudacionPostNatalParental;aaaRecaudacionPostNatalParental_PK;CLUSTERED;True;True;;;;;;;0.125;0.078125;0.0625
-RecaudacionPostNatalParental;Id_Correlativo;NONCLUSTERED;False;False;;;;;;;0.09375;0.039062;0.023437
-RecaudacionPostNatalParental;Id_CorrelativoPermiso;NONCLUSTERED;False;False;;;;;;;0.101562;0.054687;0.039062
-RecaudacionPostNatalParental;Rut;NONCLUSTERED;False;False;;;;;;;0.101562;0.046875;0.023437
-REN_Cierre;pk_Cierre;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-REN_Clasificador;PK_REN_Clasificador;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-REN_Clasificador_Establecimientos;PK_REN_Clasificador_Establecimientos;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-REN_Clasificador_Establecimientos_Tra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-REN_Clasificador_Tipo_Horas;PK_REN_Clasificador_Tipo_Horas;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-REN_Clasificador_Tipo_Horas_Tra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-REN_Clasificador_Tra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-REN_Columnas;PK_REN_Columnas;CLUSTERED;True;True;;;;;;;0.070312;0.054687;0.039062
-REN_Columnas_Tra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-REN_Detalle;PK_REN_Detalle;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-REN_Funcion;PK_REN_Funcion;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-REN_FuncionCargo;PK_REN_FuncionCargo;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-REN_FuncionCargo_Tra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-REN_Movimientos_Descuentos;PK_REN_Movimientos_Descuentos;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-REN_Movimientos_Descuentos_PS;PK_REN_Movimientos_Descuentos_PS;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-REN_Movimientos_Descuentos_PS_Tra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-REN_Movimientos_Descuentos_Tra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-REN_Movimientos_Haberes;PK_REN_Movimientos_Haberes;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-REN_Movimientos_Haberes_PS;PK_REN_Movimientos_Haberes_PS;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-REN_Movimientos_Haberes_PS_Tra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-REN_Movimientos_Haberes_Tra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-REN_Parametros;PK_REN_Parametros;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-REN_Parametros_Tra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-REN_Transacciones;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-RendicionW2W;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-RentaEncasillamiento;aaaRentaEncasillamiento_PK;CLUSTERED;True;True;;;;;;;0.132812;0.09375;0.078125
-RentaEncasillamiento;Codigo_TDP;NONCLUSTERED;False;False;;;;;;;0.039062;0.039062;0.023437
-ResultadoMigracionNet;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-ResultadoMigracionNet;NombreTablaDestino;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-ResultadoMigracionNet;NombreTablaOriginal;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-ResultadoMigracionNet;PK_ResultadoMigracionNet;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-RetencionJudicial;;HEAP;False;False;0.0;27.0;0.0;2.0;;2026-06-04 10:00:08.970;0.085937;0.03125;0.023437
-RetencionJudicial;aaaaaRetencionJudicial_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-RetencionJudicial;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-RetencionJudicial;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-RetencionJudicial;Rut_Beneficiario;NONCLUSTERED;False;False;0.0;1.0;0.0;0.0;;2026-06-04 10:00:08.980;0.015625;0.015625;0.007812
-Retroactivo;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Retroactivo;aaRetroactivo_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Retroactivo;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Retroactivo;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Sexo;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-Sindicatos;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Sindicatos;aaSindicatos_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Sindicatos;Id_Sindicato;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-SituacionMilitar;aaaSituacionMilitar_PK;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Suplencias;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Suplencias;aaaaaSuplencias_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Suplencias;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Suplencias;Id_Incremento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Suplencias;Id_SueldoMedico;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Suplencias;TipoSuplencia;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-sysdiagrams;PK__sysdiagr__C2B05B612F70311B;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-sysdiagrams;UK_principal_name;NONCLUSTERED;False;True;;;;;;;0.0;0.0;0.0
-Tabla_OperadoresLME;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-Tabla_OperadoresLME;aaaTabla_OperadoresLME_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-TablaBienestar;;HEAP;False;False;0.0;0.0;2.0;0.0;;;0.015625;0.015625;0.007812
-TablaBienestar;aaaTablaBienestar_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-TablaBienestar;Id_Funcionario;NONCLUSTERED;False;False;2.0;0.0;0.0;0.0;2026-06-04 09:06:42.163;;0.015625;0.015625;0.007812
-TablaControl;;HEAP;False;False;0.0;0.0;0.0;2.0;;;0.101562;0.046875;0.03125
-TablaControl;aaaTablaControl_PK;NONCLUSTERED;True;True;;;;;;;0.195312;0.03125;0.015625
-TablaControl;Control_Ano;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-TablaControl;Control_Id_Haber;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-TablaControl;Control_Mes;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-TablaControl;Control_TipoProceso;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-TablaControl;Control_TipoRemun;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-TablaSindicato;;HEAP;False;False;0.0;0.0;2.0;0.0;;;0.015625;0.015625;0.007812
-TablaSindicato;aaaTablaSindicato_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-TablaSindicato;Id_Funcionario;NONCLUSTERED;False;False;2.0;0.0;0.0;0.0;2026-06-04 09:06:42.197;;0.015625;0.015625;0.007812
-Tbl_Paridad;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Tbl_Paridad;Id_Vb6;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Tbl_Paridad;PK_Tbl_Paridad;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Tbl_Paridad;Tipo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-TemporalDesDificil;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-TemporalDesDificil;aaaaaTemporalDesDificil_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Tipo;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-Tipo_Causante;aaaId_Causante_PK;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
-Tipo_Finiquito;;HEAP;False;False;0.0;1.0;0.0;2.0;;2026-06-04 09:07:18.673;0.015625;0.015625;0.007812
-Tipo_Finiquito;aaTipo_Finiquito_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Tipo_Finiquito;Codigo_Causal;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Tipo_Finiquito;Codigo_Ley;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Tipo_Finiquito;Detalle;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Tipo_Finiquito;Nombre_Ley;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Tipo_Horas;;HEAP;False;False;0.0;2.0;0.0;1.0;;2026-06-04 09:07:06.400;0.015625;0.015625;0.007812
-Tipo_Horas;aaaaaTipo_Horas_PK;NONCLUSTERED;True;True;1.0;0.0;0.0;0.0;2026-06-04 09:07:06.377;;0.015625;0.015625;0.007812
-Tipo_Horas;Id_TipoContrato;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Tipo_Horas;Tipo_Horas;NONCLUSTERED;False;True;;;;;;;0.015625;0.015625;0.007812
-Tipo_Horas_AEduca;;HEAP;False;False;0.0;1.0;0.0;0.0;;2026-06-04 09:07:06.800;0.015625;0.015625;0.007812
-Tipo_Horas_AEduca;aaTipo_Horas_AEduca_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-Tipo_Horas_AEduca;Tipo_Horas;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Tipo_Horas_Proyecto;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Tipo_Horas_Proyecto;aaTipo_Horas_Proyecto_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Tipo_Horas_Proyecto;Id_Tipo_Horas_Proyecto;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Tipo_Permiso;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-Tipo_Permiso;aaaaaTipo_Pemiso_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-TipoAdministracion;aaaTipoAdministracion_PK;CLUSTERED;True;True;5.0;0.0;0.0;0.0;2026-06-04 09:07:06.887;;0.015625;0.015625;0.007812
-TipoEstablecimiento;aaaTipoEstablecimiento_PK;CLUSTERED;True;True;3.0;0.0;0.0;0.0;2026-06-04 09:07:06.917;;0.015625;0.015625;0.007812
-TipoEstadoLicenciaMedica;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-TipoEstadoLicenciaMedica;aaaEstado_LicenciaMedica_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-TipoEstadoPagoLicenciaMedica;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-TipoEstadoPagoLicenciaMedica;aaaEstadoPago_LicenciaMedica_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-TipoEstudio;aaaTipoEstudio_PK;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-TipoInstitucionesAVP;;HEAP;False;False;0.0;3.0;0.0;0.0;;2026-06-22 16:49:39.433;0.015625;0.015625;0.007812
-TipoInstitucionesAVP;aaTipoInstitucionesAVP_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-TipoInstitucionesAVP;Tipo_Institucion;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-TipoPago;aaaTipoPago_PK;CLUSTERED;True;True;14.0;0.0;0.0;0.0;2026-06-04 09:07:07.337;;0.015625;0.015625;0.007812
-TiposDeAccidentes;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
-TiposDeAccidentes;aaaaaTiposDeAccidentes_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-TiposLicenciasMedicas;;HEAP;False;False;;;;;;;0.070312;0.015625;0.007812
-TiposLicenciasMedicas;aaaTiposLicenciasMedicas_PK;NONCLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
-Totales_Finiquito;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Totales_Finiquito;aaTotales_Finiquito_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Totales_Finiquito;Correlativo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Totales_Finiquito;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Totales_Finiquito;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-Totales_PlanillaRemuneraciones;;HEAP;False;False;0.0;0.0;0.0;1.0;;;3.070312;3.039062;3.03125
-Totales_PlanillaRemuneraciones;aaTotales_PlanillaRemuneraciones_PK;NONCLUSTERED;True;True;;;;;;;2.195312;2.132812;2.101562
-Totales_PlanillaRemuneraciones;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;1.695312;1.59375;1.578125
-Totales_PlanillaRemuneraciones;Id_Funcionario;NONCLUSTERED;False;False;;;;;;;1.320312;1.210937;1.195312
-Totales_PlanillaRemuneraciones;Id_Hd;NONCLUSTERED;False;False;;;;;;;1.320312;1.210937;1.195312
-Totales_PlanillaRemuneraciones;Id_ProcesoPs;NONCLUSTERED;False;False;;;;;;;1.320312;1.210937;1.195312
-Totales_PlanillaRemuneraciones;Id_Remuneracion;NONCLUSTERED;False;False;;;;;;;1.320312;1.210937;1.195312
-Totales_PlanillaRemuneraciones;Tipo_Hd;NONCLUSTERED;False;False;;;;;;;1.320312;1.210937;1.195312
-TramoDesarrolloProfesional;aaaTramoDesarrolloProfesional_PK;CLUSTERED;True;True;12.0;0.0;0.0;6.0;2026-06-04 09:07:07.133;;0.015625;0.015625;0.007812
-TramoDesarrolloProfesional;Codigo_TDP;NONCLUSTERED;False;False;0.0;1.0;0.0;0.0;;2026-06-04 09:07:07.060;0.015625;0.015625;0.007812
-TramosAsigFamiliar;;HEAP;False;False;0.0;4.0;0.0;0.0;;2026-06-04 09:07:12.623;0.015625;0.015625;0.007812
-TramosAsigFamiliar;aaaaaTramosAsigFamiliar_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-TramosAsigFamiliar;Periodo;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-TramosAsigFamiliar;Tramo;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
-Transacciones_Educacion;;HEAP;False;False;0.0;0.0;0.0;11.0;;;1466.203125;1466.125;1466.109375
-Transfer_W2W;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-Transfer_W2W;aaTransfer_W2W_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-Transparencia;;HEAP;False;False;;;;;;;0.382812;0.265625;0.257812
-Transparencia_Paso;;HEAP;False;False;;;;;;;0.328125;0.164062;0.148437
-UnidadEducativa;;HEAP;False;False;;;;;;;0.0;0.0;0.0
-UnidadEducativa;aaaaaUnidadEducativa_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-UnidadEducativa;Id_Establecimiento;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
-UnidadEducativa;Id_Unidad;NONCLUSTERED;False;True;;;;;;;0.0;0.0;0.0
+IndicesOriginales2014;;HEAP;False;False;;;;;;;0.03125;0.03125;0.023437
+IndicesOriginales2019;;HEAP;False;False;;;;;;;0.03125;0.03125;0.023437
+IndicesOriginales2024;;HEAP;False;False;;;;;;;0.070312;0.039062;0.03125
+Info_Letrero;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Info_Letrero;aaaaaInfo_Letrero_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Informe_EstadosConvenio;;HEAP;False;False;;;;;;;0.671875;0.460937;0.445312
+Ing_Cuentas;Ano_Proceso;NONCLUSTERED;False;False;;;;;;;0.726562;0.476562;0.609375
+Ing_Cuentas;Codigo_Area;NONCLUSTERED;False;False;;;;;;;0.664062;0.445312;0.5625
+Ing_Cuentas;Correlativo_Ingreso;NONCLUSTERED;False;False;;;;;;;0.601562;0.398437;0.492187
+Ing_Cuentas;Descripcion;NONCLUSTERED;False;False;;;;;;;1.945312;1.890625;1.859375
+Ing_Cuentas;Item_Pago;NONCLUSTERED;False;False;;;;;;;0.539062;0.375;0.476562
+Ing_Cuentas;PK_Ing_Cuentas;CLUSTERED;True;True;2450.0;0.0;0.0;0.0;2026-07-01 12:25:56.637;;4.382812;4.328125;4.296875
+Ing_CuentasComprobantes;;HEAP;False;False;81.0;0.0;0.0;0.0;2026-07-01 12:25:56.867;;6.070312;6.039062;6.03125
+Ing_CuentasComprobantes;Ing_cuentasComprobantes_Indices;NONCLUSTERED;False;False;1449.0;0.0;0.0;0.0;2026-07-01 12:25:56.693;;6.320312;6.265625;6.226562
+Ing_CuentasComprobantes;IX_Cuenta_Ingreso;NONCLUSTERED;False;False;;;;;;;7.757812;7.71875;7.679687
+Ing_Departamento;PK_Ing_Departamento;CLUSTERED;True;True;70.0;0.0;0.0;0.0;2026-07-01 12:25:56.927;;0.109375;0.070312;0.054687
+ItemCajaDiaria;PrimariaItemCajaDiaria;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Lista_Precio_Proveedor;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Lista_Precio_Proveedor;aaaaaLista_Precio_Proveedor_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+ListaNegra;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Localidad;Localidad_PK;CLUSTERED;True;True;2.0;2.0;0.0;0.0;2026-07-01 12:22:19.190;2026-07-01 12:22:19.187;0.0;0.0;0.0
+MensajeriaDeSistemas;;HEAP;False;False;;;;;;;0.453125;0.304687;0.289062
+Municipalidad;;HEAP;False;False;1.0;9.0;0.0;0.0;2026-07-01 12:25:55.497;2026-07-01 12:25:55.500;0.015625;0.015625;0.007812
+NodoMinvuArchivo;PK_NodoMinvuArchivo;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+NodoMinvuDocumento;PK_NodoMinvuDocumento;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+NodoMinvuPagoAutomaticoTesoreria;PK_NodoMinvuPagoAutomaticoTesoreria;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+OFICINAS;PK_OFICINAS;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+OMIL;Prim_OMIL;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Opciones_Gestion;Prim_Opciones_Gestion;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+Organismos_Publicos;PK_Organismos_Publicos;CLUSTERED;True;True;;;;;;;0.070312;0.0625;0.046875
+Pago_de_Sellos;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Parametros;;HEAP;False;False;0.0;16.0;0.0;0.0;;2026-07-01 15:47:29.390;0.070312;0.015625;0.007812
+Parametros Sgac;;HEAP;False;False;0.0;4.0;0.0;0.0;;2026-07-01 12:22:19.270;0.0;0.0;0.0
+Parametros_ConveniosDePagos;PK_Parametros_ConveniosDePagos;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Parametros_Onepay;PK_Parametros_Onepay;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Parametros_Orden_Ingreso;;HEAP;False;False;0.0;0.0;42.0;0.0;;;0.015625;0.015625;0.007812
+Parametros_Orden_Ingreso;aaaaaParametros_Orden_Ingre_PK;NONCLUSTERED;True;True;42.0;0.0;0.0;0.0;2026-07-01 12:22:19.733;;0.015625;0.015625;0.007812
+ParametrosAPI_SII;PK_ParametrosAPI_SII;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+ParametrosCondonacion;PK_ParametrosCondonacion;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+ParametrosFactoresActualizacion;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
+ParametrosSGAC;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+ParametrosSistema_Seguridad;;HEAP;False;False;0.0;3.0;0.0;0.0;;2026-07-01 12:25:20.880;0.070312;0.015625;0.007812
+Permisos;;HEAP;False;False;0.0;1.0;0.0;1.0;;2026-07-01 11:39:36.620;16.070312;16.070312;16.0625
+Permisos;missing_index_303;NONCLUSTERED;False;False;0.0;0.0;0.0;1.0;;;17.257812;17.226562;17.0625
+Permisos_Grupos_De_Usuarios;;HEAP;False;False;;;;;;;1.257812;1.21875;1.210937
+Permisos_Grupos_De_Usuarios;Per_Grup_Usu_Name;NONCLUSTERED;False;False;;;;;;;0.882812;0.78125;0.765625
+Permisos_Grupos_De_Usuarios;Per_Grup_Usu_Sistema;NONCLUSTERED;False;False;;;;;;;0.382812;0.257812;0.242187
+Permisos_Grupos_De_Usuarios;Per_Grup_Usu_UserID;NONCLUSTERED;False;False;;;;;;;0.632812;0.523437;0.507812
+Permisosprueba;;HEAP;False;False;;;;;;;0.070312;0.023437;0.015625
+Personas;Codigo_Comuna;NONCLUSTERED;False;False;;;;;;;5.132812;5.085937;5.046875
+Personas;Direccion;NONCLUSTERED;False;False;;;;;;;9.070312;9.0;8.921875
+Personas;Nombre;NONCLUSTERED;False;False;;;;;;;11.820312;11.742187;11.632812
+Personas;PK_PERSONAS;CLUSTERED;True;True;;;;;;;20.445312;20.375;20.296875
+PersonasEnDocProt;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+PersonasEnPoderesNotariales;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Pie_Firma_Oc;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Poblacion;Poblacion_PK;CLUSTERED;True;True;2.0;2.0;0.0;0.0;2026-07-01 12:22:19.180;2026-07-01 12:22:19.180;0.0;0.0;0.0
+Proceso_Actualiza_Rut;;HEAP;False;False;0.0;3.0;0.0;0.0;;2026-07-01 11:39:36.360;0.015625;0.015625;0.007812
+Productos;;HEAP;False;False;;;;;;;0.03125;0.03125;0.0
+Productos;aaaaaProductos_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Productos;Codigo_Familia;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Productos;Descripcion;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Productos_Impuestos;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+PropietariosMantenedorGeneral;PK__Propieta__2EBB8D2970CDBB65;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Prorroga_BoletaGarantia;PK__Prorroga__6508AC0944859560;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Proveedor_Correos;PrimariaProveedor_Correos;CLUSTERED;True;True;;;;;;;0.703125;0.5;0.476562
+Proveedores;Nombre;NONCLUSTERED;False;False;;;;;;;1.757812;1.6875;1.65625
+Proveedores;PK_Proveedores;CLUSTERED;True;True;;;;;;;3.765625;3.6875;3.640625
+Proveedores;Rut;NONCLUSTERED;False;False;;;;;;;0.820312;0.585937;0.679687
+Proveedores_Familia;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Proveedores_Familia_local;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+RecuperacionClave;;HEAP;False;False;;;;;;;0.15625;0.0625;0.046875
+RecuperacionClave;PK_RecuperacionClave;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Registro_de_Multas;;HEAP;False;False;;;;;;;0.070312;0.015625;0.007812
+Registro_de_Multas;PK_RegistroMultas;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+RegistroDeDepositos_Cuentas;PK_RegistroDeDepositos_Cuentas;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Relacion_AG_OrdenIngreso;PK_Relacion_AG_OrdenIngreso;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Relacion_CC_EstablecimientoREM;PK_Relacion_CC_EstablecimientoREM;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+Relacion_CC_OrdenIngreso;PK_Relacion_CC_OrdenIngreso;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Remuneraciones;;HEAP;False;False;;;;;;;5.882812;5.867187;5.859375
+Remuneraciones;Ano_Proceso;NONCLUSTERED;False;False;;;;;;;1.507812;1.40625;1.390625
+Remuneraciones;Codigo_Area;NONCLUSTERED;False;False;;;;;;;1.507812;1.40625;1.390625
+Remuneraciones;Codigo_Cuenta;NONCLUSTERED;False;False;;;;;;;3.445312;3.40625;3.367187
+Remuneraciones;Mes_Proceso;NONCLUSTERED;False;False;;;;;;;1.507812;1.40625;1.390625
+Rescate_Combustible;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Resp_DetalleDeudaTraspasada;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+RNMT_Comuna;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+RNMT_JPL;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Secciones;CODIGO_AREA;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Secciones;Codigo_Departamento;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Secciones;Codigo_Direccion;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Secciones;Codigo_Seccion;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Secciones;PK_Secciones;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+Secre_ConvenioConEmpresas;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Secre_NominaDecretosOficios;;HEAP;False;False;;;;;;;0.007812;0.007812;0.0
+Secre_ReunionesDelConcejo;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Sector;Sector_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Sectores;Prim_Sectores;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+Seguridad_AccesoArea;Seguridad_AccesoArea_PK;CLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
+Seguridad_Autentificacion2Pasos;Seguridad_Autentificacion2Pasos_PK;CLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
+Seguridad_Config_Correo;;HEAP;False;False;;;;;;;0.070312;0.015625;0.007812
+Seguridad_Mante_tablas;PK_Seguridad_Mante_tablas;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Seguridad_Perfiles_Usuarios;PK_Seguridad_Perfiles_Usuarios;CLUSTERED;True;True;;;;;;;0.820312;0.710937;0.695312
+Seguridad_TipoDuracionContraseña;PK_Seguridad_TipoDuracionContraseña;CLUSTERED;True;True;3.0;0.0;0.0;0.0;2026-07-01 12:25:20.880;;0.070312;0.015625;0.007812
+Seguridad_TipoGruposUsuarios;PK_Seguridad_TipoGruposUsuarios_1;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Seguridad_TipoPerfilUsuario;PK_Seguridad_TipoPerfilUsuario_1;CLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
+Seguridad_TipoPreguntaSecreta;PK_Seguridad_TipoPreguntaSecreta;CLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
+Seguridad_Transacciones;;HEAP;False;False;;;;;;;1.257812;1.226562;1.21875
+Seguridad_UsuarioAccesos_Sistemas;PK_Seguridad_UsuarioAccesos_Sistemas;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Seguridad_UsuarioControl;Seguridad_UsuarioControl_PK;CLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
+Seguridad_Usuarios_Conexion;PK_Seguridad_Usuarios_Conexion;CLUSTERED;True;True;9.0;3.0;0.0;6.0;2026-07-01 15:47:43.410;2026-07-01 12:25:20.897;0.070312;0.023437;0.007812
+Sexo;Sexo_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+SGAC_Parametros;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
+Sistemas;Codigo;NONCLUSTERED;False;False;;;;;;;0.015625;0.015625;0.007812
+Sistemas;PK_Sistemas;CLUSTERED;True;True;21.0;0.0;0.0;1.0;2026-07-01 12:25:26.710;;0.03125;0.03125;0.015625
+Sistemas_ComercioDigital;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Sistemas_Migrados;;HEAP;False;False;0.0;3.0;0.0;0.0;;2026-07-01 11:39:36.370;0.015625;0.015625;0.007812
+Sub_Opcion_Gestion;Prim_Sub_Opcion_Gestion;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+SubCentro_Costo;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Sucursales_Proveedores;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+sysdiagrams;PK__sysdiagr__C2B05B6125D22869;CLUSTERED;True;True;;;;;;;0.046875;0.046875;0.007812
+sysdiagrams;UK_principal_name;NONCLUSTERED;False;True;;;;;;;0.015625;0.015625;0.007812
+Tabl2;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Tabla_Umbrales;aaTabla_Umbrales_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Tabla1;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+tb_rutmalos;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Temporal_AG_OrdenIngreso;PK_Temporal_AG_OrdenIngreso;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Temporal_CC_OrdenIngreso;PK_Temporal_CC_OrdenIngreso;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Tipo_Documentos_FirmaAbastecimientos;PK_Tipo_Documentos_FirmaAbastecimientos;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Tipo_DocumentosRentas;;HEAP;False;False;;;;;;;0.070312;0.015625;0.007812
+Tipo_DocumentosRentas;aaTipo_DocumentosRentas_PK;NONCLUSTERED;True;True;;;;;;;0.070312;0.015625;0.007812
+Tipo_DocumentosRRHH;;HEAP;False;False;;;;;;;0.023437;0.023437;0.007812
+Tipo_DocumentosRRHH;aaTipo_DocumentosRRHH_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+TipoAgrupacionHabitacional;TipoAgrupacionHabitacional_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+TipoCalle;TipoCalle_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Tipos_De_Documentos;;HEAP;False;False;;;;;;;0.023437;0.023437;0.015625
+Tipos_De_Documentos;aaaaaTipos_De_Documentos_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Tipos_de_Movimientos;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
+Tipos_Monedas;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
+Tipos_Monedas;aaaaaTipos_Monedas_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+TiposDe_Actividad_Laboral;Prim_TiposDe_Actividad_Laboral;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+TiposDeCapacitaciones;Prim_TiposDeCapacitaciones;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+TiposDeGarantias;Prim_TiposDeGarantias;CLUSTERED;True;True;;;;;;;0.023437;0.023437;0.007812
+TipoZona;TipoZona_PK;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+TomaDatosTesoreria;pK_aGRUP;CLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transaccion_Adquisiciones;Ano_Proceso;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transaccion_Adquisiciones;Codigo_Area;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transaccion_Adquisiciones;Fecha;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transaccion_Adquisiciones;Pk_Agrup;CLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Ano_Proceso;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Codigo_Sistema;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Cuota_Giro;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Estado;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Id_Multa;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Id_Multa_TAG;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Id_Serial;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Numero_Juzgado;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Placa_Vehiculo;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Rol_Causa;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Rol_Patente;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Rol_Propiedad;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;Idx_Rut_Contribuyente;NONCLUSTERED;False;False;;;;;;;0.0;0.0;0.0
+Transacciones_ComercioDigital;PK_Transacciones_ComercioDigital;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Transacciones_Convenios;Ano_Proceso;NONCLUSTERED;False;False;;;;;;;0.242187;0.109375;0.085937
+Transacciones_Convenios;Codigo_Area;NONCLUSTERED;False;False;;;;;;;0.242187;0.109375;0.085937
+Transacciones_Convenios;Fecha;NONCLUSTERED;False;False;;;;;;;0.242187;0.109375;0.085937
+Transacciones_Convenios;pK_aGRUP;CLUSTERED;False;False;;;;;;;0.765625;0.53125;0.507812
+Transacciones_MantenedorUsuarios;;HEAP;False;False;;;;;;;1.507812;1.5;1.492187
+Transacciones_Orden_Ingreso;;HEAP;False;False;;;;;;;66.445312;66.40625;66.398437
+Transacciones_Orden_Ingreso;Transacciones_Ano_Proceso;NONCLUSTERED;False;False;;;;;;;8.320312;8.257812;8.21875
+Transacciones_Orden_Ingreso;Transacciones_Codigo_Area;NONCLUSTERED;False;False;;;;;;;8.320312;8.257812;8.21875
+Transacciones_Orden_Ingreso;Transacciones_Fecha;NONCLUSTERED;False;False;;;;;;;11.382812;11.359375;11.296875
+Transacciones_Orden_Ingreso;Transacciones_Tabla;NONCLUSTERED;False;False;;;;;;;14.507812;14.453125;14.375
+Transacciones_Orden_Ingreso;Transacciones_Usuario;NONCLUSTERED;False;False;;;;;;;12.320312;12.296875;12.234375
+Transacciones_Seguridad;;HEAP;False;False;;;;;;;5.382812;5.359375;5.351562
+TransaccionesMantenedorGeneral;PK_TransaccionesMantenedorGeneral;CLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Traspasos;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Uf;;HEAP;False;False;;;;;;;0.1875;0.109375;0.09375
+Uf;aaaaaUf_PK;NONCLUSTERED;True;True;;;;;;;0.1875;0.101562;0.085937
+Unidades_De_Medidas;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
+Unidades_De_Medidas;aaaaaUnidades_De_Medidas_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+UnidadVecinal;UnidadVecinal_PK;CLUSTERED;True;True;2.0;2.0;0.0;0.0;2026-07-01 12:22:19.183;2026-07-01 12:22:19.183;0.0;0.0;0.0
+Usuario;;HEAP;False;False;0.0;270.0;267.0;0.0;;2026-07-01 12:25:21.590;0.320312;0.226562;0.21875
+Usuario;PK_USUARIO;NONCLUSTERED;True;True;267.0;0.0;0.0;0.0;2026-07-01 12:25:21.587;;0.195312;0.054687;0.039062
+UsuarioHabilitado;;HEAP;False;False;;;;;;;0.234375;0.125;0.109375
+UsuarioHabilitado;aUsuarioHabilitado_PK;NONCLUSTERED;True;True;;;;;;;0.070312;0.070312;0.054687
+UsuariosConLogin;PK_UsuariosConLogin;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
 Utm_Ipc;;HEAP;False;False;;;;;;;0.0;0.0;0.0
 Utm_Ipc;aaaaaUtm_Ipc_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
-ValidaOpcion;;HEAP;False;False;0.0;16.0;0.0;6.0;;2026-06-04 10:53:48.043;0.078125;0.03125;0.015625
-VerificaTablas;;HEAP;False;False;0.0;1.0;0.0;1.0;;2026-06-04 09:06:23.830;0.015625;0.015625;0.007812
-VerificaTablas;aaaVerificaTablas_PK;NONCLUSTERED;True;True;2.0;0.0;0.0;1.0;2026-06-04 10:53:21.843;;0.015625;0.015625;0.007812
-xData_Causales;PK__xData_Ca__573F24844C9FC96B;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
-xData_EstadoNotificacion;PK__xData_Es__AB2EB6F848CF3887;CLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812
+Valores_Derechos_Varios;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Valores_Derechos_Varios;INDICE_Valores_Derechos_Varios;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+Valores_Monedas;;HEAP;False;False;;;;;;;0.0;0.0;0.0
+Valores_Monedas;aaaaaValores_Monedas_PK;NONCLUSTERED;True;True;;;;;;;0.0;0.0;0.0
+VerificaTablas;;HEAP;False;False;;;;;;;0.015625;0.015625;0.007812
+VerificaTablas;aaaVerificaTablas_PK;NONCLUSTERED;True;True;;;;;;;0.015625;0.015625;0.007812

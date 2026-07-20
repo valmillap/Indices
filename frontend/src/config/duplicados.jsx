@@ -3,8 +3,9 @@ export const duplicadosColumnDefs = [
     {checkboxSelection: params => params.data.MANTENER?.startsWith("Duplica"), headerCheckboxSelection: true, width: 60,
         headerCheckboxSelectionFilteredOnly: true
     },
-    {headerName: "Prioridad",flex:1,
-    valueGetter: params => getPrioridad(params.data["USED-PAGES"])
+    {
+    headerName: "Prioridad",flex: 1,
+    cellRenderer: params => getPrioridad(params.data["USED-PAGES"])
     },
     { field: "TABLA", flex: 1, hide: true},
     { field: "INDICE", flex: 1.6},
@@ -57,12 +58,33 @@ export const duplicadosColumnDefs = [
      }
 ];
 const getPrioridad = (usedPages) => {
-    if (usedPages > 8)  return "🌟 Alta"
-    if (usedPages > 1)  return "🔽 Poco relevante"
-    return "⛔ No relevante"
-}
 
+    if (usedPages > 8)
+        return (
+            <span className="prioridad prioridad-alta">
+                <span className="prioridad-barra"></span>
+                Alta
+            </span>
+        );
+
+    if (usedPages > 1)
+        return (
+            <span className="prioridad prioridad-media">
+                <span className="prioridad-barra"></span>
+                Media
+            </span>
+        );
+
+    return (
+        <span className="prioridad prioridad-baja">
+            <span className="prioridad-barra"></span>
+            Baja
+        </span>
+    );
+};
 export const duplicadosRules = {
     "fila-peso": params =>
-        params.data["USED-PAGES"] < 0.015
+        params.data["USED-PAGES"] < 0.015,
+    "celda-borde": params =>
+        String(params.data["TYPE_DESC"]).trim() == "CLUSTERED"
 }

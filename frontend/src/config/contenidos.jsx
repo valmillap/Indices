@@ -10,8 +10,8 @@
             ? getPrioridad(params.data["USED-PAGES"])
             : null
     },
-
-    {field: "TABLA", flex: 1},
+    {field: "TAMANO-TOTAL", flex: 1,hide: false},
+    {field: "TABLA", flex: 1,hide: true},
     {field: "INDICE", flex: 2},
     {field: "USED-PAGES", flex: 1,hide: true},
     {field: "TIPO", flex: 1,
