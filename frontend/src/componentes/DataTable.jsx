@@ -10,7 +10,7 @@ import { agregarImagenAjustada } from "./pdfImagen";
 import "./DataTable.css";
 
 const DataTable = forwardRef(function DataTable(
-  { data, columnDefs, rowClassRules, context, titulo, tabId },
+  { data, columnDefs, rowClassRules, context, titulo, tabId, filtroExterno },
   ref
 ) {
 
@@ -175,6 +175,10 @@ const DataTable = forwardRef(function DataTable(
         rowClassRules={rowClassRules}
         rowSelection="multiple"
         context={context}
+
+        /*filtro*/
+        isExternalFilterPresent={filtroExterno ? () => true : undefined}
+        doesExternalFilterPass={filtroExterno ? (node) => filtroExterno(node.data) : undefined}
 
         defaultColDef={{
             sortable: false,

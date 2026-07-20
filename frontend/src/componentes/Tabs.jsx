@@ -225,6 +225,11 @@ function Tabs() {
         context={{ abrirModalConFila, abrirModalComparacion }}
         titulo={TABS.find((t) => t.id === tabActiva)?.label}
         tabId={tabActiva}
+        filtroExterno={
+          tabActiva === "contenidos"
+            ? (fila) => !String(fila.MANTENER).startsWith("Contenedor")
+            : undefined
+        }
       />
 
       </div>

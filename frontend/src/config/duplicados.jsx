@@ -85,6 +85,11 @@ const getPrioridad = (usedPages) => {
 export const duplicadosRules = {
     "fila-peso": params =>
         params.data["USED-PAGES"] < 0.015,
-    "celda-borde": params =>
-        String(params.data["TYPE_DESC"]).trim() == "CLUSTERED"
+    "celda-borde-rojo": params =>
+        params.data["USED-PAGES"] > 8,
+    "celda-borde-amarillo": params =>
+        params.data["USED-PAGES"] > 1 & params.data["USED-PAGES"] <= 8,
+    "celda-borde-verde": params =>
+        params.data["USED-PAGES"] <= 1
+
 }

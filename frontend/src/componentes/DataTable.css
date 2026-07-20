@@ -140,8 +140,14 @@
 
 
 /*---- LOOKUP*/
-.celda-borde {
+.celda-borde-rojo {
     border-left: 4px solid #dc2626 !important;
+}
+.celda-borde-amarillo {
+    border-left: 4px solid #dcd026 !important;
+}
+.celda-borde-verde {
+    border-left: 4px solid #60dc26 !important;
 }
 .celda-heap::before{
     content: "📁";
