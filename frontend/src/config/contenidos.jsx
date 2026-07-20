@@ -10,7 +10,6 @@
             ? getPrioridad(params.data["USED-PAGES"])
             : null
     },
-    {field: "TAMANO-TOTAL", flex: 1,hide: false},
     {field: "TABLA", flex: 1,hide: true},
     {field: "INDICE", flex: 2},
     {field: "USED-PAGES", flex: 1,hide: true},
@@ -56,7 +55,8 @@
           cellClassRules: {
               "celda-interlineado": params =>
               String(params.data.MANTENER).startsWith("Contenidopor")
-          }
+          },
+          cellRenderer: renderBeneficio
 
       },
       {field: "EVALUACION_CONTENIDO", flex: 1},
@@ -91,12 +91,26 @@
         }
       }
 ];
-
+function renderBeneficio(params) {
+    const texto = String(params.value ?? "")
+    const idx = texto.indexOf(",")
+    if (idx === -1) return texto
+    const linea1 = texto.slice(0, idx + 1)
+    const linea2 = texto.slice(idx + 1).trim()
+    return (
+        <span className="beneficio-wrapper">
+            <span className="beneficio-linea1">{linea1}</span>
+            <span className="beneficio-linea2">{linea2}</span>
+        </span>
+    )
+}
 const getPrioridad = (usedPages) => {
     if (usedPages > 8)  return "🌟 Alta"
     if (usedPages > 1)  return "🔽 Poco relevante"
     return "⛔ No relevante"
 }
+
+
 
 export const contenidosRules = {
     "fila-peso": params =>

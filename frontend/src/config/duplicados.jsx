@@ -54,9 +54,25 @@ export const duplicadosColumnDefs = [
         cellClassRules: {
             "celda-interlineado": params =>
             String(params.data.MANTENER).startsWith("Duplica"),
-        }
+        },
+        cellRenderer: renderBeneficio
      }
 ];
+
+function renderBeneficio(params) {
+    const texto = String(params.value ?? "")
+    const idx = texto.indexOf(",")
+    if (idx === -1) return texto
+    const linea1 = texto.slice(0, idx + 1)
+    const linea2 = texto.slice(idx + 1).trim()
+    return (
+        <span className="beneficio-wrapper">
+            <span className="beneficio-linea1">{linea1}</span>
+            <span className="beneficio-linea2">{linea2}</span>
+        </span>
+    )
+}
+
 const getPrioridad = (usedPages) => {
 
     if (usedPages > 8)

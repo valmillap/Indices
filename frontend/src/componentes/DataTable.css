@@ -302,3 +302,15 @@
 .prioridad-baja::before{
     background:#9ca3af;
 }
+
+/*nuevo: beneficio linea1-linea2*/
+.pill-prioridad-alta { background: #dc2626; }
+.pill-prioridad-media { background: #d97706; }
+.pill-prioridad-baja { background: #9ca3af; }
+.beneficio-linea1 {
+    display: block;
+}
+.beneficio-linea2 {
+    display: block;
+    color: #6b7280;
+}

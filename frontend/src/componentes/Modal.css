@@ -87,6 +87,9 @@
     color: #6b7280;
     font-weight: 700;
 }
+.comparacion-col strong {
+    overflow-wrap: anywhere;
+}
 
 .comparacion-atributos {
     font-size: 13px;
