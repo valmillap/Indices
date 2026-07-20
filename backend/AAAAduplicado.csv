@@ -1,9 +1,9 @@
 TABLA;INDICE;TYPE_DESC;IS_PRIMARY_KEY;IS_UNIQUE;USER_SEEKS;USER_SCANS;USER_LOOKUPS;USER_UPDATES;LAST_USER_SEEK;LAST_USER_SCAN;TAMANO-TOTAL;USED-PAGES;ATRIBUTOS;BUSQUEDAS;EVALUACION_INDICE;IS_PRIMARY_KEY_NUM;TIPO;MANTENER;INDICE_REFERENCIA;BENEFICIO
-EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_Rol_Propiedad;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;56.070312;56.007812;Rol_Propiedad;0.0;NO USO;0;INDEX;Unico;EncabezadoDeudoresMunicipales_Rol_Propiedad;
-EncabezadoDeudoresMunicipales;Rol_Propiedad;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;56.070312;56.007812;Rol_Propiedad;0.0;NO USO;0;INDEX;Duplica EncabezadoDeudoresMunicipales_Rol_Propiedad;EncabezadoDeudoresMunicipales_Rol_Propiedad;Liberar 56.007812MB, - 0.0 ops. de escritura
-EncabezadoDeudoresMunicipales;EncabezadoDeudoresMunicipales_Rol_Patente;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;43.007812;42.953125;Rol_Patente;0.0;NO USO;0;INDEX;Unico;EncabezadoDeudoresMunicipales_Rol_Patente;
-EncabezadoDeudoresMunicipales;Rol_Patente;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;43.007812;42.953125;Rol_Patente;0.0;NO USO;0;INDEX;Duplica EncabezadoDeudoresMunicipales_Rol_Patente;EncabezadoDeudoresMunicipales_Rol_Patente;Liberar 42.953125MB, - 0.0 ops. de escritura
-Proveedores;PK_Proveedores;CLUSTERED;True;True;0.0;0.0;0.0;0.0;;;3.765625;3.6875;Rut_Proveedor;0.0;NO USO;1;PK Y UNIQUE;Unico;PK_Proveedores;
-Proveedores;Rut;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.820312;0.585937;Rut_Proveedor;0.0;NO USO;0;INDEX;Duplica PK_Proveedores;PK_Proveedores;Liberar 0.585937MB, - 0.0 ops. de escritura
-Sistemas;PK_Sistemas;CLUSTERED;True;True;21.0;0.0;0.0;1.0;2026-07-01 12:25:26.710;;0.03125;0.03125;Sis_Cod;21.0;Beneficio Busqueda;1;PK Y UNIQUE;Unico;PK_Sistemas;
-Sistemas;Codigo;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.015625;0.015625;Sis_Cod;0.0;NO USO;0;INDEX;Duplica PK_Sistemas;PK_Sistemas;Liberar 0.015625MB, - 0.0 ops. de escritura
+Ubicacion_Decreto;Ubicacion_Decreto_NumeroDecre;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;6.5;6.34375;NumeroDecreto;0.0;NO USO;0;INDEX;Unico;Ubicacion_Decreto_NumeroDecre;
+Ubicacion_Decreto;Ubicacion_Decreto_NumeroDecreto;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;6.4375;6.34375;NumeroDecreto;0.0;NO USO;0;INDEX;Duplica Ubicacion_Decreto_NumeroDecre;Ubicacion_Decreto_NumeroDecre;Liberar 6.34375MB, - 0.0 ops. de escritura
+Honorario_Certificado;Honorario_Certificado_Rut;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.257812;0.171875;Rut;0.0;NO USO;0;INDEX;Unico;Honorario_Certificado_Rut;
+Honorario_Certificado;Rut;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.257812;0.125;Rut;0.0;NO USO;0;INDEX;Duplica Honorario_Certificado_Rut;Honorario_Certificado_Rut;Liberar 0.125MB, - 0.0 ops. de escritura
+Otra_Glosa_Decreto;Decreto;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.0;0.0;NumeroDecreto;0.0;NO USO;0;INDEX;Unico;Decreto;
+Otra_Glosa_Decreto;idx_NumeroDecreto;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.0;0.0;NumeroDecreto;0.0;NO USO;0;INDEX;Duplica Decreto;Decreto;Liberar 0.0MB, - 0.0 ops. de escritura
+SDF_Estados_Decreto_Historico;PK_SDF_Estados_Decreto_Historico;CLUSTERED;True;True;0.0;0.0;0.0;0.0;;;0.0;0.0;Codigo_Area,Ano_Proceso,NumeroDecreto,Id;0.0;NO USO;1;PK Y UNIQUE;Unico;PK_SDF_Estados_Decreto_Historico;
+SDF_Estados_Decreto_Historico;idx_SDF_EstadosDecretoHistorico;NONCLUSTERED;False;False;0.0;0.0;0.0;0.0;;;0.0;0.0;Codigo_Area,Ano_Proceso,NumeroDecreto,Id;0.0;NO USO;0;INDEX;Duplica PK_SDF_Estados_Decreto_Historico;PK_SDF_Estados_Decreto_Historico;Liberar 0.0MB, - 0.0 ops. de escritura

@@ -146,8 +146,8 @@
 .celda-borde-amarillo {
     border-left: 4px solid #dcd026 !important;
 }
-.celda-borde-verde {
-    border-left: 4px solid #60dc26 !important;
+.celda-borde-inactivo {
+    border-left: 4px solid #919191da !important;
 }
 .celda-heap::before{
     content: "📁";

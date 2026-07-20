@@ -105,7 +105,7 @@ export const duplicadosRules = {
         params.data["USED-PAGES"] > 8,
     "celda-borde-amarillo": params =>
         params.data["USED-PAGES"] > 1 & params.data["USED-PAGES"] <= 8,
-    "celda-borde-verde": params =>
+    "celda-borde-inactivo": params =>
         params.data["USED-PAGES"] <= 1
 
 }
