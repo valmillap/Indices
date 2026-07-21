@@ -5,7 +5,7 @@ import "./Navbar.css";
  * - Izquierda: pestañas de la app (Duplicados, Heap Lookup, etc).
  * - Derecha: BD activa + botón para cambiarla, sin salir de la pantalla.
  */
-function Navbar({ tabs, tabActiva, onSeleccionar, conexion, onCambiarBD, onCerrarSesion, onExportarTodo, exportandoTodo }) {
+function Navbar({ tabs, tabActiva, onSeleccionar, conexion, onCambiarBD, onCerrarSesion, onExportarTodo, exportandoTodo, onExportarTodoExcel, exportandoExcel }) {
   return (
     <nav className="navbar">
       <div className="navbar-marca">Índices</div>
@@ -33,11 +33,18 @@ function Navbar({ tabs, tabActiva, onSeleccionar, conexion, onCambiarBD, onCerra
               BD: <strong>{conexion.database}</strong>
             </span>
             <button
+              className="navbar-btn-exportar-excel"
+              onClick={onExportarTodoExcel}
+              disabled={exportandoExcel}
+            >
+              {exportandoExcel ? "Generando Excel..." : "Exportar todo a Excel"}
+            </button>
+            <button
               className="navbar-btn-exportar-todo"
               onClick={onExportarTodo}
               disabled={exportandoTodo}
             >
-              {exportandoTodo ? "Generando PDF..." : "Exportar todo a PDF"}
+              {exportandoTodo ? "Generando imágenes..." : "Descargar todas las imágenes"}
             </button>
             <button className="navbar-btn-bd" onClick={onCambiarBD}>
               Cambiar BD

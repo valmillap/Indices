@@ -35,16 +35,7 @@
 
     border: 1px solid #ddd;
 }
-.tabla-container {
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-} 
-
-/*INFO CONTAINER TABLA*/
 .panel-info h3 {
     margin: 0 0 8px 0;
     font-size: 14px;
@@ -97,16 +88,24 @@
     color: #374151;
     font-weight: 600;
 }
-/*-----------------*/
+.tabla-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
 
 .tabla-toolbar {
     display: flex;
     justify-content: flex-end;
+    gap: 10px;
     width: 90%;
     margin: 0 auto 10px auto;
 }
 
-.btn-exportar-pdf {
+.btn-descargar-imagen {
     border: 1px solid #93c5fd;
     background: #dbeafe;
     color: #1d4ed8;
@@ -118,14 +117,31 @@
     transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
-.btn-exportar-pdf:hover:not(:disabled) {
+.btn-descargar-imagen:hover:not(:disabled) {
     background: #bfdbfe;
     border-color: #60a5fa;
 }
 
-.btn-exportar-pdf:disabled {
+.btn-descargar-imagen:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+}
+
+.btn-exportar-excel {
+    border: 1px solid #86efac;
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-exportar-excel:hover {
+    background: #bbf7d0;
+    border-color: #4ade80;
 }
 
 /*STYLOS*/
@@ -140,14 +156,8 @@
 
 
 /*---- LOOKUP*/
-.celda-borde-rojo {
+.celda-borde {
     border-left: 4px solid #dc2626 !important;
-}
-.celda-borde-amarillo {
-    border-left: 4px solid #dcd026 !important;
-}
-.celda-borde-inactivo {
-    border-left: 4px solid #919191da !important;
 }
 .celda-heap::before{
     content: "📁";
@@ -254,6 +264,18 @@
 .pill-heap { background: #bb4d4d;}
 .pill-nonc {background:#979797;}
 
+.pill-prioridad-alta { background: #dc2626; }
+.pill-prioridad-media { background: #d97706; }
+.pill-prioridad-baja { background: #9ca3af; }
+
+.beneficio-linea1 {
+    display: block;
+}
+.beneficio-linea2 {
+    display: block;
+    color: #6b7280;
+}
+
 .mantener-duplica {
     color: #dc2626;
     font-weight: 600;
@@ -269,48 +291,4 @@
     color: #9ca3af;
     font-style: italic;
 
-}
-/*-----nuevo------*/
-.prioridad{
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    font-weight:600;
-    height:100%;
-}
-
-.prioridad::before{
-    content:"";
-
-    width:4px;
-    height:18px;
-
-    border-radius:3px;
-
-    flex-shrink:0;
-}
-
-.prioridad-alta::before{
-    background:#ef4444;
-}
-
-.prioridad-media::before{
-    background:#f59e0b;
-}
-
-.prioridad-baja::before{
-    background:#9ca3af;
-}
-
-/*nuevo: beneficio linea1-linea2*/
-.pill-prioridad-alta { background: #dc2626; }
-.pill-prioridad-media { background: #d97706; }
-.pill-prioridad-baja { background: #9ca3af; }
-.beneficio-linea1 {
-    display: block;
-}
-.beneficio-linea2 {
-    display: block;
-    color: #6b7280;
 }

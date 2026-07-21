@@ -1,12 +1,11 @@
 import { useRef, useState, forwardRef, useImperativeHandle } from "react";
 import { AgGridReact } from "ag-grid-react";
 import html2canvas from "html2canvas";
-import { jsPDF } from "jspdf";
+import * as XLSX from "xlsx";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 
 import { PANEL_INFO } from "../config/PanelInfo";
-import { agregarImagenAjustada } from "./pdfImagen";
 import "./DataTable.css";
 
 const DataTable = forwardRef(function DataTable(
@@ -77,16 +76,31 @@ const DataTable = forwardRef(function DataTable(
     capturarComoImagen,
   }));
 
-  const exportarPDF = async () => {
+  const descargarImagen = async () => {
     const imagen = await capturarComoImagen();
     if (!imagen) return;
 
-    const pdf = new jsPDF({ orientation: "landscape", unit: "pt", format: "a4" });
+    const nombreTabla = titulo || "tabla";
+    const fecha = new Date().toLocaleDateString("es-CL").replaceAll("/", "-");
+
+    const link = document.createElement("a");
+    link.href = imagen.dataUrl;
+    link.download = `${nombreTabla}_${fecha}.png`;
+    link.click();
+  };
+
+  // Exporta los datos tal cual (texto real, no una imagen) a un archivo
+  // Excel: se puede copiar, filtrar y editar en Excel/Sheets normalmente.
+  const exportarExcel = () => {
+    if (!data || data.length === 0) return;
+
     const nombreTabla = titulo || "tabla";
     const fecha = new Date().toLocaleDateString("es-CL");
 
-    agregarImagenAjustada(pdf, imagen.dataUrl, imagen.width, imagen.height, `${nombreTabla} - ${fecha}`);
-    pdf.save(`${nombreTabla}_${fecha.replaceAll("/", "-")}.pdf`);
+    const hoja = XLSX.utils.json_to_sheet(data);
+    const libro = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(libro, hoja, nombreTabla.slice(0, 31));
+    XLSX.writeFile(libro, `${nombreTabla}_${fecha.replaceAll("/", "-")}.xlsx`);
   };
 
   if (!data || data.length === 0) {
@@ -149,11 +163,17 @@ const DataTable = forwardRef(function DataTable(
 
   <div className="tabla-toolbar">
     <button
-      className="btn-exportar-pdf"
-      onClick={exportarPDF}
+      className="btn-exportar-excel"
+      onClick={exportarExcel}
+    >
+      Exportar a Excel
+    </button>
+    <button
+      className="btn-descargar-imagen"
+      onClick={descargarImagen}
       disabled={exportando}
     >
-      {exportando ? "Generando PDF..." : "Exportar esta tabla a PDF"}
+      {exportando ? "Generando imagen..." : "Descargar imagen (PNG)"}
     </button>
   </div>
 
@@ -176,7 +196,9 @@ const DataTable = forwardRef(function DataTable(
         rowSelection="multiple"
         context={context}
 
-        /*filtro*/
+        // Filtro opcional que oculta ciertas filas de la vista/paginación
+        // sin sacarlas del modelo de datos (api.forEachNode las sigue
+        // encontrando, útil para el botón "Comparar" en Contenidos).
         isExternalFilterPresent={filtroExterno ? () => true : undefined}
         doesExternalFilterPass={filtroExterno ? (node) => filtroExterno(node.data) : undefined}
 

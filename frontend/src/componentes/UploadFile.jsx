@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { uploadFiles, conectarYExportar } from "../services/api";
+import { uploadFiles } from "../services/api";
 import ModalConexion from "./ModalConexion";
+import "./UploadFile.css";
 
 
 function UploadFiles({ onUploadSuccess }) {
@@ -11,48 +12,72 @@ function UploadFiles({ onUploadSuccess }) {
 
   const [modalAbierto, setModalAbierto] = useState(false);
   const [mensaje, setMensaje] = useState("");
-  
+  const [cargando, setCargando] = useState(false);
+
+  const archivosCompletos = atributos && uso && frag;
+
   const handleUpload = async () => {
+    if (!archivosCompletos) return;
 
-    const formData = new FormData();
+    setCargando(true);
+    setMensaje("");
+    try {
+      const formData = new FormData();
+      formData.append("atributos", atributos);
+      formData.append("uso", uso);
+      formData.append("frag", frag);
 
-    formData.append("atributos", atributos);
-    formData.append("uso", uso);
-    formData.append("frag", frag);
-
-    await uploadFiles(formData);
-
-    onUploadSuccess();
+      await uploadFiles(formData);
+      onUploadSuccess();
+    } catch (err) {
+      setMensaje("No se pudo analizar los archivos");
+    } finally {
+      setCargando(false);
+    }
   };
 
+  const SelectorArchivo = ({ etiqueta, archivo, onChange }) => (
+    <label className="upload-campo">
+      <span className="upload-campo-etiqueta">{etiqueta}</span>
+      <span className="upload-campo-input">
+        <span className="upload-campo-nombre">
+          {archivo ? archivo.name : "Ningún archivo seleccionado"}
+        </span>
+        <span className="upload-campo-boton">Elegir archivo</span>
+      </span>
+      <input type="file" onChange={(e) => onChange(e.target.files[0])} />
+    </label>
+  );
+
   return (
-    <div>
+    <div className="upload-pantalla">
+      <div className="upload-card">
+        <h2>Analizador de índices</h2>
+        <p className="upload-subtitulo">
+          Sube los 3 archivos exportados o conéctate directo a la base de datos.
+        </p>
 
-      <input
-        type="file"
-        onChange={(e) =>
-          setAtributos(e.target.files[0])
-        }
-      />
+        <div className="upload-campos">
+          <SelectorArchivo etiqueta="Atributos" archivo={atributos} onChange={setAtributos} />
+          <SelectorArchivo etiqueta="Uso / tamaño" archivo={uso} onChange={setUso} />
+          <SelectorArchivo etiqueta="Fragmentación" archivo={frag} onChange={setFrag} />
+        </div>
 
-      <input
-        type="file"
-        onChange={(e) =>
-          setUso(e.target.files[0])
-        }
-      />
+        {mensaje && <p className="upload-mensaje">{mensaje}</p>}
 
-      <input
-        type="file"
-        onChange={(e) =>
-          setFrag(e.target.files[0])
-        }
-      />
-      <button onClick={() => setModalAbierto(true)}>
-        Conectar 
-      </button>
-
-      {mensaje && <p>{mensaje}</p>}
+        <div className="upload-botones">
+          <button className="upload-btn-secundario" onClick={() => setModalAbierto(true)}>
+            Conectar a BD
+          </button>
+          <button
+            className="upload-btn-primario"
+            onClick={handleUpload}
+            disabled={!archivosCompletos || cargando}
+          >
+            {cargando ? "Analizando..." : "Analizar archivos"}
+          </button>
+        </div>
+      </div>
 
       {modalAbierto && (
         <ModalConexion
@@ -64,12 +89,6 @@ function UploadFiles({ onUploadSuccess }) {
           }}
         />
       )}
-
-      <button onClick={handleUpload}>
-        Analizar
-      </button>
-
-
     </div>
   );
 }

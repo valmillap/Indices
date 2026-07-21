@@ -1,12 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import { jsPDF } from "jspdf";
+import * as XLSX from "xlsx";
 import { getDuplicados, getLookup, getFrag, getCosto, getContenidos, getConexionActual, cerrarSesion } from "../services/api";
 import { duplicadosColumnDefs, duplicadosRules } from "../config/duplicados";
 import { lookupColumnDefs, lookupRules } from "../config/lookup";
 import { fragColumnDefs, fragRules } from "../config/frag";
 import { costoColumnDefs, costoRules } from "../config/costo-beneficio";
 import { contenidosColumnDefs, contenidosRules } from "../config/contenidos";
-import { agregarImagenAjustada } from "./pdfImagen";
 import DataTable from "./DataTable";
 import ModalConexion from "./ModalConexion";
 import Navbar from "./Navbar";
@@ -27,7 +26,8 @@ function Tabs() {
   const [rowClassRules, setRowClassRules] = useState({});
   const [tabActiva, setTabActiva] = useState(null);
   const dataTableRef = useRef(null);
-  const [exportandoTodo, setExportandoTodo] = useState(false);
+  const [exportandoImagenes, setExportandoImagenes] = useState(false);
+  const [exportandoExcel, setExportandoExcel] = useState(false);
 
   // Modal genérico que muestra los datos de una fila (por ejemplo, desde
   // el botón "Acción" de lookup)
@@ -143,16 +143,15 @@ function Tabs() {
 
   /**
    * Recorre las 5 pestañas UNA vez, carga sus datos, captura cada tabla
-   * como imagen (mostrando todas sus filas) y arma un solo PDF con una
-   * tabla por página. Evita tener que exportar tabla por tabla a mano.
+   * como imagen (mostrando todas sus filas) y descarga un PNG por tabla.
+   * Evita tener que exportar tabla por tabla a mano.
    */
-  const exportarTodoPDF = async () => {
-    if (exportandoTodo) return;
-    setExportandoTodo(true);
+  const exportarTodoImagenes = async () => {
+    if (exportandoImagenes) return;
+    setExportandoImagenes(true);
 
     const tabOriginal = tabActiva;
-    const pdf = new jsPDF({ orientation: "landscape", unit: "pt", format: "a4" });
-    const fecha = new Date().toLocaleDateString("es-CL");
+    const fecha = new Date().toLocaleDateString("es-CL").replaceAll("/", "-");
 
     try {
       for (let i = 0; i < TABS.length; i++) {
@@ -167,26 +166,62 @@ function Tabs() {
           requestAnimationFrame(() => requestAnimationFrame(resolve))
         );
 
-        if (i > 0) pdf.addPage();
-
         const imagen = await dataTableRef.current?.capturarComoImagen();
-        if (imagen) {
-          agregarImagenAjustada(pdf, imagen.dataUrl, imagen.width, imagen.height, `${tab.label} - ${fecha}`);
-        } else {
-          pdf.setFontSize(12);
-          pdf.text(`${tab.label} - ${fecha}`, 24, 40);
-          pdf.text("Sin datos disponibles.", 24, 60);
-        }
-      }
+        if (!imagen) continue;
 
-      pdf.save(`Reporte_Indices_${fecha.replaceAll("/", "-")}.pdf`);
+        const link = document.createElement("a");
+        link.href = imagen.dataUrl;
+        link.download = `${tab.label}_${fecha}.png`;
+        link.click();
+
+        // Pausa breve entre descargas: el navegador puede bloquear varias
+        // descargas automáticas seguidas si van todas de golpe.
+        await new Promise((resolve) => setTimeout(resolve, 400));
+      }
     } finally {
       // Volver a la pestaña que el usuario tenía abierta antes de exportar.
       if (tabOriginal) {
         setTabActiva(tabOriginal);
         await CARGADORES[tabOriginal]?.();
       }
-      setExportandoTodo(false);
+      setExportandoImagenes(false);
+    }
+  };
+
+  /**
+   * Trae los datos crudos (texto real, no imágenes) de las 5 tablas
+   * directamente del backend y arma un solo Excel con una hoja por tabla.
+   * A diferencia del PDF, no necesita cambiar de pestaña ni esperar a que
+   * se dibuje nada: solo pide los datos y los vuelca en el archivo.
+   */
+  const exportarTodoExcel = async () => {
+    if (exportandoExcel) return;
+    setExportandoExcel(true);
+
+    try {
+      const fuentes = [
+        { nombre: "Duplicados", pedir: getDuplicados },
+        { nombre: "Heap Lookup", pedir: getLookup },
+        { nombre: "Fragmentacion", pedir: getFrag },
+        { nombre: "Costo", pedir: getCosto },
+        { nombre: "Contenidos", pedir: getContenidos },
+      ];
+
+      const libro = XLSX.utils.book_new();
+
+      for (const { nombre, pedir } of fuentes) {
+        const resultado = await pedir();
+        const filas = resultado?.data ?? [];
+        const hoja = XLSX.utils.json_to_sheet(
+          filas.length > 0 ? filas : [{ Info: "Sin datos" }]
+        );
+        XLSX.utils.book_append_sheet(libro, hoja, nombre.slice(0, 31));
+      }
+
+      const fecha = new Date().toLocaleDateString("es-CL").replaceAll("/", "-");
+      XLSX.writeFile(libro, `Reporte_Indices_${fecha}.xlsx`);
+    } finally {
+      setExportandoExcel(false);
     }
   };
 
@@ -211,8 +246,10 @@ function Tabs() {
         conexion={conexion}
         onCambiarBD={() => setModalConexionAbierto(true)}
         onCerrarSesion={handleCerrarSesion}
-        onExportarTodo={exportarTodoPDF}
-        exportandoTodo={exportandoTodo}
+        onExportarTodo={exportarTodoImagenes}
+        exportandoTodo={exportandoImagenes}
+        onExportarTodoExcel={exportarTodoExcel}
+        exportandoExcel={exportandoExcel}
       />
 
       <div className="tabs-contenido">

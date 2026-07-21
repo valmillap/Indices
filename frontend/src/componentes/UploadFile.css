@@ -1,0 +1,135 @@
+.upload-pantalla {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f4f6;
+    padding: 20px;
+}
+
+.upload-card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.upload-card h2 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+    color: #111827;
+}
+
+.upload-subtitulo {
+    margin: 0 0 20px 0;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.upload-campos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.upload-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.upload-campo input[type="file"] {
+    display: none;
+}
+
+.upload-campo-etiqueta {
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.upload-campo-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 8px 10px;
+    background: #f9fafb;
+    transition: border-color 0.15s ease;
+}
+
+.upload-campo:hover .upload-campo-input {
+    border-color: #9ca3af;
+}
+
+.upload-campo-nombre {
+    font-size: 13px;
+    color: #4b5563;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.upload-campo-boton {
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    background: #e5e7eb;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.upload-mensaje {
+    font-size: 13px;
+    color: #b91c1c;
+    margin: 0 0 12px 0;
+}
+
+.upload-botones {
+    display: flex;
+    gap: 10px;
+}
+
+.upload-btn-secundario,
+.upload-btn-primario {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.upload-btn-secundario {
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #374151;
+}
+
+.upload-btn-secundario:hover {
+    background: #f3f4f6;
+}
+
+.upload-btn-primario {
+    border: 1px solid #2563eb;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.upload-btn-primario:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.upload-btn-primario:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
