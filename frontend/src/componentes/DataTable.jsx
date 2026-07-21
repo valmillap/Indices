@@ -38,6 +38,7 @@ const DataTable = forwardRef(function DataTable(
       // en el DOM, sin virtualizar ni recortar por scroll.
       api.setGridOption("pagination", false);
       api.setGridOption("domLayout", "autoHeight");
+      api.setGridOption("suppressColumnVirtualisation", true);  
 
       await new Promise((resolve) => {
         const listener = () => {
@@ -49,7 +50,6 @@ const DataTable = forwardRef(function DataTable(
       });
 
       await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-
       const canvas = await html2canvas(tablaRef.current, {
         scale: 2,
         useCORS: true,
@@ -66,6 +66,7 @@ const DataTable = forwardRef(function DataTable(
     } finally {
       api.setGridOption("domLayout", "normal");
       api.setGridOption("pagination", true);
+      api.setGridOption("suppressColumnVirtualisation", false);
       setExportando(false);
     }
   };
@@ -184,7 +185,7 @@ const DataTable = forwardRef(function DataTable(
       className="ag-theme-alpine"
       style={{
         height: exportando ? "auto" : "700px",
-        width: "90%",
+        width: "100%",
         overflow: exportando ? "visible" : undefined,
       }}
     >
