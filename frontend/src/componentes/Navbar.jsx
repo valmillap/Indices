@@ -44,7 +44,7 @@ function Navbar({ tabs, tabActiva, onSeleccionar, conexion, onCambiarBD, onCerra
               onClick={onExportarTodo}
               disabled={exportandoTodo}
             >
-              {exportandoTodo ? "Generando imágenes..." : "Descargar todas las imágenes"}
+              {exportandoTodo ? "Generando imágenes..." : "Descargar imágenes"}
             </button>
             <button className="navbar-btn-bd" onClick={onCambiarBD}>
               Cambiar BD

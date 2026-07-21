@@ -4,7 +4,7 @@ export const duplicadosColumnDefs = [
         headerCheckboxSelectionFilteredOnly: true
     },
     {
-    headerName: "Prioridad",flex: 1,
+    headerName: "PRIORIDAD",flex: 1,
     cellRenderer: params => getPrioridad(params.data["USED-PAGES"])
     },
     { field: "TABLA", flex: 1, hide: true},
