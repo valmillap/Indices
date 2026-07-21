@@ -1,4 +1,5 @@
-﻿AccidentesDeTrabajo;aaaaaAccidentesDeTrabajo_PK;NONCLUSTERED;1;1;0;0;1;Id_Establecimiento;0;0;0;0
+Tabla;Indice;Tipo;EsPK;EsUnique;EstaDeshabilitado;IgnoraDuplicados;OrdenColumna;Columna;EsDescendente;EsIncluida;OrdenParticion;ColStoreOrder
+AccidentesDeTrabajo;aaaaaAccidentesDeTrabajo_PK;NONCLUSTERED;1;1;0;0;1;Id_Establecimiento;0;0;0;0
 AccidentesDeTrabajo;aaaaaAccidentesDeTrabajo_PK;NONCLUSTERED;1;1;0;0;2;Id_Funcionario;0;0;0;0
 AccidentesDeTrabajo;aaaaaAccidentesDeTrabajo_PK;NONCLUSTERED;1;1;0;0;3;Id_Accidente;0;0;0;0
 AccidentesDeTrabajo;aaaaaAccidentesDeTrabajo_PK;NONCLUSTERED;1;1;0;0;4;FechaAccidente;0;0;0;0

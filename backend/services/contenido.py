@@ -127,8 +127,8 @@ def buscar_contenido(df):
     #---- EFECTO DE ELIMINAR
     indices_contenidos["BENEFICIO"] = np.where(
     indices_contenidos["MANTENER"].str.startswith("Contenidopor"),
-    "Liberar " + indices_contenidos["USED-PAGES"].astype(str) +
-    "MB espacio, - " + indices_contenidos["USER_UPDATES"].astype(str) + " ops. de escritura", "")
+    "Liberar " + indices_contenidos["USED-PAGES"].round(2).astype(str) +
+    "MB espacio, - " + indices_contenidos["USER_UPDATES"].astype(int).astype(str) + " ops. de escritura", "")
     indices_contenidos.to_csv("indices_contenidos.csv",sep=";",index=False)
 
     return indices_contenidos

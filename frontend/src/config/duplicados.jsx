@@ -49,8 +49,7 @@ export const duplicadosColumnDefs = [
             )
         }
     },
-    { headerName:"EFECTO DE ELIMINAR",field: "BENEFICIO", flex: 1.2, wrapText: true,
-    autoHeight: true,
+    { headerName:"EFECTO DE ELIMINAR",field: "BENEFICIO", flex: 1.2, wrapText: true, autoHeight: true,
         cellClassRules: {
             "celda-interlineado": params =>
             String(params.data.MANTENER).startsWith("Duplica"),

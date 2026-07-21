@@ -37,7 +37,7 @@ function Navbar({ tabs, tabActiva, onSeleccionar, conexion, onCambiarBD, onCerra
               onClick={onExportarTodoExcel}
               disabled={exportandoExcel}
             >
-              {exportandoExcel ? "Generando Excel..." : "Exportar todo a Excel"}
+              {exportandoExcel ? "Generando Excel..." : "Exportar"}
             </button>
             <button
               className="navbar-btn-exportar-todo"
